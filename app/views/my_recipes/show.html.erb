@@ -17,28 +17,11 @@
       <%= link_to 'Edit', edit_my_recipe_path(@myrecipes) %>
       <%= link_to 'Back', my_recipes_path %>
       <section id="audio">
-        No song is currently playing.
-        <h2>Download and Delete Existing MP3's</h2>
+<p>Your browser does not support the audio element </p>
+</audio>
         <table>
-          <td><%= link_to "HTML5 Audio",  
-"https://s3.amazonaws.com/tennis-testing/app/assets/audios/#{@title}.mp3", :class => "html5" %></td>
+          <td><audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay loop>"HTML5 Audio"</audio></td>
         </table>
-        <script type="text/javascript">
-          $(document).ready(function() {
-              var audioSection = $('section#audio');
-              $('a.html5').click(function() {
-          
-                  var audio = $('<audio>', {
-                       controls : 'controls'
-                  });
-          
-                  var url = $(this).attr('href');
-                  $('<source>').attr('src', url).appendTo(audio);
-                  audioSection.html(audio);
-                  return false;
-              });
-          });
-        </script>
       </section>
     </section>
   </aside>

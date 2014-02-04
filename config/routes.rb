@@ -1,4 +1,19 @@
 Firstapp::Application.routes.draw do
+  get "profiles/index"
+  get "site/index"
+  devise_for :users
+  resources :bookmarks
+  resources :profiles, only: [:index, :show]
+
+  get '/search' => 'bookmarks#search', as: :search
+  post '/search' => 'bookmarks#result', as: :result
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
+  root 'site#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

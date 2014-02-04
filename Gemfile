@@ -23,6 +23,10 @@ gem 'mini_magick'
 
 gem 'tts'
 
+gem 'better_errors'
+
+gem 'binding_of_caller'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

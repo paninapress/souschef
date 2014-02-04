@@ -23,7 +23,6 @@ class MyRecipesController < ApplicationController
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title}.mp3"
     @title = @myrecipes.title.gsub(/\s/,"+")
     AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
-
   end
 
   # GET /my_recipes/new

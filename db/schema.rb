@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140204024912) do
 
   create_table "my_recipes", force: true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "speechlink"
     t.datetime "created_at"
     t.datetime "updated_at"

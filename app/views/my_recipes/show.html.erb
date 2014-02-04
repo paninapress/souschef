@@ -20,7 +20,8 @@
         No song is currently playing.
         <h2>Download and Delete Existing MP3's</h2>
         <table>
-          <td><%= link_to "HTML5 Audio", download_url_for(@file), :class => "html5" %></td>
+          <td><%= link_to "HTML5 Audio",  
+"https://s3.amazonaws.com/tennis-testing/app/assets/audios/#{@title}.mp3", :class => "html5" %></td>
         </table>
         <script type="text/javascript">
           $(document).ready(function() {

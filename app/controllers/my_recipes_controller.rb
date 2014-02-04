@@ -19,9 +19,10 @@ class MyRecipesController < ApplicationController
       :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
     :secret_access_key => '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',)
     bucket = AWS::S3::Bucket.find("tennis-testing")
-    file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title}.mp3"
+    @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title}.mp3"
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title}.mp3"
-    AWS::S3::S3Object.store("app/assets/audios/#{@myrecipes.title}.mp3", open("app/assets/audios/#{@myrecipes.title}.mp3"), 'tennis-testing')
+    @title = @myrecipes.title.gsub(/\s/,"+")
+    AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
 
   end
 

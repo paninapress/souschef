@@ -1,12 +1,10 @@
 Firstapp::Application.routes.draw do
-  get "profiles/index"
-  get "site/index"
   devise_for :users
-  resources :bookmarks
+  resources :my_recipes
   resources :profiles, only: [:index, :show]
 
-  get '/search' => 'bookmarks#search', as: :search
-  post '/search' => 'bookmarks#result', as: :result
+  get '/search' => 'my_recipes#search', as: :search
+  post '/search' => 'my_recipes#result', as: :result
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

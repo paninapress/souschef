@@ -1,2 +1,26 @@
-<h1>MyRecipes#edit</h1>
-<p>Find me in app/views/my_recipes/edit.html.erb</p>
+<h1>Edit my recipe.</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@myrecipes) do |f| %>
+      <% unless @myrecipes.errors.count == 0   %>
+        <div class="alert alert-error">
+          The form contains
+          <%= pluralize(@user.errors.count, "error") %>.
+        </div>
+        <ul>
+          <% @myrecipes.errors.full_messages.each do |msg| %>
+            <li>*
+              <%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <%= f.label :photo %>
+      <%= f.file_field :photo %>
+      <%= f.submit "Edit my recipe", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

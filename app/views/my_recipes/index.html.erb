@@ -1,2 +1,26 @@
-<h1>MyRecipes#index</h1>
-<p>Find me in app/views/my_recipes/index.html.erb</p>
+<h2>Your recipess</h2>
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @myrecipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= recipe.description%></td>
+        <td><%= recipe.photo%></td>
+        <td><%= link_to 'Show', my_recipe %></td>
+        <td><%= link_to 'Edit', edit_my_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', my_recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @myrecipes %>
+<%= link_to 'New Recipe', new_my_recipe_path, class: 'button' %>

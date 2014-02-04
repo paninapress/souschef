@@ -9,13 +9,13 @@
   <body>
     <ul class="nav pull-right">
       <% if signed_in? %>
-        <li><%= link_to "My profile", current_user %></li>
+        <li><%= link_to "My profile", profiles_path %></li>
         <li>
-          <%= link_to "Sign out", signout_path, method: "delete" %>
+          <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
         </li>
       <% else %>
-        <li><%= link_to "Sign up", signup_path %></li>
-        <li><%= link_to "Sign in", signin_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Sign in",  new_user_session_path %></li>
       <% end %>
     </ul>
     <p class="notice"><%= notice %></p>

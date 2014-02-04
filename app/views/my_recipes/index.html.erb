@@ -1,4 +1,4 @@
-<h2>Your recipess</h2>
+<h2>Your recipes</h2>
 <table style="width: 100%">
   <thead>
     <tr>
@@ -15,9 +15,9 @@
         <td><%= recipe.title %></td>
         <td><%= recipe.description%></td>
         <td><%= recipe.photo%></td>
-        <td><%= link_to 'Show', my_recipe %></td>
+        <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_my_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', my_recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

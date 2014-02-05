@@ -1,28 +1,30 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="span12 center">
-      <h1>New Recipe</h1>
-      <%= form_for(@myrecipes) do |f|  %>
-        <% unless @myrecipes.errors.count == 0   %>
-          <div class="alert alert-error">
-            The form contains
-            <%= pluralize(@user.errors.count, "error") %>.
-          </div>
-          <ul>
-            <% @myrecipes.errors.full_messages.each do |msg| %>
-              <li>*
-                <%= msg %></li>
-            <% end %>
-          </ul>
+  <div class= "form_shell">
+    <div class="row">
+      <div class="span12 center">
+        <h1>New Recipe</h1>
+        <%= form_for(@myrecipes) do |f|  %>
+          <% unless @myrecipes.errors.count == 0   %>
+            <div class="alert alert-error">
+              The form contains
+              <%= pluralize(@user.errors.count, "error") %>.
+            </div>
+            <ul>
+              <% @myrecipes.errors.full_messages.each do |msg| %>
+                <li>*
+                  <%= msg %></li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div><%= f.label :title, class: "center" %><br>
+            <%= f.text_field :title, class: "center" %></div>
+          <div><%= f.label :description,class: "center"%><br>
+            <%= f.text_area :description, class: "center"%></div>
+          <div><%= f.label :photo,class: "center"%><br>
+            <%= f.file_field :photo %></div><br>
+          <div><%= f.submit "Create my recipe", class: "form_button" %></div>
         <% end %>
-        <div><%= f.label :title, class: "center" %><br>
-          <%= f.text_field :title, class: "center" %></div>
-        <div><%= f.label :description,class: "center"%><br>
-          <%= f.text_area :description, class: "center"%></div>
-        <div><%= f.label :photo,class: "center"%><br>
-          <%= f.file_field :photo %></div><br>
-        <div><%= f.submit "Create my recipe", class: "form_button" %></div>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

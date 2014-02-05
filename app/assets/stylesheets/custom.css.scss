@@ -101,3 +101,12 @@ input[type="file"]{
 label {
   margin-top: 10px;
 }
+
+.form_shell {
+  width: 410px;
+min-height: 465px;
+margin: 10px auto 10px;
+padding: 30px 15px 15px;
+background-color: $lightbrown-color;
+}
+

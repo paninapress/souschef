@@ -4,24 +4,32 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg' #(0.17.1)
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0' #(4.0.1)
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass' #(2.1.0.0)
 
-gem 'carrierwave'
+gem 'carrierwave' # (0.9.0)
 
-gem 'fog'
+gem 'fog' #(1.19.0)
 
-gem 'aws-s3'
+gem 'unf' #(0.1.3)
 
-gem 'rmagick'
+gem 'unf_ext' #(0.0.6)
 
-gem 'mini_magick'
+gem 'aws-s3' #(0.6.3)
 
-gem 'tts'
+gem 'rmagick' #(2.13.2)
+
+gem 'mini_magick'  #(3.7.0)
+
+gem 'tts' #(0.4.1)
+
+gem 'nokogiri' #(1.6.1)
+
+gem 'mechanize' #(2.7.3)
 
 gem 'better_errors'
 

@@ -18,12 +18,13 @@ nav {
     li { display: inline-block;
 	 font: bold 11px Arial;
     text-decoration: none;
+    margin-right: 10px;
     padding: 2px 6px 2px 6px;
   
    }
 
 
-   a { width: 60px; 
+   a { width: 80px; 
    font-size: 16px;
    	display: inline-block;
     text-align: right;
@@ -52,3 +53,17 @@ nav {
           border-radius: $radius;
 }
 
+#logo {
+	text-align: left;
+	float: left;
+	font: bold 32px Arial;
+	font-color: $yellow-color;
+}
+
+.center {
+    text-align:center;
+}
+
+.center form {
+    display: block;
+}

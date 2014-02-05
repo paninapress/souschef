@@ -7,11 +7,12 @@
     <%= csrf_meta_tags %>
   </head>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <%= link_to "Recipes", root_path, id: "logo" %>
     <div class="container-fluid">
       <ul>
         <% if signed_in? %>
-          <li><%= link_to "My profile", profiles_path %></li>
-          <li>
+          <li class="navbar-text pull-right"><%= link_to "My profile", profiles_path %></li>
+          <li class="navbar-text pull-right">
             <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
           </li>
         <% else %>

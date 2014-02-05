@@ -31,6 +31,8 @@ gem 'nokogiri' #(1.6.1)
 
 gem 'mechanize' #(2.7.3)
 
+gem 'masonry-rails'
+
 gem 'better_errors'
 
 gem 'binding_of_caller'

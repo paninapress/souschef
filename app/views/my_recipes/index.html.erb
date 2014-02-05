@@ -5,7 +5,9 @@
   <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
     <div class="box col3">
       <%= recipe.title %>
+      <br>
       <%= image_tag recipe.photo_url %>
+      <br>
       <%= truncate(recipe.description, length: 100, omission: '... (continued)')%>
       <br>
       <%= link_to 'Show', recipe %>

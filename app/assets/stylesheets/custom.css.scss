@@ -1,0 +1,54 @@
+@import "bootstrap";
+
+$brown-color: #b06334;
+$yellow-color: #f6a54b;
+$lightbrown-color: #886547;
+$red-color: #b32b2a;
+$radius:6px;
+
+html {
+  overflow-y: scroll;
+}
+
+
+nav {
+
+	ul { display: block;}
+
+    li { display: inline-block;
+	 font: bold 11px Arial;
+    text-decoration: none;
+    padding: 2px 6px 2px 6px;
+  
+   }
+
+
+   a { width: 60px; 
+   font-size: 16px;
+   	display: inline-block;
+    text-align: right;
+    float: right;
+    color: white;
+    &:hover {color: $red-color;
+    			text-decoration: none;}
+    }
+
+}
+
+.navbar {
+		background-color: $brown-color;
+}
+
+.navbar-default {
+	
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+

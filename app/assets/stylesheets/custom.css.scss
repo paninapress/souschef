@@ -38,9 +38,12 @@ nav {
 
 .navbar {
 		background-color: $brown-color;
+    margin: 0px;
+      padding: 0px;
 }
 
 .navbar-default {
+  margin: 0px;
 	
 }
 
@@ -98,6 +101,31 @@ input[type="file"]{
 
 }
 
+input[type="submit"]{
+  border: 0;
+width: 80px;
+cursor: pointer;
+display: inline-block;
+font-weight: bold;
+font-size: 14px;
+line-height: 1;
+font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
+margin-top: 15px;
+padding: 9px 18px 7px;
+position: relative;
+text-align: center;
+text-decoration: none;
+background-color: $red-color;
+color: white;
+text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+border-radius: 4px;
+-webkit-transition: background-color 0.15s ease-in-out;
+-moz-transition: background-color 0.15s ease-in-out;
+-ms-transition: background-color 0.15s ease-in-out;
+-o-transition: background-color 0.15s ease-in-out;
+transition: background-color 0.15s ease-in-out;
+}
+
 label {
   margin-top: 10px;
 }
@@ -108,5 +136,19 @@ min-height: 465px;
 margin: 10px auto 10px;
 padding: 30px 15px 15px;
 background-color: $lightbrown-color;
+}
+
+.panel {
+  margin: 0px;
+  height: 520px;
+  background-image: url('/assets/Hungarian_Soup.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0px;
+
+}
+
+#search_bar {
+  color: white;
 }
 

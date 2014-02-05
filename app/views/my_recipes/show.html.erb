@@ -3,25 +3,29 @@
     <div class="span12 center">
       <section>
         <p id="notice"><%= notice %></p>
-        <p>
-          <strong>Title:</strong>
-          <%= @myrecipes.title %>
-        </p>
-        <p>
-          <%= image_tag @myrecipes.photo_url %>
-          <%= @myrecipes.user_id %>
-        </p>
-        <p>
-          <strong>Description:</strong>
-          <%= @myrecipes.description %>
-        </p>
-        <%= link_to 'Edit', edit_my_recipe_path(@myrecipes) %>
-        <%= link_to 'Back', my_recipes_path %>
-        <section id="audio">
-          <p>Play Recipe.</p>
-          <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay loop>"HTML5 Audio"</audio>
-        </section>
-      </section>
+        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+          <div class="box col7 container-fluid">
+            <p>
+              <strong>Title:</strong>
+              <%= @myrecipes.title %>
+            </p>
+            <p>
+              <%= image_tag @myrecipes.photo_url %>
+              <%= @myrecipes.user_id %>
+            </p>
+            <p>
+              <strong>Description:</strong>
+              <%= @myrecipes.description %>
+            </p>
+            <%= link_to 'Edit', edit_my_recipe_path(@myrecipes) %>
+            <%= link_to 'Back', my_recipes_path %>
+            <section id="audio">
+              <p>Play Recipe.</p>
+              <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay loop>"HTML5 Audio"</audio>
+            </section>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
 </div>

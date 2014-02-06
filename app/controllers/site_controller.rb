@@ -7,26 +7,34 @@ class SiteController < ApplicationController
     agent = Mechanize.new
     url = "http://www.epicurious.com/tools/searchresults?search=#{CGI.escape(params[:search])}&type=simple&sort=1&pageNumber=2&pageSize=30"
     page = agent.get(url)
+
+    box_preparation = []
+    box_ingredient =[]
+    box_image = []
+
+
     temp = []
     page.search("a.recipeLnk").each do |link|
-
       temp << link.attr('href')
+    end
 
-      box_preparation = []
-      box_ingredient =[]
-      box_image = []
-      box_title = []
-      box_source = []
-      i = 0
-      while i < temp.size
-        link = page.link_with(href: temp[i]).click
-        box_preparation << link.parser.css("#preparation").text
-        box_ingredient << link.parser.css("#ingredients").text
-        agent.back
-        i +=1
-      end
+    box_title = []
+    page.search("a.recipeLnk").each do |link|
+      box_title << link.text
+    end
+
+    i = 0
+    while i < temp.size
+      link = page.link_with(href: temp[i]).click
+      box_preparation << link.parser.css("#preparation").text
+      box_ingredient << link.parser.css("#ingredients").text
+      box_source << link.parser.css(".source").text
+      box_image << link.parser.css(".photo")
+      agent.back
+      i +=1
     end
   end
+
 
   def result
   end

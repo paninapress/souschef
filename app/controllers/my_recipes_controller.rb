@@ -17,14 +17,15 @@ class MyRecipesController < ApplicationController
 
   # GET /my_recipes/1
   def show
+    @username = current_user.username
     @myrecipes = MyRecipe.find(params[:id])
     AWS::S3::Base.establish_connection!(
       :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
     :secret_access_key => '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',)
     bucket = AWS::S3::Bucket.find("tennis-testing")
-    @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title}.mp3"
-    @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title}.mp3"
-    @title = @myrecipes.title.gsub(/\s/,"+")
+    @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+    @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+    @title = @myrecipes.title.gsub(/\s/,"+")+@username
     AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
   end
 
@@ -50,7 +51,20 @@ class MyRecipesController < ApplicationController
 
   # PATCH/PUT /my_recipes/1
   def update
+    @username = current_user.username
+    @myrecipes = MyRecipe.find(params[:id])
+    AWS::S3::Base.establish_connection!(
+      :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
+    :secret_access_key => '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',)
+    bucket = AWS::S3::Bucket.find("tennis-testing")
+    @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+    @title = @myrecipes.title.gsub(/\s/,"+")+@username
+    File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
+    AWS::S3::S3Object.delete(@myrecipes.speechlink, 'tennis-testing')
     if @myrecipes.update(my_recipes_params)
+      @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+      @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+      AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
       redirect_to @myrecipes, notice: 'Recipe was successfully updated.'
     else
       render action: 'edit'

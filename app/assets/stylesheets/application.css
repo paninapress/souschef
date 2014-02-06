@@ -82,11 +82,12 @@ nav a {
     text-decoration: none; }
 
 .navbar {
-  background-color: #b06334;
+  background-color: #603913;
   margin: 0px;
   padding: 0px; }
 
 .navbar-default {
+  background-color: #603913;
   margin: 0px; }
 
 #logo {
@@ -162,14 +163,15 @@ label {
   padding: 30px 15px 15px;
   background-color: #886547; }
 
-.panel {
-  margin: 0px;
-  height: 520px;
+
+.bgSizeCover {
+  height: 500px;
   background-image: url("/assets/Hungarian_Soup.jpg");
-  background-size: 100%;
+  background-size: cover;
+  min-width: 400px;
   background-repeat: no-repeat;
-  vertical-align: middle;
-  float: none; }
+  }
+
 
 .panel2 {
   height: 420px;

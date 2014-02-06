@@ -11,6 +11,7 @@ class SiteController < ApplicationController
     box_preparation = []
     box_ingredient =[]
     box_image = []
+    box_source = []
 
 
     temp = []
@@ -29,7 +30,13 @@ class SiteController < ApplicationController
       box_preparation << link.parser.css("#preparation").text
       box_ingredient << link.parser.css("#ingredients").text
       box_source << link.parser.css(".source").text
-      box_image << link.parser.css(".photo")
+      photo =  link.parser.css('img.photo')
+      if photo.empty?
+        box_image << "no image"
+      else
+        box_image << photo.attr('src').text
+      end
+
       agent.back
       i +=1
     end

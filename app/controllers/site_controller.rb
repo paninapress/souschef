@@ -40,10 +40,13 @@ class SiteController < ApplicationController
       agent.back
       i +=1
     end
+
+
   end
 
 
   def result
+
   end
 
 end

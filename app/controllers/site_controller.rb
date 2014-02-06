@@ -8,7 +8,7 @@ class SiteController < ApplicationController
   def search
     agent = Mechanize.new
     url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=1&pageNumber=1&pageSize=10"
-    # binding.pry
+
     page = agent.get(url)
     box_preparation = []
     box_ingredient =[]
@@ -44,8 +44,7 @@ class SiteController < ApplicationController
 
     i = 0
     while i < temp.size
-      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}",
-                        preparation: "box_preparation[i]", image: "box_image[1]", source: "box_source[i]")
+      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[1]}", source: "#{box_source[i]}")
       i +=1
     end
     @recipes = SiteRecipe.all

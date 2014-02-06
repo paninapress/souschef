@@ -1,8 +1,13 @@
 <div class="panel" data-stellar-background-ratio="0.5">
-  <h1 class="center" id="search_bar">Search for a recipe.</h1>
-  <%= form_tag search_path, :class => "center" do %>
-    <%= label_tag(:search, "Search for:") %>
-    <%= text_field_tag(:search) %><br>
-    <%= submit_tag("Search")%>
-  <% end %>
+  <div class="container-fluid">
+    <p class="center container-fluid" id="search_bar">Search for a recipe.</p>
+    <%= form_tag search_path, :class => "center" do %>
+      <%= label_tag(:search, "Search for:") %>
+      <%= text_field_tag(:search) %><br>
+      <%= submit_tag("Search")%>
+    <% end %>
+  </div>
+</div>
+<div class="panel2" data-stellar-background-ratio="0.5">
+  <p>Panel2</p>
 </div>

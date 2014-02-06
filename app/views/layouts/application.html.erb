@@ -5,6 +5,14 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      $(function(){
+        $.stellar({
+          horizontalScrolling: false,
+          verticalOffset: 40
+        });
+      });
+    </script>
   </head>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <%= link_to "Recipes", root_path, id: "logo" %>

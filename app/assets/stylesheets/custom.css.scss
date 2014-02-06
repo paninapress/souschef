@@ -104,6 +104,7 @@ input[type="file"]{
 input[type="submit"]{
   border: 0;
 width: 80px;
+margin-left: 60px;
 cursor: pointer;
 display: inline-block;
 font-weight: bold;
@@ -144,11 +145,22 @@ background-color: $lightbrown-color;
   background-image: url('/assets/Hungarian_Soup.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  padding: 0px;
-
+    vertical-align : middle;
+    float:none;
 }
+
+.panel2 {
+  height: 420px;
+  background-color: blue;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 
 #search_bar {
   color: white;
+  font-size: 24px;
+  background-color:rgba(0,0,255,0.5);
+  text-align: none;
 }
 

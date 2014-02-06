@@ -5,6 +5,9 @@ Firstapp::Application.routes.draw do
 
   get '/search' => 'my_recipes#search', as: :search
   post '/search' => 'my_recipes#result', as: :result
+
+  get '/search' => 'site#search', as: :search
+  post '/search' => 'site#result', as: :result
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

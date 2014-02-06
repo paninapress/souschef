@@ -2,7 +2,10 @@ class MyRecipesController < ApplicationController
   require 'net/http'
   require 'json'
   require 'tts'
+  require 'nokogiri'
+  require 'open-uri'
 
+  require 'mechanize'
 
   before_action :set_my_recipe, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
@@ -43,33 +46,6 @@ class MyRecipesController < ApplicationController
     else
       render action: 'new'
     end
-  end
-
-  #
-  #
-  #web search can't take spaces, need to add +sign between words.
-  ###typhoeus is will get it as a hash
-  ####need json.
-  ###webknox/recipes api
-  def search
-    food = params[:search]
-    url = "http://api.yummly.com/v1/api/recipes?_app_id=4319bda9&_app_key=699fc2abb535f3a2cb846c2971e5ff4d&q=#{food}&maxResult=10&start=10"
-    resp = Net::HTTP.get_response(URI(url))
-    @data = JSON.parse(resp.body)
-    puts @data["matches"][1]["ingredients"]
-    @data["matches"][1]["ingredients"].to_s.to_file "en", "app/assets/audios/recipe_id.mp3"
-
-    AWS::S3::Base.establish_connection!(
-      :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
-    :secret_access_key => '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',)
-    bucket = AWS::S3::Bucket.find("tennis-testing")
-    file = 'app/assets/audios/recipe_id.mp3'
-    AWS::S3::S3Object.store(file, open(file), 'tennis-testing')
-
-
-    #  @data["ingredientLines"].to_file "en"
-    #####need to specify entire folder directory to save mp3 file that's generated. app/assets/audios/filename
-    ###when adding file to s3 bucket, will need whole file path as well. Like /User/calvinlam/Desktop/filename
   end
 
   # PATCH/PUT /my_recipes/1

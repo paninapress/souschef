@@ -22,4 +22,5 @@
 //= require masonry/box-maker
 //= require jquery.stellar
 //= require jquery.stellar.min
+//= main.js
 //= require_tree .

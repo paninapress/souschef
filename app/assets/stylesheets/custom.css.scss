@@ -103,8 +103,7 @@ input[type="file"]{
 
 input[type="submit"]{
   border: 0;
-width: 80px;
-margin-left: 60px;
+width: 150px;
 cursor: pointer;
 display: inline-block;
 font-weight: bold;
@@ -134,7 +133,7 @@ label {
 .form_shell {
   width: 410px;
 min-height: 465px;
-margin: 10px auto 10px;
+margin: 50px auto 10px;
 padding: 30px 15px 15px;
 background-color: $lightbrown-color;
 }

@@ -19,7 +19,7 @@
     <div class="container-fluid">
       <ul>
         <% if signed_in? %>
-          <li class="navbar-text pull-right"><%= link_to "My profile", profiles_path %></li>
+          <li class="navbar-text pull-right"><%= link_to "My profile", my_recipes_path %></li>
           <li class="navbar-text pull-right">
             <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
           </li>

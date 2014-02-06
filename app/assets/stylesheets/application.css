@@ -59,4 +59,127 @@
 .col9 img { max-width: 880px; } 
 .col10 img { max-width: 980px; } 
 
+html {
+  overflow-y: scroll; }
+
+nav ul {
+  display: block; }
+nav li {
+  display: inline-block;
+  font: bold 11px Arial;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 2px 6px 2px 6px; }
+nav a {
+  width: 80px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: right;
+  float: right;
+  color: white; }
+  nav a:hover {
+    color: #b32b2a;
+    text-decoration: none; }
+
+.navbar {
+  background-color: #b06334;
+  margin: 0px;
+  padding: 0px; }
+
+.navbar-default {
+  margin: 0px; }
+
+#logo {
+  text-align: left;
+  float: left;
+  font: bold 32px Arial;
+  font-color: #f6a54b; }
+
+.center {
+  text-align: center; }
+
+.center form {
+  display: block; }
+
+.form_button {
+  border: 0;
+  width: 200px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
+  margin-top: 15px;
+  padding: 9px 18px 7px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f6a54b;
+  color: #b32b2a;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out; }
+
+input[type="file"] {
+  display: inline-block; }
+
+input[type="submit"] {
+  border: 0;
+  width: 150px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
+  margin-top: 15px;
+  padding: 9px 18px 7px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #b32b2a;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out; }
+
+label {
+  margin-top: 10px; }
+
+.form_shell {
+  width: 410px;
+  min-height: 465px;
+  margin: 50px auto 10px;
+  padding: 30px 15px 15px;
+  background-color: #886547; }
+
+.panel {
+  margin: 0px;
+  height: 520px;
+  background-image: url("/assets/Hungarian_Soup.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  float: none; }
+
+.panel2 {
+  height: 420px;
+  background-color: blue;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+#search_bar {
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 255, 0.5);
+  text-align: none; }
 

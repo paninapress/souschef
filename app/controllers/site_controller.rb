@@ -5,9 +5,8 @@ class SiteController < ApplicationController
 
   def search
     agent = Mechanize.new
-    url = "http://www.epicurious.com/tools/searchresults?search=#{CGI.escape(params[:search])}&type=simple&sort=1&pageNumber=2&pageSize=30"
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:search]}&type=simple&sort=1&pageNumber=1&pageSize=30"
     page = agent.get(url)
-
     box_preparation = []
     box_ingredient =[]
     box_image = []
@@ -32,12 +31,18 @@ class SiteController < ApplicationController
       box_source << link.parser.css(".source").text
       photo =  link.parser.css('img.photo')
       if photo.empty?
-        box_image << "no image"
+        box_image << '/assets/logo.png'
       else
         box_image << photo.attr('src').text
       end
-
       agent.back
+      i +=1
+    end
+
+    i = 0
+    while i < temp.size
+      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}",
+                        preparation: "box_preparation[i]", image: "box_image[1]", source: "box_source[i]")
       i +=1
     end
 

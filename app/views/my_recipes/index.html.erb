@@ -1,5 +1,6 @@
 <h2>Your recipes</h2>
 <%= link_to 'New Recipe', new_my_recipe_path, class: 'button' %>
+<%= link_to 'Edit Account', edit_user_registration_path %>
 <br>
 <% @myrecipes.each do |recipe| %>
   <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">

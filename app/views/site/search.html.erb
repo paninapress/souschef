@@ -1,5 +1,15 @@
 <h2>Your Results</h2>
 <div class="container-fluid">
-  <p class="center" id="search_bar">Search for a recipe.</p>
-  <%= @recipes %>
-</div>
+  <p id="search_bar">Search for a recipe.</p>
+  <% @recipes.each do |recipe| %>
+    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+      <div class="box col3">
+        <%= recipe.title %>
+        <br>
+        <img src="https://www.epicurious.com/<%= recipe.image %>">
+        <br>
+        <%= truncate(recipe.preparation, length: 100, omission: '... (continued)')%>
+        <br>
+      </div>
+    </div>
+  <% end %>

@@ -2,6 +2,7 @@ Firstapp::Application.routes.draw do
   devise_for :users
   resources :my_recipes
   resources :profiles, only: [:index, :show]
+  resources :site, only: [:index, :show, :search]
 
   post '/search' => 'site#search', as: :search
   # post '/search' => 'site#result', as: :result

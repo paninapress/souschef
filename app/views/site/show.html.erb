@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="span12 center">
+      <section>
+        <p id="notice"><%= notice %></p>
+        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+          <div class="box col7">
+            <p>
+              <strong>Title:</strong>
+              <%= @recipes.title %>
+            </p>
+            <p>
+      
+            </p>
+            <p>
+              <strong>Ingredients:</strong>
+              <%= @recipes.ingredients %>
+            </p>
+             <strong>Preparation:</strong>
+              <%= @recipes.preparation %>
+            </p>
+            <%= link_to 'Back', root_path %>
+            <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

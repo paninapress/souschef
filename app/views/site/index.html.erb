@@ -1,8 +1,8 @@
 <div class="bgSizeCover container-fluid" data-stellar-background-ratio="0.5">
   <p class="center" id="search_bar">Search for a recipe.</p>
   <%= form_tag search_path, :class => "center" do %>
-    <%= label_tag(:search, "Search for:") %>
-    <%= text_field_tag(:search) %><br>
+    <%= label_tag(:food, "Search for:") %>
+    <%= text_field_tag(:food) %><br>
     <%= submit_tag("Search")%>
   <% end %>
 </div>

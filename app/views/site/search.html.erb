@@ -1,8 +1,5 @@
+<h2>Your Results</h2>
 <div class="container-fluid">
   <p class="center" id="search_bar">Search for a recipe.</p>
-  <%= form_tag search_path, :class => "center" do %>
-    <%= label_tag(:search, "Search for:") %>
-    <%= text_field_tag :search, params[:search] %><br>
-    <%= submit_tag("Search")%>
-  <% end %>
+  <%= @recipes %>
 </div>

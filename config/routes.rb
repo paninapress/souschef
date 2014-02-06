@@ -3,8 +3,8 @@ Firstapp::Application.routes.draw do
   resources :my_recipes
   resources :profiles, only: [:index, :show]
 
-  get '/search' => 'site#search', as: :search
-  post '/search' => 'site#result', as: :result
+  post '/search' => 'site#search', as: :search
+  # post '/search' => 'site#result', as: :result
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

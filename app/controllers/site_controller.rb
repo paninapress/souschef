@@ -1,11 +1,14 @@
 class SiteController < ApplicationController
   def index
-    @my_recipes = MyRecipe.order('created_at desc').page(params[:page]) if current_user
+    #    @my_recipes = MyRecipe.order('created_at desc').page(params[:page]) if current_user
+
+
   end
 
   def search
     agent = Mechanize.new
-    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:search]}&type=simple&sort=1&pageNumber=1&pageSize=30"
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=1&pageNumber=1&pageSize=10"
+    # binding.pry
     page = agent.get(url)
     box_preparation = []
     box_ingredient =[]
@@ -45,7 +48,7 @@ class SiteController < ApplicationController
                         preparation: "box_preparation[i]", image: "box_image[1]", source: "box_source[i]")
       i +=1
     end
-
+    @recipes = SiteRecipe.all
 
   end
 

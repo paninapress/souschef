@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
   def index
-    #    @my_recipes = MyRecipe.order('created_at desc').page(params[:page]) if current_user
+    @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
 
 
   end
@@ -34,7 +34,7 @@ class SiteController < ApplicationController
       box_source << link.parser.css(".source").text
       photo =  link.parser.css('img.photo')
       if photo.empty?
-        box_image << '/images/recipes/recipe_search/4_forks.gif'
+        box_image << '/images/articlesguides/howtocook/cookbooks/best-cookbooks-2012_612.jpg'
       else
         box_image << photo.attr('src').text
       end

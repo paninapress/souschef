@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20140207093236) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
-    t.string   "confirmable"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"

@@ -8,6 +8,28 @@
 </div>
 <div class="panel2" data-stellar-background-ratio="0.5">
   <div class="container-fluid">
-    <p class="center">Panel2</p>
+    <span>
+      <h1 id="panel2" class="center">Focus more on cooking by not having to look at a recipe. No more
+      	swiping your smartphone with a greasy hand. No more spilled drinks on your Mac. Now you
+      	can enjoy listening to your favorite recipe while you cook.</h1>
+    </span>
+  </div>
+</div>
+<div class="panel3" data-stellar-background-ratio="0.4">
+  <% @siterecipes.each do |recipe| %>
+    <div id="masonry-container">
+      <div class="box col3">
+        <%= recipe.title %>
+        <br>
+        <a href="<%= site_path(recipe)%>"><img src="http://www.epicurious.com<%= recipe.image %>"></a>
+        <br>
+        <%= truncate(recipe.source, length: 100, omission: '... (continued)')%>
+        <br>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="panel4" data-stellar-background-ratio="0.2">
+  <div class="container-fluid">
   </div>
 </div>

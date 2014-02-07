@@ -63,7 +63,7 @@ class SiteController < ApplicationController
       :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
     :secret_access_key => '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',)
     bucket = AWS::S3::Bucket.find("tennis-testing")
-    @file = @description.to_file "en", "app/assets/audios/#{@recipes.title}.mp3"
+    file = @description.to_file "en", "app/assets/audios/#{@recipes.title}.mp3"
     @audio = "app/assets/audios/#{@recipes.title}.mp3"
     @title = @recipes.title.gsub(/\s/,"+")
     AWS::S3::S3Object.store(@audio, open(@audio), 'tennis-testing')

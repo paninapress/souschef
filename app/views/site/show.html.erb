@@ -10,14 +10,14 @@
               <%= @recipes.title %>
             </p>
             <p>
-      
+             <img src="https://www.epicurious.com/<%= @recipes.image %>">
             </p>
             <p>
               <strong>Ingredients:</strong>
-              <%= @recipes.ingredients %>
+              <%= @ingredients %>
             </p>
              <strong>Preparation:</strong>
-              <%= @recipes.preparation %>
+              <%= @preparation %>
             </p>
             <%= link_to 'Back', root_path %>
             <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>

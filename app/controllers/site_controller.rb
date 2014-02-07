@@ -34,7 +34,7 @@ class SiteController < ApplicationController
       box_source << link.parser.css(".source").text
       photo =  link.parser.css('img.photo')
       if photo.empty?
-        box_image << 'images/recipes/recipe_search/4_forks.gif'
+        box_image << '/images/recipes/recipe_search/4_forks.gif'
       else
         box_image << photo.attr('src').text
       end
@@ -44,16 +44,18 @@ class SiteController < ApplicationController
 
     i = 0
     while i < temp.size
-      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[1]}", source: "#{box_source[i]}")
+      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[i]}", source: "#{box_source[i]}")
       i +=1
     end
-    @recipes = SiteRecipe.all
+
+    @recipes = SiteRecipe.last(10)
 
   end
 
 
   def show
     @recipes = SiteRecipe.find(params[:id])
+    @image = @recipes.image
     @ingredients = @recipes.ingredients
     @preparation = @recipes.preparation
     @description =@ingredients + @preparation

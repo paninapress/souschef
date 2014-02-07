@@ -6,9 +6,9 @@
       <div class="box col3">
         <%= recipe.title %>
         <br>
-        <img src="https://www.epicurious.com/<%= recipe.image %>">
+        <a href="<%= site_path(recipe)%>"><img src="http://www.epicurious.com<%= recipe.image %>"></a>
         <br>
-        <%= truncate(recipe.preparation, length: 100, omission: '... (continued)')%>
+        <%= truncate(recipe.source, length: 100, omission: '... (continued)')%>
         <br>
       </div>
     </div>

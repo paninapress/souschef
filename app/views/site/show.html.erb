@@ -20,7 +20,13 @@
               <%= @preparation %>
             </p>
             <%= link_to 'Back', root_path %>
-            <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>
+            <script type="text/javascript">
+            function playrecipe() {
+           document.getElementById('recipeclip').play();
+         }
+           </script>
+<input onwebkitspeechchange="playrecipe()" x-webkit-speech />
+            <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>
           </section>
         </div>
       </div>

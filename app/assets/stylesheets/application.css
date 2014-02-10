@@ -185,3 +185,16 @@ label {
   background-color: rgba(0, 0, 255, 0.5);
   text-align: none; }
 
+
+.panel2 {
+  height: 600px;
+background-image: url("/assets/kneading-dough.jpg");
+  background-size: cover;
+  min-width: 400px;
+  background-repeat: no-repeat;
+
+}
+
+ h1 {
+    font-size: 36px;
+  }

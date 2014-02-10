@@ -30,22 +30,5 @@
     </div>
   <% end %>
 </div>
-<div class="panel4" data-stellar-background-ratio="0.2">
-  <div class="container-fluid">
 
-  </div>
-</div>
-<div class="panel3" data-stellar-background-ratio="0.4">
-  <% @siterecipes.each do |recipe| %>
-    <div id="masonry-container">
-      <div class="box col3">
-        <%= recipe.title %>
-        <br>
-        <a href="<%= site_path(recipe)%>"><img src="http://www.epicurious.com<%= recipe.image %>"></a>
-        <br>
-        <%= truncate(recipe.source, length: 100, omission: '... (continued)')%>
-        <br>
-      </div>
-    </div>
-  <% end %>
-</div>
+

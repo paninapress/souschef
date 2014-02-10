@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
   def index
-    #    @my_recipes = MyRecipe.order('created_at desc').page(params[:page]) if current_user
+    @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
 
 
   end
@@ -48,7 +48,7 @@ class SiteController < ApplicationController
       i +=1
     end
 
-    @recipes = SiteRecipe.last(10)
+    @recipes = SiteRecipe.last(20)
 
   end
 

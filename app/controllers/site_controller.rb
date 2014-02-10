@@ -67,6 +67,8 @@ class SiteController < ApplicationController
     @audio = "app/assets/audios/#{@recipes.title}.mp3"
     @title = @recipes.title.gsub(/\s/,"+")
     AWS::S3::S3Object.store(@audio, open(@audio), 'tennis-testing')
+    File.delete("#{Rails.root}/app/assets/audios/#{@recipes.title}.mp3")
+
   end
 
 end

@@ -60,7 +60,6 @@ class MyRecipesController < ApplicationController
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @title = @myrecipes.title.gsub(/\s/,"+")+@username
-    File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
     AWS::S3::S3Object.delete(@myrecipes.speechlink, 'tennis-testing')
     if @myrecipes.update(my_recipes_params)
       @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"

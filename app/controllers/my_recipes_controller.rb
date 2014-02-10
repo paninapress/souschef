@@ -20,8 +20,8 @@ class MyRecipesController < ApplicationController
     @username = current_user.username
     @myrecipes = MyRecipe.find(params[:id])
     AWS::S3::Base.establish_connection!(
-      :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
-    :secret_access_key => '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',)
+      :access_key_id     => ENV['AWSid'],
+    :secret_access_key => ENV['AWSkey'])
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
@@ -54,8 +54,8 @@ class MyRecipesController < ApplicationController
     @username = current_user.username
     @myrecipes = MyRecipe.find(params[:id])
     AWS::S3::Base.establish_connection!(
-      :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
-    :secret_access_key => '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',)
+      :access_key_id     => ENV['AWSid'],
+    :secret_access_key => ENV['AWSkey'])
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @title = @myrecipes.title.gsub(/\s/,"+")+@username

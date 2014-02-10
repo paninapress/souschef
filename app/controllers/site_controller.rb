@@ -60,8 +60,8 @@ class SiteController < ApplicationController
     @preparation = @recipes.preparation
     @description =@ingredients + @preparation
     AWS::S3::Base.establish_connection!(
-      :access_key_id     => 'AKIAI6AECUXY23A6B56Q',
-    :secret_access_key => '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',)
+      :access_key_id     => ENV['AWSid'],
+    :secret_access_key => ENV['AWSkey'])
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @file = @description.to_file "en", "app/assets/audios/#{@recipes.title}.mp3"
     @audio = "app/assets/audios/#{@recipes.title}.mp3"

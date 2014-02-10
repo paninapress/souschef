@@ -48,7 +48,7 @@ class SiteController < ApplicationController
       i +=1
     end
 
-    @recipes = SiteRecipe.last(20)
+    @recipes = SiteRecipe.last(10)
 
   end
 

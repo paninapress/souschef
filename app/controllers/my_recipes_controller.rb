@@ -20,8 +20,8 @@ class MyRecipesController < ApplicationController
     @username = current_user.username
     @myrecipes = MyRecipe.find(params[:id])
     AWS::S3::Base.establish_connection!(
-      :access_key_id     => ENV['AWSid'],
-    :secret_access_key => ENV['AWSkey'])
+      :access_key_id     => ENV['access_key_id'],
+    :secret_access_key => ENV['secret_access_key'])
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"

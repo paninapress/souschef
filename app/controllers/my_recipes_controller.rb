@@ -27,6 +27,7 @@ class MyRecipesController < ApplicationController
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @title = @myrecipes.title.gsub(/\s/,"+")+@username
     AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
+    File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
   end
 
   # GET /my_recipes/new
@@ -64,6 +65,7 @@ class MyRecipesController < ApplicationController
       @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
       @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
       AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
+      File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
       redirect_to @myrecipes, notice: 'Recipe was successfully updated.'
     else
       render action: 'edit'

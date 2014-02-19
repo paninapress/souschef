@@ -7,6 +7,11 @@ gem 'rails', '4.0.2'
 group :development, :test do
   gem 'pry'
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'faker'
+  gem 'launchy'
 end
 # Use postgresql as the database for Active Record
 gem 'pg' #(0.17.1)

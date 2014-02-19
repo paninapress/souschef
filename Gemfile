@@ -9,9 +9,14 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+end
+
+group :test do
   gem 'capybara'
   gem 'faker'
   gem 'launchy'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 # Use postgresql as the database for Active Record
 gem 'pg' #(0.17.1)

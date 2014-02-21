@@ -10,6 +10,7 @@ class MyRecipesController < ApplicationController
   before_action :set_my_recipe, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+
   # GET /my_recipes
   def index
     @myrecipes = current_user.my_recipes.order('created_at desc').page(params[:page])

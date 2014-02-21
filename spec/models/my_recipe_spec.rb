@@ -7,11 +7,13 @@ describe MyRecipe do
 
 
   it "is invalid without a title." do
-    expect(MyRecipe.new(title: nil)).to have(1).errors_on(:title)
+    my_recipe = FactoryGirl.build(:my_recipe, title: nil)
+    expect(my_recipe).to have(1).errors_on(:title)
   end
 
   it "is invalid without a description." do
-    expect(MyRecipe.new(description: nil)).to have(1).errors_on(:description)
+    my_recipe = FactoryGirl.build(:my_recipe, description: nil)
+    expect(my_recipe).to have(1).errors_on(:description)
   end
 
 end

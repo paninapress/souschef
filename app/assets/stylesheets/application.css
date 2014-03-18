@@ -20,9 +20,13 @@
  *= require_tree .
  */
 
+.navbar {
+  margin-bottom: 0px;
+}
+
 #masonry-container {
   background: #FFF;
-  padding: 5px;
+  padding: 25px;
   margin-bottom: 20px;
   border-radius: 5px;
   display: inline-block;
@@ -43,7 +47,7 @@
 
 .col1 { width: 80px; }
 .col2 { width: 180px; }
-.col3 { width: 280px; }
+.col3 { width: 220px; }
 .col4 { width: 380px; }
 .col5 { width: 480px; }
 .col6 { width: 580px; }
@@ -54,11 +58,11 @@
 
 .col1 img { max-width: 80px; }
 .col2 img { max-width: 180px; }
-.col3 img { max-width: 280px; }
+.col3 img { width: 220px; }
 .col4 img { max-width: 380px; }
 .col5 img { max-width: 480px; }
 .col6 img { max-width: 580px; } 
-.col7 img { max-width: 480px; } 
+.col7 img { max-width: 680px; } 
 .col8 img { max-width: 780px; } 
 .col9 img { max-width: 880px; } 
 .col10 img { max-width: 980px; } 
@@ -133,13 +137,19 @@ nav a {
 input[type="file"] {
   display: inline-block; }
 
+input[id="food"] {
+  height: 50px;
+  width: 400px;
+  font-size: 24px;
+border-radius: 4px}
+
 input[type="submit"] {
   border: 0;
   width: 150px;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1;
   font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
   margin-top: 15px;
@@ -149,6 +159,7 @@ input[type="submit"] {
   text-decoration: none;
   background-color: #b32b2a;
   color: white;
+  height: 40px;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -169,8 +180,8 @@ label {
 
 
 .bgSizeCover {
-  height: 500px;
-  background-image: url("/assets/Hungarian_Soup.jpg");
+  height: 600px;
+  background-image: url("/assets/sushi.jpg");
   background-size: cover;
   min-width: 400px;
   background-repeat: no-repeat;
@@ -195,7 +206,7 @@ background-image: url("/assets/kneading-dough.jpg");
   color: white;
   margin-top: 100px; 
   font-size: 36px;
-  background-color: rgba(0, 0, 255, 0.5);
+  text-shadow: 1px 1px #000000;
   text-align: none; }
 
 

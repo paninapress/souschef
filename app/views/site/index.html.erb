@@ -1,8 +1,8 @@
 <div class="bgSizeCover container-fluid" data-stellar-background-ratio="0.5">
-  <p class="center" id="search_bar">Search for a recipe.</p>
+  <p class="center" id="search_bar">Let SousChef read the recipe while you cook.</p>
   <%= form_tag search_path, :class => "center" do %>
-    <%= label_tag(:food, "Search for:") %>
-    <%= text_field_tag(:food) %><br>
+    <%= label_tag() %>
+    <%= text_field_tag(:food, "Search recipes...") %><br>
     <%= submit_tag("Search")%>
   <% end %>
 </div>
@@ -24,7 +24,7 @@
         <br>
         <a href="<%= site_path(recipe)%>"><img src="http://www.epicurious.com<%= recipe.image %>"></a>
         <br>
-        <%= truncate(recipe.source, length: 100, omission: '... (continued)')%>
+        <%= truncate(recipe.source, length: 100, omission: '... (more)')%>
         <br>
       </div>
     </div>

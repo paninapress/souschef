@@ -7,7 +7,7 @@ class SiteController < ApplicationController
 
   def search
     agent = Mechanize.new
-    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=1&pageNumber=1&pageSize=10"
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=1&pageNumber=1&pageSize=12"
 
     page = agent.get(url)
     box_preparation = []
@@ -48,7 +48,7 @@ class SiteController < ApplicationController
       i +=1
     end
 
-    @recipes = SiteRecipe.last(10)
+    @recipes = SiteRecipe.last(12)
 
   end
 

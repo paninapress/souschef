@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Firstapp</title>
+    <title>SousChef</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <script type="text/javascript">
-      $(function(){
-        $.stellar({
-          horizontalScrolling: false,
-          verticalOffset: 40
-        });
-      });
-    </script>
   </head>
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <%= link_to "Recipes", root_path, id: "logo" %>
+    <%= link_to "SousChef", root_path, id: "logo" %>
     <div class="container-fluid">
       <ul>
         <% if signed_in? %>
@@ -31,8 +23,6 @@
     </div>
   </nav>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

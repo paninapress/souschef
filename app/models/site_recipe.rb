@@ -1,3 +1,3 @@
 class SiteRecipe < ActiveRecord::Base
-  paginates_per 12
+  paginates_per 10
 end

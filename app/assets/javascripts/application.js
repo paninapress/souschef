@@ -20,6 +20,7 @@
 //= require masonry/jquery.infinitescroll.min
 //= require masonry/modernizr-transitions
 //= require masonry/box-maker
+//= require app
 //= require jquery.stellar
 //= require jquery.stellar.min
 //= main.js

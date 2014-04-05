@@ -9,6 +9,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -46,11 +48,9 @@ gem 'nokogiri' #(1.6.1)
 
 gem 'mechanize' #(2.7.3)
 
+gem "dotenv", "~> 0.10.0"
+
 gem 'masonry-rails'
-
-gem 'better_errors'
-
-gem 'binding_of_caller'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -70,6 +70,7 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.15)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (0.10.0)
     erubis (2.7.0)
     excon (0.31.0)
     execjs (2.0.2)
@@ -250,6 +251,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   devise (~> 3.0.0.rc)
+  dotenv (~> 0.10.0)
   factory_girl_rails
   faker
   figaro

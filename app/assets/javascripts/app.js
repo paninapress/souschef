@@ -26,7 +26,7 @@
         canvases.height(content.height());
         content.css('left', (w - content.width()) / 2);
         content.css('top', ((h - content.height()) / 2) + 55);
-    }
+    };
     $(window).resize(resize);
     $(window).ready(function() {
         resize();

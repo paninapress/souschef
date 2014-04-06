@@ -21,9 +21,15 @@
 
     $('#up').on('motion', function() {
         console.log('touched up');
+        var x = $(window).scrollTop() + 30;
+        $(window).scrollTop(x);
+        
     });
 
     $('#down').on('motion', function() {
         console.log('touched down');
+        var x = $(window).scrollTop() - 30;
+        $(window).scrollTop(x);
+      
     });
 })();

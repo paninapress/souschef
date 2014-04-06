@@ -30,24 +30,6 @@
     $(window).resize(resize);
     $(window).ready(function() {
         resize();
-        $('#watchVideo').click(function() {
-            $(".browsers").fadeOut();
-            $(".browsersWithVideo").delay(300).fadeIn();
-            $("#video-demo").delay(300).fadeIn();
-            $("#video-demo")[0].play();
-            $('.backFromVideo').fadeIn();
-            event.stopPropagation();
-            return false;
-        });
-        $('.backFromVideo a').click(function() {
-            $(".browsersWithVideo").fadeOut();
-            $('.backFromVideo').fadeOut();
-            $(".browsers").fadeIn();
-            $("#video-demo")[0].pause();
-            $('#video-demo').fadeOut();
-            event.stopPropagation();
-            return false;
-        });
     });
 
     function hasGetUserMedia() {

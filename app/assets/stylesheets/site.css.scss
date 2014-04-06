@@ -1,4 +1,4 @@
-// Place all the styles related to the site controller here.
+// Place all the styles related to the MyRecipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -170,24 +170,35 @@ video {
 }
 
 /* Sample hotspots */
-#one {
+
+#play {
 	width: 10%;
 	height: 20%;
-	top: 50%;
-	left: 0;
+	top: 0%;
+	left: 0%;
 	margin-top: -10%;
 }
 
-#another {
-	width: 20%;
+#pause {
+	width: 10%;
 	height: 10%;
-	top: 0;
-	left: 50%;
+	top: 0%;
+	left: 100%;
 	margin-left: -10%;
 }
 
-.link {
-	font-size: 22px;
-	color: #fff;
-	padding: .5%;
+#up {
+	width: 10%;
+	height: 20%;
+	top: 0%;
+	left: 30%;
+	margin-top: -10%;
+}
+
+#down {
+	width: 10%;
+	height: 10%;
+	top: 0%;
+	left: 70%;
+	margin-left: -10%;
 }

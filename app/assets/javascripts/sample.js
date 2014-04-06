@@ -9,19 +9,21 @@
         }, 230);
     });
 
-    // example using a class
-    $('.link').on('motion', function(ev, data) {
-        console.log('motion detected on a link to', data.spot.el.href);
-    });
-
-    // examples for id usage
-    $('#one').on('motion', function() {
-        console.log('touched one');
+    $('#play').on('motion', function() {
+        console.log('touched play');
         document.getElementById('recipeclip').play();
     });
 
-    $('#another').on('motion', function() {
-        console.log('another');
+    $('#pause').on('motion', function() {
+        console.log('touched pause');
         document.getElementById('recipeclip').pause();
+    });
+
+    $('#up').on('motion', function() {
+        console.log('touched up');
+    });
+
+    $('#down').on('motion', function() {
+        console.log('touched down');
     });
 })();

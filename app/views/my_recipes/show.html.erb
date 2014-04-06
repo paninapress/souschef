@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="span12 center">
+    <div class="col-lg-6">
       <section>
         <p id="notice"><%= notice %></p>
         <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-          <div class="box col7">
+          <div class="box col6">
             <p>
               <strong>Title:</strong>
               <%= @myrecipes.title %>
@@ -18,10 +18,49 @@
             </p>
             <%= link_to 'Edit', edit_my_recipe_path(@myrecipes) %>
             <%= link_to 'Back', my_recipes_path %>
-            <audio id="recipespeech"src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>
+            <audio id="recipeclip"src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio>
           </section>
+        </div>
+        <div class="col-lg-4">
+          <div id="content">
+            <video id="webcam" autoplay width="480" height="480"></video>
+            <video id="video-demo" controls="controls" poster="/assets/jsdetection.jpg" width="640" height="480"
+               onclick="if(/Android/.test(navigator.userAgent))this.play();">
+              <source src="/assets/jsdetection.mp4" type="video/mp4"/>
+              <source src="/assets/jsdetection.ogg" type="video/ogg"/>
+              <source src="/assets/jsdetection.webm" type="video/webm"/>
+              Your browser doesn't support the HTML5 video tag.
+            </video>
+            <canvas id="canvas-source" width="480" height="480"></canvas>
+            <canvas id="canvas-highlights" width="480" height="480"></canvas>
+            <canvas id="canvas-blended" width="480" height="480"></canvas>
+            <div id="hotSpots">
+              <div id="play"></div>
+              <div id="pause"></div>
+              <div id="up"></div>
+              <div id="down"></div>
+            </div>
+          </div>
+          <div class="loading">Loading assets...</div>
+          <div class="backFromVideo"><a href="#">Back<a/></div>
+            <div class="introduction">
+              <p>This demo lets you control stuff using motion detection in your browser.</p>
+              <p>Please allow access to your camera and microphone above.</p>
+            </div>
+            <div class="browsers">
+              <p>This demo lets you control stuff using motion detection in your browser.</p>
+              <p>Install
+                <a href="https://www.google.com/landing/chrome/beta/" target="_blank">Chrome Beta</a>
+                to play, or
+                <a
+                href="#" id="watchVideo">watch this video</a>
+                to check it out first.</p>
+            </div>
+          </div>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+          <script src="/assets/app.js"></script>
+          <script src="/assets/sample.js"></script>
         </div>
       </div>
     </div>
   </div>
-</div>

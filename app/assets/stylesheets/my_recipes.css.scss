@@ -171,12 +171,18 @@ video {
 
 /* Sample hotspots */
 
-#play {
+#play{
 	width: 10%;
-	height: 20%;
+	height: 10%;
 	top: 0%;
 	left: 0%;
-	margin-top: -10%;
+}
+
+#playButton {
+	width: 50px;
+	height: 50px;
+	top: 0%;
+	left: 0%;
 }
 
 #pause {
@@ -187,13 +193,28 @@ video {
 	margin-left: -10%;
 }
 
+#pauseButton {
+	width: 50px;
+	height: 50px;
+	top: 0%;
+	left: 100%;
+	margin-left: -10%;
+}
+
 #up {
 	width: 10%;
-	height: 20%;
+	height: 10%;
 	top: 0%;
 	left: 30%;
-	margin-top: -10%;
 }
+
+#upButton {
+	width: 50px;
+	height: 50px;
+	top: 0%;
+	left: 30%;
+}
+
 
 #down {
 	width: 10%;
@@ -202,3 +223,11 @@ video {
 	left: 70%;
 	margin-left: -10%;
 }
+
+#downButton {
+	width: 50px;
+	height: 50px;
+	top: 0%;
+	left: 70%;
+}
+

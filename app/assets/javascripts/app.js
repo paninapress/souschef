@@ -1,5 +1,5 @@
 (function() {
-
+    //works in firefox and chrome since safari and ie do not support getUserMedia
     // config start
     var OUTLINES = false;
     // config end

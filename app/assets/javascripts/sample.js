@@ -10,24 +10,20 @@
     });
 
     $('#play').on('motion', function() {
-        console.log('touched play');
         document.getElementById('recipeclip').play();
     });
 
     $('#pause').on('motion', function() {
-        console.log('touched pause');
         document.getElementById('recipeclip').pause();
     });
 
     $('#up').on('motion', function() {
-        console.log('touched up');
         var x = $(window).scrollTop() + 30;
         $(window).scrollTop(x);
         
     });
 
     $('#down').on('motion', function() {
-        console.log('touched down');
         var x = $(window).scrollTop() - 30;
         $(window).scrollTop(x);
       

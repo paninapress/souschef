@@ -66,7 +66,15 @@
             video.src = window.webkitURL.createObjectURL(stream);
             initialize();
         }, webcamError);
-    } else {
+    } else if (navigator.mozGetUserMedia) {
+         navigator.mozGetUserMedia({
+            audio: true,
+            video: true
+        }, function(stream) {
+            video.mozSrcObject = stream;
+             initialize();
+        }, webcamError);
+    }    else {
         //video.src = 'somevideo.webm'; // fallback.
     }
 
@@ -120,7 +128,16 @@
     }
 
     function drawVideo() {
+        try {
         contextSource.drawImage(video, 0, 0, video.width, video.height);
+    }
+         catch (e) {
+         if (e.name == "NS_ERROR_NOT_AVAILABLE") {
+          setTimeout(drawVideo, 0);
+         } else {
+             throw e;
+     }
+    }
     }
 
     function blend() {

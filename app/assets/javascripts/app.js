@@ -75,7 +75,7 @@
              initialize();
         }, webcamError);
     }    else {
-        //video.src = 'somevideo.webm'; // fallback.
+        console.log("You need to use either chrome or firefox browser");//video.src = 'somevideo.webm'; // fallback.
     }
 
     var lastImageData;

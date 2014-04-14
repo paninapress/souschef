@@ -52,7 +52,7 @@
 
     if (navigator.getUserMedia) {
         navigator.getUserMedia({
-            audio: true,
+            audio: false,
             video: true
         }, function(stream) {
             video.src = stream;
@@ -60,7 +60,7 @@
         }, webcamError);
     } else if (navigator.webkitGetUserMedia) {
         navigator.webkitGetUserMedia({
-            audio: true,
+            audio: false,
             video: true
         }, function(stream) {
             video.src = window.webkitURL.createObjectURL(stream);
@@ -68,7 +68,7 @@
         }, webcamError);
     } else if (navigator.mozGetUserMedia) {
          navigator.mozGetUserMedia({
-            audio: true,
+            audio: false,
             video: true
         }, function(stream) {
             video.mozSrcObject = stream;

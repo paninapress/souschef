@@ -1,28 +1,5 @@
-== README
+SousChef
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this application out of my own need for having access to recipes in a hands-free way. Sometimes in the middle of cooking I would need to know the ingredients or the next step in the instructions, but greasy or floury hands are not ideal for laptops or tablets. I set out to make a recipe application that would read out all the text, and the audio player could be controlled using webcam gestures. SousChef is the product of that inspiration.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+SousChef is the first web application I created, and it was an independent project where I wore all the hats in full-stack development. SousChef was built using Ruby on Rails as the framework. It used Devise for User account management, and Heroku for deployment. The search feature is powered by web-scraping Epicurious using code written with Mechanize. User file upload is handedled by setting up Carrierwave with Amazon's S3 cloud storage. Text-to-speech is handled by a gem that uses Google Translation, and the webcam gesture feature was built using HTML5 and javascript. The styling was done with CSS,HTML, and Bootstrap.

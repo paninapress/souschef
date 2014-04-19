@@ -43,7 +43,7 @@ gem 'rmagick' #(2.13.2)
 
 gem 'mini_magick'  #(3.7.0)
 
-gem 'tts' #(0.4.1)
+gem 'tts', '0.4.1', :path => 'vendor/tts-0.4.1'
 
 gem 'nokogiri' #(1.6.1)
 
@@ -59,6 +59,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem "figaro"
+
+gem 'metric_fu'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

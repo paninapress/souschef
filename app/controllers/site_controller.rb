@@ -44,7 +44,7 @@ class SiteController < ApplicationController
 
     i = 0
     while i < temp.size
-      SiteRecipe.create(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[i]}", source: "#{box_source[i]}")
+      SiteRecipe.find_or_create_by(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[i]}", source: "#{box_source[i]}")
       i +=1
     end
 

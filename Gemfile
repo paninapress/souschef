@@ -12,6 +12,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'metric_fu'
 end
 
 group :test do
@@ -59,8 +60,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem "figaro"
-
-gem 'metric_fu'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

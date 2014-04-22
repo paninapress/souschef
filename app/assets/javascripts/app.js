@@ -10,7 +10,7 @@
     var video = $('#webcam')[0];
     var canvases = $('canvas');
 
-    var resize = function() {
+    var resize = function() { //function to resize the canvas and video container on window resize. 
         var ratio = video.width / video.height;
         var w = $(this).width();
         var h = $(this).height() - 110;
@@ -32,13 +32,13 @@
         resize();
     });
 
-    function hasGetUserMedia() {
+    function hasGetUserMedia() { //checking if browser supports getUserMedia.
         // Note: Opera builds are unprefixed.
         return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
             navigator.mozGetUserMedia || navigator.msGetUserMedia);
     }
 
-    if (hasGetUserMedia()) {
+    if (hasGetUserMedia()) { 
         $('.introduction').fadeIn();
         $('.allow').fadeIn();
     } else {
@@ -46,15 +46,15 @@
         return;
     }
 
-    var webcamError = function(e) {
+    var webcamError = function(e) { //Alert for error event.
         alert('Webcam error!', e);
     };
 
-    if (navigator.getUserMedia) {
+    if (navigator.getUserMedia) { 
         navigator.getUserMedia({
-            audio: false,
+            audio: false, //turn off audio since it causes microphone feedback from recipe audio player.
             video: true
-        }, function(stream) {
+        }, function(stream) { // video source is stream from user's webcam.
             video.src = stream;
             initialize();
         }, webcamError);
@@ -91,14 +91,14 @@
 
     var c = 5;
 
-    function initialize() {
+    function initialize() {//getting ready to display video from webcam.
         $('.introduction').fadeOut();
         $('.allow').fadeOut();
         $('.loading').delay(300).fadeIn();
         start();
     }
 
-    function start() {
+    function start() {//starts displaying video from webcam.
         $('.loading').fadeOut();
         $('#hotSpots').fadeIn();
         $(".instructions").delay(600).fadeIn();
@@ -106,10 +106,10 @@
         $(canvasBlended).delay(600).fadeIn();
         $('#canvas-highlights').delay(600).fadeIn();
         $(window).trigger('start');
-        update();
+        update(); //
     }
 
-    window.requestAnimFrame = (function() {
+    window.requestAnimFrame = (function() { //getting frames from the video
         return window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.mozRequestAnimationFrame ||
@@ -132,7 +132,7 @@
         contextSource.drawImage(video, 0, 0, video.width, video.height);
     }
          catch (e) {
-         if (e.name == "NS_ERROR_NOT_AVAILABLE") {
+         if (e.name == "NS_ERROR_NOT_AVAILABLE") { //handles firefox drawVideo error.
           setTimeout(drawVideo, 0);
          } else {
              throw e;
@@ -242,6 +242,7 @@
             ctx.strokeStyle = 'rgba(0,255,0,0.6)';
             ctx.lineWidth = 1;
             ctx.strokeRect(o.x, o.y, o.width, o.height);
+            //Creating an overlay of the hotspot region when motion is detected over it.
         });
     }
 })();

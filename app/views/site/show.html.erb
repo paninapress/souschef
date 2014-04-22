@@ -20,21 +20,23 @@
             <%= @preparation %>
           </p>
           <%= link_to 'Back', root_path %>
-          <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio>
+          <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
         </section>
       </div>
       <div class="col-lg-4">
         <div id="content">
-          <video id="webcam" autoplay width="480" height="480">
+          <video id="webcam" autoplay width="480" height="480"><!-- Where video will be displayed-->
           </video>
           <canvas id="canvas-source" width="480" height="480"></canvas>
           <canvas id="canvas-highlights" width="480" height="480"></canvas>
           <canvas id="canvas-blended" width="480" height="480"></canvas>
+          <!-- The different canvas layers to detect motion based on pixel changes from each frame of video.-->
           <div id="hotSpots">
             <div id="play"><img src="/assets/playbutton.png" id="playButton" /></div>
             <div id="pause"><img src="/assets/pausebutton.png" id="pauseButton" /></div>
             <div id="up"><img src="/assets/downbutton.png" id="upButton" /></div>
             <div id="down"><img src="/assets/upbutton.png" id="downButton" /></div>
+            <!-- Events are triggered if motion is detected over these hotspot regions.-->
           </div>
         </div>
         <div class="loading">Loading assets...</div>

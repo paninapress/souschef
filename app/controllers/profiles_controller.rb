@@ -4,8 +4,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    if @user = User.where(id: params[:id]).first
-      @myrecipes = @user.my_recipes.page(params[:page])
+    if @user = User.where(id: params[:id]).first # returns User object. Returns nil when not found.
+      @myrecipes = @user.my_recipes.page(params[:page]) #to display user's recipe.
     else
       flash[:alert] = 'Profile not found.'
       redirect_to profiles_path

@@ -23,11 +23,16 @@ class MyRecipesController < ApplicationController
     AWS::S3::Base.establish_connection!(
       :access_key_id     => ENV['S3_KEY'],
     :secret_access_key => ENV['S3_SECRET'])
+    #Establish connection to Amazon S3 account.
     bucket = AWS::S3::Bucket.find("tennis-testing")
+    #Find S3 bucket to store audio file.
     @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+    #Create the audio file of the recipe's cooking information and set language and file path.
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+    #Add the local path of audio file to the recipe object.
     @title = @myrecipes.title.gsub(/\s/,"+")+@username
     AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
+    #Upload the recipe audio file to S3.
     File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
   end
 
@@ -58,15 +63,20 @@ class MyRecipesController < ApplicationController
     AWS::S3::Base.establish_connection!(
       :access_key_id     => ENV['S3_KEY'],
     :secret_access_key => ENV['S3_SECRET'])
+    #Establish connection to S3.
     bucket = AWS::S3::Bucket.find("tennis-testing")
     @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
     @title = @myrecipes.title.gsub(/\s/,"+")+@username
     AWS::S3::S3Object.delete(@myrecipes.speechlink, 'tennis-testing')
+    #Delete the old audio file from S3 bucket.
     if @myrecipes.update(my_recipes_params)
       @file = @myrecipes.description.to_file "en", "app/assets/audios/#{@myrecipes.title+@username}.mp3"
+      #Create a new audio file from updated recipe information.
       @myrecipes.speechlink = "app/assets/audios/#{@myrecipes.title+@username}.mp3"
       AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
+      #Upload the new audio file to S3.
       File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
+      #Delete the local audio file.
       redirect_to @myrecipes, notice: 'Recipe was successfully updated.'
     else
       render action: 'edit'

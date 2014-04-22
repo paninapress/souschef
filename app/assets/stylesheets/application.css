@@ -71,7 +71,7 @@ html {
   overflow-y: scroll; }
 
 nav ul {
-  display: block; }
+  display: flex; }
 nav li {
   display: inline-block;
   font: bold 11px Arial;
@@ -149,7 +149,7 @@ input[type="submit"] {
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1;
   font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
   margin-top: 15px;
@@ -168,8 +168,25 @@ input[type="submit"] {
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out; }
 
+#my_recipe_description {
+  width: 350px;
+  height: 200px;
+}
+
+#my_recipe_title{
+   width: 350px;
+}
+
+#my_recipe_photo {
+  margin-left: 125px;
+}
+
 label {
   margin-top: 10px; }
+
+.icon-bar {
+  background-color: white;
+}
 
 .form_shell {
   width: 410px;

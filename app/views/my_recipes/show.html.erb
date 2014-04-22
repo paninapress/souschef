@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:50px;">
   <div class="row">
     <div class="col-lg-6">
       <section>
@@ -28,15 +28,13 @@
           <canvas id="canvas-source" width="480" height="480"></canvas>
           <canvas id="canvas-highlights" width="480" height="480"></canvas>
           <canvas id="canvas-blended" width="480" height="480"></canvas>
-    <!-- The different canvas layers to detect motion based on pixel changes from each frame of video.-->
-
+          <!-- The different canvas layers to detect motion based on pixel changes from each frame of video.-->
           <div id="hotSpots">
             <div id="play"><img src="/assets/playbutton.png" id="playButton" /></div>
             <div id="pause"><img src="/assets/pausebutton.png" id="pauseButton" /></div>
             <div id="up"><img src="/assets/downbutton.png" id="upButton" /></div>
             <div id="down"><img src="/assets/upbutton.png" id="downButton" /></div>
-        <!-- Events are triggered if motion is detected over these hotspot regions.-->
-
+            <!-- Events are triggered if motion is detected over these hotspot regions.-->
           </div>
         </div>
         <div class="loading">Loading assets...</div>

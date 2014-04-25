@@ -16,17 +16,44 @@
 
   </div>
 </div>
-<div class="panel3" data-stellar-background-ratio="0.4">
+
+<div class="panel2a">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col-md-4">
+        <div class="circle center-block"></div>
+        <img class="center-block" id="speaker" src="/assets/speaker.png">
+        <h2>HI HI HI</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+      </div>
+      <div class="col-md-4">
+        <div class="circle center-block "></div>
+        <img class="center-block" id="webcam" src="/assets/webcam.png">
+        <h2>HI HI HI</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="circle center-block"></div>
+        <img class="center-block" id="cooking" src="/assets/cooking.png">
+        <h2>HI HI HI</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel3 center" data-stellar-background-ratio="0.4">
   <% @siterecipes.each do |recipe| %>
     <div id="masonry-container">
+      <a href="<%= site_path(recipe)%>">
       <div class="box col3">
         <%= recipe.title %>
         <br>
-        <a href="<%= site_path(recipe)%>"><img src="http://www.epicurious.com<%= recipe.image %>"></a>
+        <img src="http://www.epicurious.com<%= recipe.image %>">
         <br>
         <%= truncate(recipe.source, length: 100, omission: '... (more)')%>
         <br>
       </div>
+      </a>
     </div>
   <% end %>
 </div>

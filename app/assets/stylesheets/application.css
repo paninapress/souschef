@@ -197,7 +197,7 @@ label {
 
 
 .bgSizeCover {
-  height: 600px;
+  height: 650px;
   background-image: url("/assets/sushi.jpg");
   background-size: cover;
   min-width: 400px;
@@ -218,6 +218,32 @@ background-image: url("/assets/kneading-dough.jpg");
     font-size: 36px;
   }
 
+#panel2 {
+  color: ghostwhite;
+  margin-top: 20%;
+  background:rgba(0,0,0,0.3);
+}  
+
+.panel2a{
+  width: 100%;
+    margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  margin-bottom: 55px;
+  background-color: burlywood;
+
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: wheat;
+  margin-top: 20%;
+}
 
 #search_bar {
   color: white;
@@ -226,20 +252,47 @@ background-image: url("/assets/kneading-dough.jpg");
   text-shadow: 1px 1px #000000;
   text-align: none; }
 
+#speaker {
+  position: absolute;
+  top: 80px; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  left: 50px;
+}
 
+#webcam {
+  position: absolute;
+  top: 50px; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  left: 0;
+  height: 225px;
+}
 
-.panel2 {
-  height: 600px;
-background-image: url("/assets/kneading-dough.jpg");
-  background-size: cover;
-  min-width: 400px;
-  background-repeat: no-repeat;
-
+#cooking {
+  position: absolute;
+  top: 80px; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  left: 0;
+  height: 170px;
 }
 
  h1 {
     font-size: 36px;
   }
 
-
-
+@media (max-width: 950px) {
+#speaker {
+  top: 10px;
+  }
+  #cooking {
+  top: 10px;
+  }
+  #webcam {
+  top: -20px;
+  }
+}

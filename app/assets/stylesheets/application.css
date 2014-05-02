@@ -79,7 +79,6 @@ nav li {
   margin-right: 10px;
   padding: 2px 6px 2px 6px; }
 nav a {
-  width: 80px;
   font-size: 16px;
   display: inline-block;
   text-align: right;
@@ -139,7 +138,7 @@ input[type="file"] {
 
 input[id="food"] {
   height: 50px;
-  width: 400px;
+  width: 380px;
   font-size: 24px;
 border-radius: 4px}
 
@@ -247,9 +246,9 @@ background-image: url("/assets/kneading-dough.jpg");
 
 #search_bar {
   color: white;
-  margin-top: 100px; 
+  margin-top: 260px; 
   font-size: 36px;
-  text-shadow: 1px 1px #000000;
+  text-shadow:   #000 0 0 7px,rgba(0,0,0,1) 0 0 20px;
   text-align: none; }
 
 #speaker {

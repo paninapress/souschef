@@ -10,13 +10,11 @@
   <div class="container-fluid">
     <span>
       <h1 id="panel2" class="center">Focus more on cooking by not having to look at a recipe. No more
-      	swiping your smartphone with a greasy hand. No more spilled drinks on your Mac. Now you
-      	can enjoy listening to your favorite recipe while you cook.</h1>
+        swiping your smartphone with a greasy hand. No more spilled drinks on your Mac. Now you
+        can enjoy listening to your favorite recipe while you cook.</h1>
     </span>
-
   </div>
 </div>
-
 <div class="panel2a">
   <div class="container">
     <div class="row-fluid">
@@ -24,7 +22,8 @@
         <div class="circle center-block"></div>
         <img class="center-block" id="speaker" src="/assets/speaker.png">
         <h2>HI HI HI</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
       </div>
       <div class="col-md-4">
         <div class="circle center-block "></div>
@@ -36,7 +35,8 @@
         <div class="circle center-block"></div>
         <img class="center-block" id="cooking" src="/assets/cooking.png">
         <h2>HI HI HI</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
       </div>
     </div>
   </div>
@@ -45,17 +45,11 @@
   <% @siterecipes.each do |recipe| %>
     <div id="masonry-container">
       <a href="<%= site_path(recipe)%>">
-      <div class="box col3">
-        <%= recipe.title %>
-        <br>
-        <img src="http://www.epicurious.com<%= recipe.image %>">
-        <br>
-        <%= truncate(recipe.source, length: 100, omission: '... (more)')%>
-        <br>
-      </div>
+        <div class="box col3">
+          <img src="http://www.epicurious.com<%= recipe.image %>">
+          <%= recipe.title %>
+        </div>
       </a>
     </div>
   <% end %>
 </div>
-
-

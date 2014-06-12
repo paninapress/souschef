@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require bootstrap
- *= require 'masonry/basic'
  *= require 'masonry/centered'
  *= require 'masonry/fluid'
  *= require 'masonry/gutters'
@@ -20,14 +19,10 @@
  *= require_tree .
  */
 
-.navbar {
-  margin-bottom: 0px;
-}
-
 #masonry-container {
-  background: #FFF;
-  padding: 25px;
   margin-bottom: 20px;
+  padding-top: 50px;
+  margin-right: 2%;
   border-radius: 5px;
   display: inline-block;
   clear: both;
@@ -88,10 +83,7 @@ nav a {
     color: #b32b2a;
     text-decoration: none; }
 
-.navbar {
-  background-color: #603913;
-  margin: 0px;
-  padding: 0px; }
+.navbar-nav>li>a
 
 .navbar-default {
   background-color: #603913;
@@ -140,6 +132,7 @@ input[id="food"] {
   height: 50px;
   width: 380px;
   font-size: 24px;
+  background-color: currentcolor;
 border-radius: 4px}
 
 input[type="submit"] {
@@ -156,7 +149,7 @@ input[type="submit"] {
   position: relative;
   text-align: center;
   text-decoration: none;
-  background-color: #b32b2a;
+  background-color: tomato;
   color: white;
   height: 40px;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
@@ -197,7 +190,7 @@ label {
 
 .bgSizeCover {
   height: 650px;
-  background-image: url("/assets/sushi.jpg");
+  background-image: url("/assets/landing.jpg");
   background-size: cover;
   min-width: 400px;
   background-repeat: no-repeat;
@@ -211,6 +204,12 @@ background-image: url("/assets/kneading-dough.jpg");
   min-width: 400px;
   background-repeat: no-repeat;
 
+}
+
+.panel3{
+  background-image: url("/assets/Vintage-Retro-Paper-Background013.png");
+  background-size: cover;
+  padding-top-top: 50px;
 }
 
  h1 {
@@ -231,7 +230,6 @@ background-image: url("/assets/kneading-dough.jpg");
   padding-right: 15px;
   padding-top: 35px;
   padding-bottom: 50px;
-  margin-bottom: 55px;
   background-color: burlywood;
 
 }

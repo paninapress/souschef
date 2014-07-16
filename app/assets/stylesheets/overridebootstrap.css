@@ -5,7 +5,10 @@ nav li {
   font: bold 11px Arial;
   text-decoration: none;
   margin-right: 10px;
-  padding: 2px 6px 2px 6px; }
+  padding: 2px 6px 2px 6px;
+  border-right: 1px solid #fff;
+    }
+
 nav a {
   font-size: 16px;
   display: inline-block;
@@ -17,11 +20,16 @@ nav a:hover {
     text-decoration: none; }
 
 .navbar-nav>li>a {
-  color: blue;
+  color: white;
+  top: 0px;
+}
+
+.navbar-nav>li>a {
+  
 }
 
 .navbar-nav>li>a:hover {
-  color: green;
+  color: tomato;
   background-color: none;
 }
 
@@ -58,3 +66,4 @@ nav a:hover {
   -ms-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out; }
+

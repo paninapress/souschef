@@ -64,66 +64,13 @@
 
 html {
   overflow-y: scroll; }
-
-nav ul {
-  display: flex; }
-nav li {
-  display: inline-block;
-  font: bold 11px Arial;
-  text-decoration: none;
-  margin-right: 10px;
-  padding: 2px 6px 2px 6px; }
-nav a {
-  font-size: 16px;
-  display: inline-block;
-  text-align: right;
-  float: right;
-  color: white; }
-  nav a:hover {
-    color: #b32b2a;
-    text-decoration: none; }
-
-.navbar-nav>li>a
-
-.navbar-default {
-  background-color: #603913;
-  margin: 0px; }
-
+  
 #logo {
   text-align: left;
   float: left;
   font: bold 32px Arial;
   font-color: #f6a54b; }
 
-.center {
-  text-align: center; }
-
-.center form {
-  display: block; }
-
-.form_button {
-  border: 0;
-  width: 200px;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1;
-  font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
-  margin-top: 15px;
-  padding: 9px 18px 7px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  background-color: #f6a54b;
-  color: #b32b2a;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -ms-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out; }
 
 input[type="file"] {
   display: inline-block; }

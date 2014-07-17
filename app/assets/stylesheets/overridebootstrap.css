@@ -6,7 +6,7 @@ nav li {
   text-decoration: none;
   margin-right: 10px;
   padding: 2px 6px 2px 6px;
-  border-right: 1px solid #fff;
+  border-right: 1px solid tomato;
     }
 
 nav a {
@@ -67,3 +67,9 @@ nav a:hover {
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out; }
 
+a {
+  color: white;
+}
+
+a:hover{
+  color: tomato;

@@ -129,11 +129,20 @@ label {
 
 .form_shell {
   width: 410px;
-  min-height: 465px;
-  margin: 50px auto 10px;
+  min-height: 555px;
+  margin: 100px auto 10px;
   padding: 30px 15px 15px;
-  background-color: #886547; }
+  background-color: transparent; 
+  color: white;
+  background-image: url('/assets/formframe.png');
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
 
+.form-title {
+
+}
 
 .bgSizeCover {
   height: 650px;
@@ -157,6 +166,16 @@ background-image: url("/assets/kneading-dough.jpg");
   background-image: url("/assets/Vintage-Retro-Paper-Background013.png");
   background-size: cover;
   padding-top-top: 50px;
+}
+
+
+.form-bg {
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/assets/chalkbg.jpg");
+
 }
 
  h1 {

@@ -6,7 +6,12 @@ class SiteController < ApplicationController
 
   def search
     agent = Mechanize.new
+    
     url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=3&pageNumber=1&pageSize=12"
+    url_params = params[:food]
+    if url_params == nil
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:foodnav]}&type=simple&sort=3&pageNumber=1&pageSize=12"
+    end
     #Epicurus search url is passed the user's search input.
     page = agent.get(url)
     #mechanize is getting data from the url.
@@ -60,7 +65,6 @@ class SiteController < ApplicationController
     end
 
     @recipes = SiteRecipe.last(12)
-
   end
 
 

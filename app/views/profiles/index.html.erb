@@ -12,7 +12,7 @@
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav pull-right">
           <% if signed_in? %>
             <li><%= link_to "My profile", my_recipes_path %></li>
             <li><%= link_to 'New Recipe', new_my_recipe_path%></li>
@@ -26,7 +26,7 @@
               <% end %>
               <%= form_tag search_path, :class => "center" do %>
                     <%= label_tag() %>
-                    <%= text_field_tag(:food, "Search recipes...") %><br>
+                    <%= text_field_tag(:foodnav, "Search recipes...") %><br>
                     <%= submit_tag("Search")%>
                   <% end %>
             </ul>

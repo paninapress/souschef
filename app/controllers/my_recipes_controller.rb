@@ -20,6 +20,9 @@ class MyRecipesController < ApplicationController
   def show
     @username = current_user.username
     @myrecipes = MyRecipe.find(params[:id])
+    #@ingredients = @myrecipes.ingredients
+    #@preparation = @myrecipes.preparation
+    #@description =@ingredients + @preparation
     AWS::S3::Base.establish_connection!(
       :access_key_id     => ENV['S3_KEY'],
     :secret_access_key => ENV['S3_SECRET'])

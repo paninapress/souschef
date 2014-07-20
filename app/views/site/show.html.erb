@@ -35,17 +35,21 @@
       </nav>
 <div class="container-fluid">
   <div class="row">
+     <div class="col-lg-2">
+      <h1>whw whowh 
+        whowhowh wohwow hwo</h1> 
+     </div>
     <div class="col-lg-6">
       <section>
         <p id="notice"><%= notice %></p>
-        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
           <div class="box col6">
             <p>
               <strong>Title:</strong>
               <%= @recipes.title %>
             </p>
             <p>
-              <img src="http://www.epicurious.com<%= @recipes.image %>">
+              <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative; top:-32px;">
             </p>
             <p>
               <strong>Ingredients:</strong>
@@ -59,7 +63,8 @@
         </section>
       </div>
       <div class="col-lg-4">
-        <div id="content">
+        <div id="video-instruction"><h1>whowh w whowh wo hwohwo  whowh owho</h1></div>
+        <div id="content" style="left:560px; width:450px; height:250px;">
           <video id="webcam" autoplay width="480" height="480"><!-- Where video will be displayed-->
           </video>
           <canvas id="canvas-source" width="480" height="480"></canvas>

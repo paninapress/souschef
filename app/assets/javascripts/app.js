@@ -12,7 +12,7 @@
 
     var resize = function() { //function to resize the canvas and video container on window resize. 
         var ratio = video.width / video.height;
-        var w = $(this).width();
+        var w = $(this).width -250();
         var h = $(this).height() - 110;
 
         if (content.width() > w) {
@@ -24,8 +24,8 @@
         }
         canvases.width(content.width());
         canvases.height(content.height());
-        content.css('left', (w - content.width()) / 2);
-        content.css('top', ((h - content.height()) / 2) + 55);
+        content.css('left', ((h - content.width()) ) + 505);
+        content.css('top', ((h - content.height()) ) + 55);
     };
     $(window).resize(resize);
     $(window).ready(function() {

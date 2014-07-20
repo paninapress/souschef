@@ -31,13 +31,18 @@ video {
 
 #content {
 	position: fixed;
-	left: 0;
+	left: 300;
 	right: 0;
-	top: 0;
+	width: 450px;
+	top: 355px;
 	bottom: 0;
 	overflow: hidden;
 	z-index: 0;
-	margin-left:20%;
+}
+
+#video-instruction {
+	position: fixed;
+	top:80px;
 }
 
 .loading {

@@ -83,6 +83,14 @@ input[id="food"] {
 border-radius: 4px;
 }
 
+input[id="user_email"] {
+  background-color: tomato;
+}
+
+input[id="user_password"] {
+  background-color: tomato;
+}
+
 
 
 input[id="foodnav"] {
@@ -163,6 +171,11 @@ label {
 
 .form-title {
 
+}
+
+#new_recipe_form {
+  color: black;
+  background-image: none;  
 }
 
 .bgSizeCover {
@@ -446,4 +459,10 @@ background-size: cover;
 #signup-button {
   margin-left: 30%;
  }
+
+.form_shell {
+    position: absolute;
+    left: -6px;
+  }
+
 }

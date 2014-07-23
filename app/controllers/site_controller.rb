@@ -6,12 +6,11 @@ class SiteController < ApplicationController
 
   def search
     agent = Mechanize.new
-    #url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=3&pageNumber=1&pageSize=12"
-    url = "http://allrecipes.com/search/default.aspx?qt=k&wt=#{params[:food]}"
+    
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:food]}&type=simple&sort=3&pageNumber=1&pageSize=12"
     url_params = params[:food]
     if url_params == nil
-    #url = "http://www.epicurious.com/tools/searchresults?search=#{params[:foodnav]}&type=simple&sort=3&pageNumber=1&pageSize=12"
-    url = "http://allrecipes.com/search/default.aspx?qt=k&wt=#{params[:foodnav]}" 
+    url = "http://www.epicurious.com/tools/searchresults?search=#{params[:foodnav]}&type=simple&sort=3&pageNumber=1&pageSize=12"
     end
     #Epicurus search url is passed the user's search input.
     page = agent.get(url)
@@ -20,23 +19,23 @@ class SiteController < ApplicationController
     box_ingredient =[]
     box_image = []
     box_source = []
+    box_nutrition = []
     #creating arrays to store the desired information from the search page for instantiating Site Recipes.
 
 
     temp = []
     #temporary array to hold links to every recipe found in the Epicurus search result.
-    #page.search("a.recipeLnk").each do |link|
-      page.search("a.title").each do |link|
+    page.search("a.recipeLnk").each do |link|
       temp << link.attr('href')
       #Add each recipe's link to the temporary array so mechanize can visit those links.
     end
 
     box_title = []
-    #page.search("a.recipeLnk").each do |link|
-       page.search("a.title").each do |link|
+    page.search("a.recipeLnk").each do |link|
       box_title << link.text
       #Add the recipe title to the array.
     end
+
     i = 0
     while i < temp.size
       link = page.link_with(href: temp[i]).click
@@ -44,13 +43,23 @@ class SiteController < ApplicationController
       box_preparation << link.parser.css("#preparation").text
       box_ingredient << link.parser.css("#ingredients").text
       box_source << link.parser.css(".source").text
+      link.search(".nutriData").each do |nutrition|
+        box_nutrition << nutrition.text
+            i = 0
+            while i < box_nutrition.size
+              box_nutrition[i].sub!(/\n/,"")
+              if box_nutrition[i] == nil
+                box_nutrition = "N/A"
+              end
+              i +=1
+            end
+          end
+          binding.pry
       photo =  link.parser.css('img.photo')
       #mechanize parses the data from the page and gets the text value of the
       #desired css element. The data gets stored in the respective arrays.
       if photo.empty?
-        #box_image << '/images/articlesguides/howtocook/cookbooks/best-cookbooks-2012_612.jpg'
-        box_image << "http://images.media-allrecipes.com/userphotos/250x250/00/97/39/973972.jpg"
-
+        box_image << '/images/articlesguides/howtocook/cookbooks/best-cookbooks-2012_612.jpg'
         #if the recipe page does not have an image, use some other Epicurus image.
       else
         box_image << photo.attr('src').text

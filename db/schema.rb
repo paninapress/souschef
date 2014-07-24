@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206202210) do
+ActiveRecord::Schema.define(version: 20140724030706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 20140206202210) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "photo"
+    t.text     "servings"
+    t.text     "time"
+    t.text     "calories"
+    t.text     "fat"
+    t.text     "saturated"
+    t.text     "poly"
+    t.text     "mono"
+    t.text     "carb"
+    t.text     "protein"
+    t.text     "sodium"
+    t.text     "fiber"
+    t.text     "cholesterol"
   end
 
   create_table "site_recipes", force: true do |t|
@@ -34,6 +46,18 @@ ActiveRecord::Schema.define(version: 20140206202210) do
     t.text     "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "servings"
+    t.text     "time"
+    t.text     "calories"
+    t.text     "fat"
+    t.text     "saturated"
+    t.text     "poly"
+    t.text     "mono"
+    t.text     "carb"
+    t.text     "protein"
+    t.text     "sodium"
+    t.text     "fiber"
+    t.text     "cholesterol"
   end
 
   create_table "users", force: true do |t|

@@ -20,6 +20,21 @@ class SiteController < ApplicationController
     box_image = []
     box_source = []
     box_nutrition = []
+    box_summary = []
+    box_calorie = []
+    box_serving = []
+    box_total_time =[]
+    box_active_time = []
+    box_fat = []
+    box_poly= []
+    box_mono = []
+    box_saturated = []
+    box_protein = []
+    box_carb= []
+    box_sodium = []
+    box_fiber = []
+    box_cholesterol = []
+
     #creating arrays to store the desired information from the search page for instantiating Site Recipes.
 
 
@@ -43,18 +58,35 @@ class SiteController < ApplicationController
       box_preparation << link.parser.css("#preparation").text
       box_ingredient << link.parser.css("#ingredients").text
       box_source << link.parser.css(".source").text
-      link.search(".nutriData").each do |nutrition|
-        box_nutrition << nutrition.text
-            i = 0
-            while i < box_nutrition.size
-              box_nutrition[i].sub!(/\n/,"")
-              if box_nutrition[i] == nil
-                box_nutrition = "N/A"
-              end
-              i +=1
+        link.search(".nutriData").each do |nutrition|
+          box_nutrition << nutrition.text
+        end
+            j = 0
+            while j < box_nutrition.size
+              box_nutrition[j].sub!(/\n/,"")
+              if box_nutrition[j] == nil
+                box_nutrition[j] = "N/A"
+                end
+               j +=1
             end
-          end
-          binding.pry
+         
+       box_fat << box_nutrition[0]
+    box_poly << box_nutrition[1]
+    box_mono << box_nutrition[2]
+    box_saturated << box_nutrition[3]
+    box_protein << box_nutrition[4]
+    box_carb << box_nutrition[5]
+    box_sodium << box_nutrition[6]
+    box_fiber << box_nutrition[7]
+    box_cholesterol << box_nutrition[8]
+
+    box_serving_temp = link.parser.css("p.summary_data")[0].text
+    box_serving_temp = box_serving_temp.strip
+    box_serving_temp =  box_serving_temp.gsub("\n","")
+    box_serving << box_serving_temp.gsub("yieldMakes","")
+    box_active_time = "N/A"
+    box_total_time = "N/A"
+
       photo =  link.parser.css('img.photo')
       #mechanize parses the data from the page and gets the text value of the
       #desired css element. The data gets stored in the respective arrays.
@@ -64,6 +96,7 @@ class SiteController < ApplicationController
       else
         box_image << photo.attr('src').text
       end
+      binding.pry
       agent.back
       #Mechanize goes back to the search result page, and then can
       #click on the next link in the temporary array.

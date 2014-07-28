@@ -1,4 +1,6 @@
 class SiteController < ApplicationController
+  include ActionView::Helpers::TextHelper
+
   def index
     @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
     #display some recipes that were created by former search results.
@@ -86,7 +88,7 @@ class SiteController < ApplicationController
     box_serving << box_serving_temp.gsub("yieldMakes","")
     box_active_time = "N/A"
     box_total_time = "N/A"
-
+    binding.pry
       photo =  link.parser.css('img.photo')
       #mechanize parses the data from the page and gets the text value of the
       #desired css element. The data gets stored in the respective arrays.
@@ -96,7 +98,6 @@ class SiteController < ApplicationController
       else
         box_image << photo.attr('src').text
       end
-      binding.pry
       agent.back
       #Mechanize goes back to the search result page, and then can
       #click on the next link in the temporary array.

@@ -411,7 +411,7 @@ h1 {
         top: -20px;
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 450px) {
     #signup-button {
         margin-left: 30%;
     }
@@ -419,4 +419,35 @@ h1 {
         position: absolute;
         left: -6px;
     }
+
+    #search_bar {
+    margin-top: 140px;
+    font-size: 36px;
+    width: 310px;
+}
+
+input[id="food"] {
+    height: 50px;
+    width: 300px;
+    font-size: 24px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.search_button {
+    left:30%;
+}
+
+#signup-panel {
+    height: 700px;
+    width: 100%;
+    background-image: url("/assets/chalkbg.jpg");
+    background-size: cover;
+}
+
+#signup-button {
+    margin-left: 25%;
+
+}
+
 }

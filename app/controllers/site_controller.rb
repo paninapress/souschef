@@ -19,6 +19,7 @@ class SiteController < ApplicationController
     #mechanize is getting data from the url.
     box_preparation = []
     box_ingredient =[]
+    box_ingredient_temp =[]
     box_image = []
     box_source = []
     box_nutrition = []
@@ -58,7 +59,13 @@ class SiteController < ApplicationController
       link = page.link_with(href: temp[i]).click
       #mechanize will visit each link that was stored in the temporary array.
       box_preparation << link.parser.css("#preparation").text
-      box_ingredient << link.parser.css("#ingredients").text
+
+      link.search(".ingredient").each do |food|
+        box_ingredient_temp << food.text
+      end
+      box_ingredient_temp = box_ingredient_temp.join(",")
+      box_ingredient << box_ingredient_temp.gsub(",","\n")
+      
       box_source << link.parser.css(".source").text
         link.search(".nutriData").each do |nutrition|
           box_nutrition << nutrition.text
@@ -71,16 +78,17 @@ class SiteController < ApplicationController
                 end
                j +=1
             end
-         
-       box_fat << box_nutrition[0]
-    box_poly << box_nutrition[1]
-    box_mono << box_nutrition[2]
-    box_saturated << box_nutrition[3]
-    box_protein << box_nutrition[4]
-    box_carb << box_nutrition[5]
-    box_sodium << box_nutrition[6]
+
+       box_calorie << box_nutrition[0]
+       box_carb << box_nutrition[1]
+    box_fat << box_nutrition[2]
+    box_protein << box_nutrition[3]
+    box_saturated << box_nutrition[4]
+    box_sodium << box_nutrition[5]
+    box_poly << box_nutrition[6]
     box_fiber << box_nutrition[7]
-    box_cholesterol << box_nutrition[8]
+    box_mono << box_nutrition[8]
+    box_cholesterol << box_nutrition[9]
 
     box_serving_temp = link.parser.css("p.summary_data")[0].text
     box_serving_temp = box_serving_temp.strip
@@ -88,7 +96,6 @@ class SiteController < ApplicationController
     box_serving << box_serving_temp.gsub("yieldMakes","")
     box_active_time = "N/A"
     box_total_time = "N/A"
-    binding.pry
       photo =  link.parser.css('img.photo')
       #mechanize parses the data from the page and gets the text value of the
       #desired css element. The data gets stored in the respective arrays.
@@ -98,15 +105,30 @@ class SiteController < ApplicationController
       else
         box_image << photo.attr('src').text
       end
+      box_ingredient_temp = []
+
       agent.back
       #Mechanize goes back to the search result page, and then can
       #click on the next link in the temporary array.
       i +=1
     end
-
     i = 0
     while i < temp.size
-      SiteRecipe.find_or_create_by(title: "#{box_title[i]}", ingredients: "#{box_ingredient[i]}", preparation: "#{box_preparation[i]}", image: "#{box_image[i]}", source: "#{box_source[i]}")
+      SiteRecipe.find_or_create_by(title: "#{box_title[i]}", 
+        ingredients: "#{box_ingredient[i]}", 
+        preparation: "#{box_preparation[i]}", 
+        image: "#{box_image[i]}", 
+        source: "#{box_source[i]}", 
+        calories: "#{box_calorie[i]}", 
+        fat: "#{box_fat[i]}", 
+        protein: "#{box_protein[i]}",
+      saturated: "#{box_saturated[i]}",
+      sodium: "#{box_sodium[i]}",
+      poly: "#{box_poly[i]}",
+      mono: "#{box_mono[i]}",
+      carb: "#{box_carb[i]}",
+      fiber: "#{box_fiber[i]}",
+      cholesterol: "#{box_cholesterol[i]}")
       i +=1
       #Create a Site Recipe from the data scraped from Epicurus by Mechanize. Should only create if a new entry.
     end
@@ -121,6 +143,16 @@ class SiteController < ApplicationController
     @ingredients = @recipes.ingredients
     @preparation = @recipes.preparation
     @description =@ingredients + @preparation
+    @calories = @recipes.calories
+    @protein = @recipes.protein
+    @fat = @recipes.fat
+    @saturated = @recipes.saturated
+    @poly = @recipes.poly
+    @sodium = @recipes.sodium
+    @mono= @recipes.mono
+    @cholesterol = @recipes.cholesterol
+    @carb = @recipes.carb
+    @fiber = @recipes.fiber
     #creating instance variables for the recipe page to be displayed in the view.
     AWS::S3::Base.establish_connection!(
       :access_key_id     => ENV['S3_KEY'],

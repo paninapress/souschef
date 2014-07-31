@@ -257,3 +257,21 @@ video {
 	top: 0%;
 	left: 70%;
 }
+
+@media (max-width: 450px) {
+
+.stitched {
+   padding: 0px;
+}
+
+.navbar {
+  min-height: 0px;
+  padding: 0px; }
+
+ .pull-right {
+ float: none;
+ } 
+
+
+
+}

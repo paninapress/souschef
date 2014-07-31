@@ -74,7 +74,13 @@
       <a href="<%= site_path(recipe)%>">
         <div class="box col3">
           <img src="http://www.epicurious.com<%= recipe.image %>">
-          <%= recipe.title %>
+          <div class="row">
+            <div class="col-xs-12"><%= recipe.title %></div>
+          <div class="col-xs-12"><%= recipe.source %></div>
+          <div class="col-xs-4" style="background-color:tomato"><%= recipe.calories %></div>
+           <div class="col-xs-4" style="background-color:red">hi hi</div>
+            <div class="col-xs-4"style="background-color:tomato">jhoi</div>
+        </div>
         </div>
       </a>
     </div>

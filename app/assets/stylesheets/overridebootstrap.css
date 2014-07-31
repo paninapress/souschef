@@ -108,5 +108,9 @@ height: 35px;
   position: relative;
 }
 
+.col-lg-3 {
+  width: 30.6%;
+  left: 15px;
+}
 
   }

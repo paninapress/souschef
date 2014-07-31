@@ -79,16 +79,79 @@ class SiteController < ApplicationController
                j +=1
             end
 
-       box_calorie << box_nutrition[0]
-       box_carb << box_nutrition[1]
+       
+if box_nutrition[0].nil?
+  box_nutrition[0] = "N/A" 
+  box_calorie << box_nutrition[0]  
+  else  
+    box_calorie << box_nutrition[0]
+  end
+
+if box_nutrition[1].nil?
+  box_nutrition[1] = "N/A" 
+  box_carb << box_nutrition[1]  
+  else  
+    box_carb << box_nutrition[1]
+  end
+    
+
+    if box_nutrition[2].nil?
+  box_nutrition[2] = "N/A" 
+  box_fat << box_nutrition[2]  
+  else  
     box_fat << box_nutrition[2]
+  end
+
+    if box_nutrition[3].nil?
+  box_nutrition[3] = "N/A" 
+  box_protein << box_nutrition[3]  
+  else  
     box_protein << box_nutrition[3]
+  end
+    
+    if box_nutrition[4].nil?
+  box_nutrition[4] = "N/A" 
+  box_saturated << box_nutrition[4]  
+  else  
     box_saturated << box_nutrition[4]
+  end
+    
+    if box_nutrition[5].nil?
+  box_nutrition[5] = "N/A" 
+  box_sodium << box_nutrition[5]  
+  else  
     box_sodium << box_nutrition[5]
+  end
+
+if box_nutrition[6].nil?
+  box_nutrition[6] = "N/A" 
+  box_poly << box_nutrition[6]  
+  else  
     box_poly << box_nutrition[6]
+  end
+
+    if box_nutrition[7].nil?
+  box_nutrition[7] = "N/A" 
+  box_fiber << box_nutrition[7]  
+  else  
     box_fiber << box_nutrition[7]
+  end
+
+    if box_nutrition[8].nil?
+  box_nutrition[8] = "N/A" 
+  box_mono << box_nutrition[8]  
+  else  
     box_mono << box_nutrition[8]
+  end
+
+    if box_nutrition[9].nil?
+  box_nutrition[9] = "N/A" 
+  box_cholesterol << box_nutrition[9]  
+  else  
     box_cholesterol << box_nutrition[9]
+  end
+
+
 
     if link.parser.css("p.summary_data")[0].nil?
       box_serving_temp = "N/A"

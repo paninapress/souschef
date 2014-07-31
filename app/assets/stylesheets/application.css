@@ -432,10 +432,11 @@ input[id="food"] {
     font-size: 24px;
     background-color: white;
     border-radius: 4px;
+    margin-right: 100px;
 }
 
 .search_button {
-    left:30%;
+    margin-right:20%;
 }
 
 #signup-panel {

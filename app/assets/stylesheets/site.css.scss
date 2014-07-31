@@ -260,6 +260,10 @@ video {
 
 @media (max-width: 450px) {
 
+.pull-right {
+  float: none;
+}
+
 .stitched {
    padding: 0px;
 }

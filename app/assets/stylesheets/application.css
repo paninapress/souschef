@@ -400,6 +400,16 @@ h1 {
     color: black;
     text-align: center;
 }
+
+#index_source {
+font-size: 12px;
+padding-bottom: 10px;
+}
+
+.index_info {
+    height:;
+}
+
 @media (max-width: 950px) {
     #speaker {
         top: 10px;

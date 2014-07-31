@@ -94,4 +94,8 @@ nav li {
   background-repeat: no-repeat;
 }
 
+.pull-right {
+  float: none;
+}
+
   }

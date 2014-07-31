@@ -75,6 +75,11 @@ a:hover{
   color: tomato;
 }
 
+.col-lg-3 {
+  width: 30.5%;
+  left: 15px;
+}
+
 @media (max-width: 450px) {
 nav li {
   display: inline-block;
@@ -102,5 +107,6 @@ height: 35px;
   width: 100%;
   position: relative;
 }
+
 
   }

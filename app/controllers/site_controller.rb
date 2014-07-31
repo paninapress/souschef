@@ -90,7 +90,11 @@ class SiteController < ApplicationController
     box_mono << box_nutrition[8]
     box_cholesterol << box_nutrition[9]
 
+    if link.parser.css("p.summary_data")[0].nil?
+      box_serving_temp = "N/A"
+    else
     box_serving_temp = link.parser.css("p.summary_data")[0].text
+  end
     box_serving_temp = box_serving_temp.strip
     box_serving_temp =  box_serving_temp.gsub("\n","")
     box_serving << box_serving_temp.gsub("yieldMakes","")

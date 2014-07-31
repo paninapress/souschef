@@ -407,7 +407,8 @@ padding-bottom: 10px;
 }
 
 .index_info {
-    height:;
+    height: 50px;
+    background-color: tomato;
 }
 
 @media (max-width: 950px) {

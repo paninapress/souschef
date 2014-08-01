@@ -12,7 +12,7 @@ Firstapp::Application.routes.draw do
     resources :comments
   end
 
-  resources :ratings, only: :update
+  resources :ratings, only: [:update]
   post '/search' => 'site_recipes#search', as: :search
 
   #post '/search' => 'site#search', as: :search

@@ -16,12 +16,12 @@
  <script>
   $('#star').raty({
     readOnly: true,
-    score: 3.5,
+    score: <%= @recipes.average_rating %>,
     path: '/assets/'
   });
 
   $('#user_star').raty({
-    score: 4,
+    score: <%= @rating.score %>,
     path: '/assets/',
     click: function(score, evt) {
       $.ajax({

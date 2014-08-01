@@ -12,6 +12,7 @@
 
   <div class="field">
     <%= f.text_area :content, rows: 8 %>
+     <%= f.hidden_field :username, :value => current_user.username %>
   </div>
   <div class="actions">
     <%= f.submit %>

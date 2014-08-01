@@ -1,5 +1,5 @@
-class SiteController < ApplicationController
-  include ActionView::Helpers::TextHelper
+class SiteRecipesController < ApplicationController
+	include ActionView::Helpers::TextHelper
 
   def index
     @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
@@ -241,5 +241,4 @@ if box_nutrition[6].nil?
   @comments = @commentable.comments
   @comment = Comment.new
   end
-
 end

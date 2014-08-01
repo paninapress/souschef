@@ -1,6 +1,5 @@
 Firstapp::Application.routes.draw do
-  get "comments/index"
-  get "comments/new"
+  resources :comments
   devise_for :users
   resources :my_recipes do 
     resources :comments
@@ -9,8 +8,12 @@ Firstapp::Application.routes.draw do
   resources :site, only: [:index, :show, :search] do 
     resources :comments
   end
+  resources :site_recipes, only: [:index, :show, :search] do 
+    resources :comments
+  end
+  post '/search' => 'site_recipes#search', as: :search
 
-  post '/search' => 'site#search', as: :search
+  #post '/search' => 'site#search', as: :search
   # post '/search' => 'site#result', as: :result
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

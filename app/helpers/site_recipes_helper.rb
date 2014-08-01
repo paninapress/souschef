@@ -1,0 +1,2 @@
+module SiteRecipesHelper
+end

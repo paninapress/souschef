@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 	before_filter :load_commentable
+	before_action :authenticate_user!
 
   def index
   	@comments = @commentable.comments
@@ -10,7 +11,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @commentable.comments.new(params[:comment])
+  	 current_user.username = :username
+    @comment = @commentable.comments.create!(params.require(:comment).permit(:content, current_user.username = :username))
     if @comment.save
       redirect_to @commentable, notice: "Comment created."
     else
@@ -30,4 +32,9 @@ class CommentsController < ApplicationController
   end
   	@commentable = resource.find(id)
   end
+
+  def comment_params
+  	params.require(:comment).permit(:content, :username)
+	end
 end
+

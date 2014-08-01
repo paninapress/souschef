@@ -11,6 +11,8 @@ Firstapp::Application.routes.draw do
   resources :site_recipes, only: [:index, :show, :search] do 
     resources :comments
   end
+
+  resources :ratings, only: :update
   post '/search' => 'site_recipes#search', as: :search
 
   #post '/search' => 'site#search', as: :search

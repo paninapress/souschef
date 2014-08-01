@@ -89,6 +89,36 @@
                               <strong>Ingredients:</strong>
                               <%= simple_format(@ingredients) %>
                             </p>
+
+                      <p>Averate rating</p>
+<div id="star"></div>
+
+<p>Your rating</p>
+<div id="user_star"></div>
+
+
+ <script>
+  $('#star').raty({
+    readOnly: true,
+    score:  <%= @recipes.average_rating %>,
+    path: '/assets/'
+  });
+
+  $('#user_star').raty({
+    score: <%= @rating.score %>,
+    path: '/assets/',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>
+
+
+
                             <h2>Comments</h2>
 
 <%= render "comments/comments" %>
@@ -134,3 +164,4 @@ $('#tab2 a').click(function (e) {
     </div>
   </div>
 </div>
+

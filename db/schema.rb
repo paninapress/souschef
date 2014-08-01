@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801163332) do
+ActiveRecord::Schema.define(version: 20140801204332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,20 @@ ActiveRecord::Schema.define(version: 20140801163332) do
     t.text     "fiber"
     t.text     "cholesterol"
   end
+
+  create_table "ratings", force: true do |t|
+    t.integer  "site_recipe_id"
+    t.integer  "my_recipe_id"
+    t.integer  "user_id"
+    t.integer  "score"
+    t.string   "default"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ratings", ["my_recipe_id"], name: "index_ratings_on_my_recipe_id", using: :btree
+  add_index "ratings", ["site_recipe_id"], name: "index_ratings_on_site_recipe_id", using: :btree
+  add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
 
   create_table "site_recipes", force: true do |t|
     t.text     "title"

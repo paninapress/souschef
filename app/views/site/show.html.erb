@@ -89,6 +89,9 @@
                               <strong>Ingredients:</strong>
                               <%= simple_format(@ingredients) %>
                             </p>
+                            <p>Averate rating</p>
+<div data-score="1"></div>
+
                             <h2>Comments</h2>
 
 <%= render "comments/comments" %>
@@ -130,6 +133,12 @@ $('#tab2 a').click(function (e) {
   $(this).tab('show')
 });
         </script>
+        <script type="text/javascript">
+        $('div').raty({
+  score: function() {
+    return $(this).attr('data-score');
+  }
+});</script>
       </div>
     </div>
   </div>

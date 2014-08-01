@@ -24,4 +24,5 @@
 //= require jquery.stellar
 //= require jquery.stellar.min
 //= main.js
+// jquery.raty
 //= require_tree .

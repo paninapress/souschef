@@ -3,3 +3,32 @@
 <%= render 'comments' %>
 
 <p><%= link_to "New Comment", [:new, @commentable, :comment] %></p>
+
+<div></div>
+
+<p>Averate rating</p>
+<div id="star"></div>
+
+<p>Your rating</p>
+<div id="user_star"></div>
+
+
+ <script>
+  $('#star').raty({
+    readOnly: true,
+    score: 3.5,
+    path: '/assets/'
+  });
+
+  $('#user_star').raty({
+    score: 4,
+    path: '/assets/',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>

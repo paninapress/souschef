@@ -1,8 +1,14 @@
 Firstapp::Application.routes.draw do
+  get "comments/index"
+  get "comments/new"
   devise_for :users
-  resources :my_recipes
+  resources :my_recipes do 
+    resources :comments
+  end
   resources :profiles, only: [:index, :show]
-  resources :site, only: [:index, :show, :search]
+  resources :site, only: [:index, :show, :search] do 
+    resources :comments
+  end
 
   post '/search' => 'site#search', as: :search
   # post '/search' => 'site#result', as: :result

@@ -39,41 +39,75 @@
       <h1>whw whowh 
         whowhowh wohwow hwo</h1> 
      </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6">
       <section>
         <p id="notice"><%= notice %></p>
-        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
-          <div class="box col6">
-            <p>
-              <strong>Title:</strong>
-              <%= @recipes.title %>
-            </p>
-            <p>
-              <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative; top:-32px;">
-            </p>
-            <p>
-              <strong>Ingredients:</strong>
-              <%= simple_format(@ingredients) %>
-            </p>
-            <p>
-              <%= @calories %>
-   <%= @protein %>
-    <%=@fat %>
-    <%=@saturated %>
-   <%= @poly %>
-   <%= @sodium%>
-   <%= @mono%>
-    <%= @fiber%>
-     <%= @carb%>
-   <%= @cholesterol %>
-            </p>
-            <strong>Preparation:</strong>
-            <%= @preparation %>
-          </p>
-          <%= link_to 'Back', root_path %>
-          <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
-        </section>
+    
+          <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
+             <ul  class="nav nav-tabs">
+      <li class="active"><a href="#pane1" data-toggle="tab">Recipe</a></li>
+      <li><a href="#pane2" data-toggle="tab">Reviews</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="pane1">
+        <p>
+                              <strong>Title:</strong>
+                              <%= @recipes.title %>
+                            </p>
+                            <p>
+                              <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative; top:-32px;">
+                            </p>
+                            <p>
+                              <strong>Ingredients:</strong>
+                              <%= simple_format(@ingredients) %>
+                            </p>
+                            <p>
+                              <%= @calories %>
+                   <%= @protein %>
+                    <%=@fat %>
+                    <%=@saturated %>
+                   <%= @poly %>
+                   <%= @sodium%>
+                   <%= @mono%>
+                    <%= @fiber%>
+                     <%= @carb%>
+                   <%= @cholesterol %>
+                            </p>
+                            <strong>Preparation:</strong>
+                            <%= simple_format(@preparation) %>
+                          </p>
+                          <%= link_to 'Back', root_path %>
+                            <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
+                        
       </div>
+      <div class="tab-pane" id="pane2">
+         <p>
+                              <strong>Title:</strong>
+                              <%= @recipes.title %>
+                            </p>
+                            <p>
+                              <strong>Ingredients:</strong>
+                              <%= simple_format(@ingredients) %>
+                            </p>
+                            <p>
+                              <%= @calories %>
+                   <%= @protein %>
+                    <%=@fat %>
+                    <%=@saturated %>
+                   <%= @poly %>
+                   <%= @sodium%>
+                   <%= @mono%>
+                    <%= @fiber%>
+                     <%= @carb%>
+                   <%= @cholesterol %>
+                            </p>
+                            <strong>Preparation:</strong>
+                            <%= simple_format(@preparation) %>
+                          </p>
+                          <%= link_to 'Back', root_path %>
+      </div>
+      </section>
+    </div>
       <div class="col-lg-4">
         <div id="video-instruction"><h1>whowh w whowh wo hwohwo  whowh owho</h1></div>
         <div id="content" style="left:560px; width:450px; height:250px;">
@@ -95,6 +129,17 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="/assets/app.js"></script>
         <script src="/assets/sample.js"></script>
+        <script type="text/javascript">
+$('#tab1 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+
+$('#tab2 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+        </script>
       </div>
     </div>
   </div>

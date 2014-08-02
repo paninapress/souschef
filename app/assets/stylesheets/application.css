@@ -431,6 +431,7 @@ h1 {
     top: 505px;
     position: absolute;
     color: white;
+    font-family: 'octin_vintage_b_rg-webfont';
 }
 #star {
     top: 190px;
@@ -442,8 +443,9 @@ h1 {
     top: 150px;
     position: absolute;
     left: 430px;
-    font-size: 20px;
+    font-size: 28px;
     color: white;
+     font-family: 'headlinerno.45_demo-webfont';
 }
 #star>img {
     width: 30px;
@@ -466,7 +468,8 @@ h1 {
     position: absolute;
     left: 440px;
     color: white;
-    font-size: 20px;
+    font-size: 28px;
+     font-family: 'headlinerno.45_demo-webfont';
 }
 #recipe_image>img {
     width: 350px;
@@ -512,7 +515,8 @@ h1 {
 height: 50px;
 top: 0px;
 position: relative;
-background-color: red;
+background-color: #333;
+color: white;
 left: -15px;
 list-style: none;
 border-bottom-color: white;
@@ -521,11 +525,13 @@ border-top-style: solid;
 border-top-color: white;
 border-width: thin;
 padding-top: 15px;
+font-family: 'roadmovie_trial___-webfont';
+font-size: 16px;
 
 }
 
 #nutrition_column {
-    background-color: tan;
+    background-color: tomato;
 left: 8px;
 margin-top: 135px;
 }

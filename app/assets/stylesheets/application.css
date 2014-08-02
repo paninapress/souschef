@@ -505,9 +505,10 @@ h1 {
     left: 40px;
 }
 #recipeclip {
-    top: -1050px;
-    position: relative;
-    left: 300px;
+  top: 420px;
+position: absolute;
+left: 315px;
+
 }
 
 .nutrition_info {
@@ -525,7 +526,7 @@ border-top-style: solid;
 border-top-color: white;
 border-width: thin;
 padding-top: 15px;
-font-family: 'roadmovie_trial___-webfont';
+font-family: 'chunkfive-webfont';
 font-size: 16px;
 
 }

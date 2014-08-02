@@ -38,7 +38,7 @@
   <p id="search_bar">Search for a recipe.</p>
   <% @recipes.each do |recipe| %>
     <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-      <a href="<%= site_path(recipe)%>">
+      <a href="<%= site_recipe_path(recipe)%>">
       <div class="box col3">
           <img src="http://www.epicurious.com<%= recipe.image %>">
           <div class="row">

@@ -90,31 +90,25 @@
                               <%= simple_format(@ingredients) %>
                             </p>
 
+
+<div><img alt="1" src="/assets/star-on.png" title="bad">
+
+<img alt="2" src="/assets/star-on.png" title="bad">
+
+<img alt="3" src="/assets/star-on.png" title="bad">
+
+<img alt="4" src="/assets/star-on.png" title="bad">
+
+<img alt="5" src="/assets/star-off.png" title="bad">
+<input name="score" type="hidden" value="1" readonly=""></div>
                       <p>Averate rating</p>
-<div id="star"></div>
+<div id="star">
+</div>
 
 <p>Your rating</p>
-<div id="user_star"></div>
+<div id="user_star">
+</div>
 
- <script>
-  $('#star').raty({
-    readOnly: true,
-    score:  <%= @recipes.average_rating %>,
-    path: '/assets/'
-  });
-
-  $('#user_star').raty({
-    score: <%= @rating.score %>,
-    path: '/assets/',
-    click: function(score, evt) {
-      $.ajax({
-        url: '/ratings/' + <%= @rating.id %>,
-        type: 'PATCH',
-        data: { score: score }
-      });
-    }
-  });
-</script>
 
 
 
@@ -145,9 +139,10 @@
           </div>
         </div>
         <div class="loading">Loading assets...</div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="/assets/app.js"></script>
         <script src="/assets/sample.js"></script>
+        <script src="/assets/jquery.raty.js"></script>
         <script type="text/javascript">
 $('#tab1 a').click(function (e) {
   e.preventDefault()
@@ -159,6 +154,25 @@ $('#tab2 a').click(function (e) {
   $(this).tab('show')
 });
         </script>
+        <script>
+$('#star').raty({
+    readOnly: true,
+    score:  0,
+    path: '/assets'
+  });
+        
+  $('#user_star').raty({
+    score: <%= @rating.score %>,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>
       </div>
     </div>
   </div>

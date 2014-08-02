@@ -35,7 +35,7 @@
       </nav>
 <div class="container-fluid">
   <div class="row">
-       <div class="col-lg-2" id="nutrition_column">
+     <div class="col-lg-2" id="nutrition_column">
       <div class="col-xs-4" id="calories_column">
         <p id="calorie_content">152</p>
         <p id="caloire_title"> Calories</p></div>
@@ -47,7 +47,7 @@
         <p id="serving_content">8</p> 
         <p id="serving_title">Servings</p>
       </div>
-      <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                           
+      <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                
     <li class="nutrition_info"> protein &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @protein %></li>
                    <li class="nutrition_info">fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -67,7 +67,8 @@
                   <li class="nutrition_info"> cholesterol &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @cholesterol %>
                             </p>
-</div>
+     </div>
+
     <div class="col-lg-6 col-md-6">
       <section>
         <p id="notice"><%= notice %></p>
@@ -84,7 +85,9 @@
                             <%= @recipes.title %>
                               
                             </p>
-                             <div id="recipe_source"> <%= @recipes.source %></div>
+
+                            <div id="recipe_source"> <%= @recipes.source %></div>
+
                             <p id="star_title">Averate rating</p>
 <div id="star">
 </div>
@@ -97,6 +100,7 @@
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
                             <div id="ingredients_list">
+
                            <h4>Ingredients:</h4>
                            <br>
                               <%= simple_format(@ingredients) %>
@@ -107,6 +111,20 @@
                                 </div>
 
                             <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
+
+                              <h4>Ingredients:</h4>
+                              <br>
+                              <%= simple_format(@ingredients) %>
+                            </div>
+                            
+                            <h4 id="prep_heading">Preparation:</h4>
+                            <div id="prep" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
+                              </div>
+                              
+                          
+                
+                            <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.--><
+
                         
       </div>
       <div class="tab-pane" id="pane2">
@@ -114,7 +132,7 @@
                               <strong>Title:</strong>
                               <%= @recipes.title %>
                             </p>
-                            <p>
+                            <div>
                               <strong>Ingredients:</strong>
                               <%= simple_format(@ingredients) %>
                             </p>

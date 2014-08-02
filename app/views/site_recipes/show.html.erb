@@ -35,9 +35,38 @@
       </nav>
 <div class="container-fluid">
   <div class="row">
-     <div class="col-lg-2">
-      <h1>whw whowh 
-        whowhowh wohwow hwo</h1> 
+     <div class="col-lg-2" id="nutrition_column">
+      <div class="col-xs-4" id="calories_column">
+        <p id="calorie_content">152</p>
+        <p id="caloire_title"> Calories</p></div>
+       <div class="col-xs-4" id="time_column">
+        <p id="time_content">N/A</p> 
+        <p id="time_title">Time</p>
+      </div>
+        <div class="col-xs-4" id="serving_column">
+        <p id="serving_content">8</p> 
+        <p id="serving_title">Servings</p>
+      </div>
+      <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                           
+    <li class="nutrition_info"> protein &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @protein %></li>
+                   <li class="nutrition_info">fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%=@fat %></li>
+                    <li class="nutrition_info">saturated &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%=@saturated %></li>
+                  <li class="nutrition_info"> poly &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @poly %></li>
+                  <li class="nutrition_info">sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @sodium%></li>
+                  <li class="nutrition_info"> mono &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @mono%></li>
+                   <li class="nutrition_info"> fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @fiber%></li>
+                     <li class="nutrition_info">carb &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @carb%></li>
+                  <li class="nutrition_info"> cholesterol &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @cholesterol %>
+                            </p>
      </div>
     <div class="col-lg-6 col-md-6">
       <section>
@@ -55,6 +84,7 @@
                             <%= @recipes.title %>
                               
                             </p>
+                            <div id="recipe_source"> <%= @recipes.source %></div>
                             <p id="star_title">Averate rating</p>
 <div id="star">
 </div>
@@ -66,28 +96,20 @@
                             <p id="recipe_image">
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
-                            <p>
-                              <strong>Ingredients:</strong>
+                            <div id="ingredients_list">
+                              <h4>Ingredients:</h4>
+                              <br>
                               <%= simple_format(@ingredients) %>
-                            </p>
-                            <p>
-                              <%= @calories %>
-                   <%= @protein %>
-                    <%=@fat %>
-                    <%=@saturated %>
-                   <%= @poly %>
-                   <%= @sodium%>
-                   <%= @mono%>
-                    <%= @fiber%>
-                     <%= @carb%>
-                   <%= @cholesterol %>
-                            </p>
-                            <p>Preparation:</p>
-                            <div id="prep"><%= simple_format(@preparation) %>
+                            </div>>
+                            
+                            <h4 id="prep_heading">Preparation:</h4>
+                            <div id="prep" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
                               </div>
+                              
                           
-                          <%= link_to 'Back', root_path %>
-                            <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
+                        
+                          <div id="recipeclip">
+                            <audio src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.--></div>
                         
       </div>
       <div class="tab-pane" id="pane2">
@@ -95,7 +117,7 @@
                               <strong>Title:</strong>
                               <%= @recipes.title %>
                             </p>
-                            <p>
+                            <div>
                               <strong>Ingredients:</strong>
                               <%= simple_format(@ingredients) %>
                             </p>

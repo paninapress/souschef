@@ -89,6 +89,9 @@ audio {
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
+  width: 225px;
+position: relative;
+left: 65px;
 }
 audio::-webkit-media-controls-enclosure {
   height: 25px;
@@ -113,6 +116,22 @@ min-width: 25px;
 color: inherit;
 }
 
+
+.nav-tabs>li.active>a {color: #333;
+background-color: tomato;
+border: 1px solid #ddd;
+border-bottom-color: transparent;
+cursor: default;
+
+}
+
+.nav-tabs>li>a {
+margin-right: 2px;
+line-height: 1.428571429;
+border: 1px solid transparent;
+border-radius: 4px 4px 0 0;
+color: tomato;
+}
 
 @media (max-width: 450px) {
 nav li {

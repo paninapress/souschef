@@ -18,6 +18,7 @@ class SiteRecipesController < ApplicationController
     page = agent.get(url)
     #mechanize is getting data from the url.
     box_preparation = []
+    box_preparation_temp = []
     box_ingredient =[]
     box_ingredient_temp =[]
     box_image = []
@@ -58,7 +59,8 @@ class SiteRecipesController < ApplicationController
     while i < temp.size
       link = page.link_with(href: temp[i]).click
       #mechanize will visit each link that was stored in the temporary array.
-      box_preparation << link.parser.css("#preparation").text
+      box_preparation_temp = link.parser.css("#preparation").text
+      box_preparation << box_preparation_temp.gsub("Preparation","")
 
       link.search(".ingredient").each do |food|
         box_ingredient_temp << food.text

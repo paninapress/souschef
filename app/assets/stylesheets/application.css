@@ -296,6 +296,14 @@ h1 {
     font-size: 36px;
 }
 @font-face {
+    font-family: 'kgsecondchancessketch-webfont';
+    src: url('/assets/kgsecondchancessketch-webfont.eot');
+    src: url('/assets/kgsecondchancessketch-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/kgsecondchancessketch-webfont.woff') format('woff'), url('/assets/kgsecondchancessketch-webfont.ttf') format('truetype'), url('/assets/kgsecondchancessketch-webfont.svg#kgsecondchancessketch-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'carnevalee_freakshow-webfont';
     src: url('/assets/carnevalee_freakshow-webfont.eot');
     src: url('/assets/carnevalee_freakshow-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/carnevalee_freakshow-webfont.woff') format('woff'), url('/assets/carnevalee_freakshow-webfont.ttf') format('truetype'), url('/assets/carnevalee_freakshow-webfont.svg#carnevalee_freakshow-webfont') format('svg');
@@ -421,6 +429,74 @@ padding-bottom: 15px;
 
 .info_title {
     font-size: 12px;
+}
+
+
+.recipe_title {
+left: 50px;
+font-size: 28px;
+top: 530px;
+position: absolute;
+color: white;
+}
+
+#star {
+top: 190px;
+position: absolute;
+left: 410px;
+color: white;
+}
+
+#star_title {
+    top: 150px;
+position: absolute;
+left: 430px;
+font-size: 20px;
+color: white;
+
+}
+
+#star>img{
+    width: 30px;
+    height: 30px;
+}
+
+#user_star {
+    top: 290px;
+position: absolute;
+left: 435px;
+color: white;
+}
+
+#user_star>img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -25px;
+}
+
+#user_star_title {
+    top: 250px;
+position: absolute;
+left: 440px;
+color: white;
+font-size: 20px;
+}
+
+#recipe_image>img {
+    width: 350px;
+    height: 350px; 
+}
+
+.social-buttons {
+    position: absolute;
+left: 393px;
+top: 400px;
+}
+}
+
+#prep {
+    color: white;
 }
 
 @media (max-width: 950px) {

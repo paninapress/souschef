@@ -23,6 +23,7 @@
 //= require app
 //= require jquery.stellar
 //= require jquery.stellar.min
-//= main.js
-// jquery.raty
+//= require main
+//= require jquery.raty
+//= require jquery.sharer
 //= require_tree .

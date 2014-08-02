@@ -80,6 +80,10 @@ a:hover{
   left: 15px;
 }
 
+#panel1 {
+  background-color: #333;
+}
+
 @media (max-width: 450px) {
 nav li {
   display: inline-block;

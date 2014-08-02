@@ -50,12 +50,21 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="pane1">
-        <p>
-                              <strong>Title:</strong>
-                              <%= @recipes.title %>
+        <p class="recipe_title">
+
+                            <%= @recipes.title %>
+                              
                             </p>
-                            <p>
-                              <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative; top:-32px;">
+                            <p id="star_title">Averate rating</p>
+<div id="star">
+</div>
+
+<p id="user_star_title">Your rating</p>
+<div id="user_star">
+</div>
+<div class="social-buttons"></div>
+                            <p id="recipe_image">
+                              <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
                             <p>
                               <strong>Ingredients:</strong>
@@ -73,9 +82,10 @@
                      <%= @carb%>
                    <%= @cholesterol %>
                             </p>
-                            <strong>Preparation:</strong>
-                            <%= simple_format(@preparation) %>
-                          </p>
+                            <p>Preparation:</p>
+                            <div id="prep"><%= simple_format(@preparation) %>
+                              </div>
+                          
                           <%= link_to 'Back', root_path %>
                             <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
                         
@@ -90,17 +100,6 @@
                               <%= simple_format(@ingredients) %>
                             </p>
 
-
-<div><img alt="1" src="/assets/star-on.png" title="bad">
-
-<img alt="2" src="/assets/star-on.png" title="bad">
-
-<img alt="3" src="/assets/star-on.png" title="bad">
-
-<img alt="4" src="/assets/star-on.png" title="bad">
-
-<img alt="5" src="/assets/star-off.png" title="bad">
-<input name="score" type="hidden" value="1" readonly=""></div>
                       <p>Averate rating</p>
 <div id="star">
 </div>
@@ -143,6 +142,7 @@
         <script src="/assets/app.js"></script>
         <script src="/assets/sample.js"></script>
         <script src="/assets/jquery.raty.js"></script>
+        <script src="/assets/jquery.sharer.js"></script>
         <script type="text/javascript">
 $('#tab1 a').click(function (e) {
   e.preventDefault()
@@ -157,12 +157,14 @@ $('#tab2 a').click(function (e) {
         <script>
 $('#star').raty({
     readOnly: true,
-    score:  0,
+    score: <%= @recipes.average_rating %>,
+    half: true,
     path: '/assets'
   });
-        
+
   $('#user_star').raty({
     score: <%= @rating.score %>,
+    half: true,
     path: '/assets',
     click: function(score, evt) {
       $.ajax({
@@ -177,4 +179,6 @@ $('#star').raty({
     </div>
   </div>
 </div>
-
+<script>
+$(".social-buttons").sharer()
+</script>

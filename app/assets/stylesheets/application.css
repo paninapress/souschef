@@ -411,7 +411,7 @@ h1 {
 
 #index_source {
 font-size: 12px;
-padding-bottom: 15px;
+     padding-bottom: 15px;
 }
 
 .index_info {
@@ -433,11 +433,12 @@ padding-bottom: 15px;
 
 
 .recipe_title {
-left: 50px;
-font-size: 28px;
-top: 530px;
-position: absolute;
-color: white;
+ left: 40px;
+     font-size: 28px;
+     top: 505px;
+     position: absolute;
+     color: white;
+     font-family: 'octin_vintage_b_rg-webfont';
 }
 
 #star {
@@ -450,9 +451,10 @@ color: white;
 #star_title {
     top: 150px;
 position: absolute;
-left: 430px;
-font-size: 20px;
+left: 415px;
+font-size: 28px;
 color: white;
+font-family: 'carnevalee_freakshow-webfont';
 
 }
 
@@ -478,9 +480,10 @@ color: white;
 #user_star_title {
     top: 250px;
 position: absolute;
-left: 440px;
+left: 435px;
 color: white;
-font-size: 20px;
+font-size: 28px;
+font-family: 'carnevalee_freakshow-webfont';
 }
 
 #recipe_image>img {
@@ -491,13 +494,103 @@ font-size: 20px;
 .social-buttons {
     position: absolute;
 left: 393px;
-top: 400px;
-}
+top: 360px;
 }
 
 #prep {
-    color: white;
-}
+      color: white;
+     font-size: 16px;
+     position: relative;
+     top: 70px;
+ }
+ #prep_heading {
+     color: white;
+     position: relative;
+     top: 150px;
+ }
+ #ingredients_list {
+     color: white;
+     font-size: 16px;
+     top: 150px;
+     position: relative;
+ }
+ #recipe_source {
+     color: white;
+     font-size: 14px;
+     top: 560px;
+     position: absolute;
+     left: 40px;
+ }
+ #recipeclip {
+     top: 440px;
+     position: absolute;
+     left: 380px;
+ }
+ 
+ .nutrition_info {
+    width: 213px;
+ height: 50px;
+ top: 0px;
+ font-size: 11px;
+ position: relative;
+ background-color: #333;
+ color: white;
+ left: -15px;
+ list-style: none;
+ border-bottom-color: white;
+ border-bottom-style: solid;
+ border-top-style: solid;
+ border-top-color: white;
+ border-width: thin;
+ padding-top: 15px;
+ font-family: 'kgnexttomesolid-webfont';
+ }
+ 
+ #nutrition_column {
+     background-color: tan;
+ left: 8px;
+ margin-top: 135px;
+ }
+ 
+ #cal {
+     top: 900px;
+ visibility: hidden;
+ }
+ 
+ #calories_column {
+     left: -15px;
+     width: 60px;
+ }
+ 
+ #calorie_content {
+     font-size: 16px;
+ }
+ 
+ #calorie_title {
+     left: -8px;
+ position: relative;
+ }
+ 
+ #serving_column {
+ width: 60px;
+ }
+ 
+ #serving_content {
+     font-size: 16px;
+ }
+ 
+ #serving_title {
+   
+ }
+ 
+ #time_content {
+     font-size: 16px;
+ }
+ 
+ #time_column {
+     background-color: orange;
+     width: 60px;
+ }
 
 @media (max-width: 950px) {
     #speaker {

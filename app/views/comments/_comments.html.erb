@@ -1,10 +1,23 @@
-<div id="comments">
+<div class="row">
+<div id="comments" class="col-lg-12">
   <% @comments.each do |comment| %>
-    <div class="comment">
-      <%= simple_format comment.content %>
+  <div class="username col-lg-2">
+    	<%= simple_format(comment.username) %>
     </div>
-    <div class="username">
-    	<%= simple_format(@username) %>
+    <div class="comment col-lg-10">
+    	<% if  comment.content.length > 250 %>
+    	<div class="truncated"><%=truncate(comment.content, length: 250)%></div>
+      <div class="more">view more...</div>
+      <div class="complete"><%= simple_format comment.content %></div>
+      	<% else %>
+
+      	<div><%= simple_format comment.content %></div>
+      	<% end %>
+
     </div>
+
+
+
   <% end %>
+</div>
 </div>

@@ -512,27 +512,10 @@ top: 360px;
  #recipeclip {
      top: 440px;
      position: absolute;
-     left: 385px;
+     left: 380px;
  }
  
- .nutrition_info {
-    width: 216px;
- height: 50px;
- top: 0px;
- font-size: 11px;
- position: relative;
- background-color: #333;
- color: white;
- left: -15px;
- list-style: none;
- border-bottom-color: white;
- border-bottom-style: solid;
- border-top-style: solid;
- border-top-color: white;
- border-width: thin;
- padding-top: 15px;
- font-family: 'kgnexttomesolid-webfont';
- }
+ 
  
  #nutrition_column {
      background-color: tan;
@@ -604,15 +587,9 @@ top: 360px;
     position: absolute;
     left: 40px;
 }
-#recipeclip {
-  top: 420px;
-position: absolute;
-left: 315px;
-
-}
 
 .nutrition_info {
-   width: 213px;
+   width: 214px;
 height: 50px;
 top: 0px;
 position: relative;
@@ -676,6 +653,24 @@ width: 60px;
     background-color: orange;
     width: 60px;
 }
+
+#pane2 {
+    width: 598px;
+
+}
+
+.complete{
+    display:none;
+}
+
+.more{
+    background:lightblue;
+    color:navy;
+    font-size:13px;
+    padding:0px;
+    cursor:pointer;
+}
+
 
 @media (max-width: 950px) {
     #speaker {

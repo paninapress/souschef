@@ -151,6 +151,39 @@ color: tomato;
 }
 
 @media (max-width: 450px) {
+
+audio {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 295px;
+position: relative;
+left: 65px;
+}
+audio::-webkit-media-controls-enclosure {
+  height: 15px;
+}
+audio::-webkit-media-controls-panel {
+  height: 15px;
+  box-shadow: 1px 3px 5px #333;
+  border-radius: 3px;
+  background: tomato;
+}
+
+audio::-webkit-media-controls-timeline {
+  -webkit-appearance: media-slider;
+display: flex;
+flex: 10 5 auto;
+height: 2px;
+margin: 0px 15px 0px 0px;
+padding: 0px;
+background-color: #111;
+min-width: 25px;
+/* border: initial; */
+color: inherit;
+}
+
 nav li {
   display: inline-block;
   font: bold 11px Arial;

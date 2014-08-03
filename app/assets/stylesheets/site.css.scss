@@ -261,7 +261,9 @@ video {
 
 @media (max-width: 450px) {
 
-
+#video-instruction {
+	display: none;
+}
 
 .stitched {
    padding: 0px;

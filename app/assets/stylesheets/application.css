@@ -501,11 +501,12 @@ top: 360px;
      font-size: 16px;
      top: 150px;
      position: relative;
+     margin-bottom: 55px;
  }
  #recipe_source {
      color: white;
      font-size: 14px;
-     top: 560px;
+     top: 590px;
      position: absolute;
      left: 40px;
  }
@@ -589,7 +590,7 @@ top: 360px;
 }
 
 .nutrition_info {
-   width: 214px;
+   width: 213px;
 height: 50px;
 top: 0px;
 position: relative;
@@ -597,15 +598,14 @@ background-color: #333;
 color: white;
 left: -15px;
 list-style: none;
-border-bottom-color: white;
+border-bottom-color: tomato;
 border-bottom-style: solid;
 border-top-style: solid;
-border-top-color: white;
+border-top-color: tomato;
 border-width: thin;
 padding-top: 15px;
-font-family: 'chunkfive-webfont';
-font-size: 16px;
-
+font-size: 14px;
+padding-bottom: 40px;
 }
 
 #nutrition_column {
@@ -626,6 +626,8 @@ visibility: hidden;
 
 #calorie_content {
     font-size: 16px;
+    left: 10px;
+position: relative;
 }
 
 #calorie_title {
@@ -639,6 +641,8 @@ width: 60px;
 
 #serving_content {
     font-size: 16px;
+    left: 15px;
+position: relative;
 }
 
 #serving_title {

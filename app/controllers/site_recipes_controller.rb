@@ -1,6 +1,6 @@
 class SiteRecipesController < ApplicationController
 	include ActionView::Helpers::TextHelper
-	before_action :authenticate_user!, except: [:index]
+	before_action :authenticate_user!, except: [:index,:show,:search]
   def index
     @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
     #display some recipes that were created by former search results.
@@ -24,6 +24,7 @@ class SiteRecipesController < ApplicationController
     box_image = []
     box_source = []
     box_nutrition = []
+    box_nutrition_temp = []
     box_summary = []
     box_calorie = []
     box_serving = []
@@ -154,7 +155,6 @@ if box_nutrition[6].nil?
   end
 
 
-
     if link.parser.css("p.summary_data")[0].nil?
       box_serving_temp = "N/A"
     else
@@ -162,7 +162,8 @@ if box_nutrition[6].nil?
   end
     box_serving_temp = box_serving_temp.strip
     box_serving_temp =  box_serving_temp.gsub("\n","")
-    box_serving << box_serving_temp.gsub("yieldMakes","")
+    box_serving_temp = box_serving_temp.gsub("yieldMakes","")
+    box_serving <<  box_serving_temp[1] + box_serving_temp[2]
     box_active_time = "N/A"
     box_total_time = "N/A"
       photo =  link.parser.css('img.photo')
@@ -175,12 +176,14 @@ if box_nutrition[6].nil?
         box_image << photo.attr('src').text
       end
       box_ingredient_temp = []
-
+      box_nutrition = []
+      box_serving_temp = []
       agent.back
       #Mechanize goes back to the search result page, and then can
       #click on the next link in the temporary array.
       i +=1
     end
+
     i = 0
     while i < temp.size
       SiteRecipe.find_or_create_by(title: "#{box_title[i]}", 
@@ -197,6 +200,7 @@ if box_nutrition[6].nil?
       mono: "#{box_mono[i]}",
       carb: "#{box_carb[i]}",
       fiber: "#{box_fiber[i]}",
+      servings: "#{box_serving[i]}",
       cholesterol: "#{box_cholesterol[i]}")
       i +=1
       #Create a Site Recipe from the data scraped from Epicurus by Mechanize. Should only create if a new entry.
@@ -222,6 +226,7 @@ if box_nutrition[6].nil?
     @cholesterol = @recipes.cholesterol
     @carb = @recipes.carb
     @fiber = @recipes.fiber
+    @serving = @recipes.servings
     #creating instance variables for the recipe page to be displayed in the view.
     AWS::S3::Base.establish_connection!(
       :access_key_id     => ENV['S3_KEY'],
@@ -242,8 +247,13 @@ if box_nutrition[6].nil?
     @commentable = @recipes
   @comments = @commentable.comments
   @comment = Comment.new
+  if current_user == nil
+   @current_user = User.first
+  else
+    @current_user = current_user.id   
+  end
 
-@rating = Rating.where(site_recipe_id: @recipes.id, user_id: current_user.id).first unless @rating 
-@rating = Rating.create(site_recipe_id: @recipes.id, user_id: current_user.id, score: 0)
+@rating = Rating.where(site_recipe_id: @recipes.id, user_id: @current_user).first unless @rating 
+@rating = Rating.create(site_recipe_id: @recipes.id, user_id: @current_user, score: 0)
   end
 end

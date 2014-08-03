@@ -11,12 +11,15 @@ class CommentsController < ApplicationController
   end
 
   def create
+     current_user.username = current_user.username
+     @username = current_user.username
     @comment = @commentable.comments.create!(params.require(:comment).permit(:content, :username))
     if @comment.save
       redirect_to @commentable, notice: "Comment created."
     else
       render :new
     end
+    binding.pry
   end
 
   private

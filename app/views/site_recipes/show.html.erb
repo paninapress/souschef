@@ -34,43 +34,48 @@
         </div>
       </nav>
 <div class="container-fluid">
+  <div id="notice">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+    </div>
   <div class="row">
     <div class="col-lg-2" id="nutrition_column">
       <div class="col-xs-4" id="calories_column">
-        <p id="calorie_content">152</p>
+        <p id="calorie_content"><%=@calories %></p>
         <p id="caloire_title"> Calories</p></div>
        <div class="col-xs-4" id="time_column">
         <p id="time_content">N/A</p> 
         <p id="time_title">Time</p>
       </div>
         <div class="col-xs-4" id="serving_column">
-        <p id="serving_content">8</p> 
+        <p id="serving_content"><%=@serving%></p> 
         <p id="serving_title">Servings</p>
       </div>
       <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                
-    <li class="nutrition_info"> protein &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @protein %></li>
-                   <li class="nutrition_info">fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%=@fat %></li>
-                    <li class="nutrition_info">saturated &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%=@saturated %></li>
-                  <li class="nutrition_info"> poly &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @poly %></li>
-                  <li class="nutrition_info">sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @sodium%></li>
-                  <li class="nutrition_info"> mono &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @mono%></li>
-                   <li class="nutrition_info"> fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @fiber%></li>
-                     <li class="nutrition_info">carb &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<%= @carb%></li>
-                  <li class="nutrition_info"> cholesterol &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= @cholesterol %>
+    <li class="nutrition_info"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
+      <%= @protein %></li>
+                   <li class="nutrition_info">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp <%=@fat %></li>
+                    <li class="nutrition_info">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
+      &nbsp<%=@saturated %></li>
+                  <li class="nutrition_info">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
+        <%= @poly %></li>
+                  <li class="nutrition_info">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp  <%= @sodium%></li>
+                  <li class="nutrition_info">Monounsaturated Fat &nbsp &nbsp
+       <%= @mono%></li>
+                   <li class="nutrition_info">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+       <%= @fiber%></li>
+                     <li class="nutrition_info">Carbohydrates  &nbsp &nbsp &nbsp
+      &nbsp <%= @carb%></li>
+                  <li class="nutrition_info">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
+      &nbsp  <%= @cholesterol %>
                             </p>
      </div>
     <div class="col-lg-6 col-md-6">
       <section>
-        <p id="notice"><%= notice %></p>
+        
     
           <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
              <ul  class="nav nav-tabs">

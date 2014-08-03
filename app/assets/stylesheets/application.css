@@ -29,7 +29,6 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    width: 598px;
 }
 .box h1 {
     font-size: 24px;
@@ -666,6 +665,12 @@ position: relative;
 
 .complete{
     display:none;
+    margin-bottom: 50px;
+position: relative;
+padding-bottom: 500px;
+/* height: 500px; */
+z-index: 10;
+background-color: white;
 }
 
 .more{
@@ -681,6 +686,11 @@ position: relative;
     height: 72px;
 }
 
+.comment {
+    height: 150px;
+}
+
+
 #profile_pic>img{
     width: 150px;
     height: 150px;
@@ -689,6 +699,13 @@ position: relative;
 #username {
     font-family: 'headlinerno.45_demo-webfont';
     font-size: 64px;
+}
+
+.username {
+    text-align: center;
+font-family: 'engeholzschrift-webfont';
+font-size: 36px;
+height: 150px;
 }
 
 @media (max-width: 950px) {

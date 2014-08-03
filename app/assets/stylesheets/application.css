@@ -29,6 +29,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    width: 598px;
 }
 .box h1 {
     font-size: 24px;
@@ -675,6 +676,20 @@ position: relative;
     cursor:pointer;
 }
 
+#comment_avatar>img {
+    width: 72px;
+    height: 72px;
+}
+
+#profile_pic>img{
+    width: 150px;
+    height: 150px;
+}
+
+#username {
+    font-family: 'headlinerno.45_demo-webfont';
+    font-size: 64px;
+}
 
 @media (max-width: 950px) {
     #speaker {

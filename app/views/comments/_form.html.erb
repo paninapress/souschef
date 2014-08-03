@@ -13,6 +13,7 @@
   <div class="field">
     <%= f.text_area :content, rows: 8 %>
     <%= f.hidden_field :username, :value =>  User.find(current_user).username %>
+    <%= f.hidden_field :profile, :value =>  User.find(current_user).avatar %>
   </div>
   <div class="actions">
     <%= f.submit %>

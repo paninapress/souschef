@@ -14,11 +14,11 @@ class ApplicationController < ActionController::Base
   #Allows users to sign in using their email or username. Rails4 devise methods.
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:username, :email, :password, :password_confirmation)
+      u.permit(:username, :email, :password, :password_confirmation, :avatar, :avatar_cache)
     end
 
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:username, :email, :password, :password_confirmation, :current_password)
+      u.permit(:username, :email, :password, :password_confirmation, :current_password, :avatar, :avatar_cache)
     end
   end
 end

@@ -306,4 +306,13 @@ background-color: tomato;
 border-color: tomato;
 }
 
+div.accordion-heading{
+  margin-top: 15px;
+}
+
+a.accordion-toggle{
+ z-index: 1099;
+position: relative;
+}
+
   }

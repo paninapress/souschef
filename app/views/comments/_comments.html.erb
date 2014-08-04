@@ -1,11 +1,11 @@
 <div class="row">
 <div id="comments" class="col-lg-12">
   <% @comments.each do |comment| %>
-  <div class="username col-lg-2">
-    <p id="comment_avatar"><%= image_tag(comment.profile) if comment.profile? %></p>
+  <div class="username col-lg-2 col-xs-3">
+    <p id="comment_avatar" class="col-sm-2"><%= image_tag(comment.profile) if comment.profile? %></p>
     	<%= simple_format comment.username %>
     </div>
-    <div class="comment col-lg-10">
+    <div class="comment col-lg-10 col-xs-9">
     	<% if  comment.content.length > 250 %>
     	<div class="truncated"><%=truncate(comment.content, length: 250)%></div>
       <div class="more">view more...</div>

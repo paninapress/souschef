@@ -701,7 +701,7 @@ position: relative;
 
 
 #pane3 {
-     visibility: visible;
+     visibility: hidden;
 }
 
 .complete{
@@ -778,6 +778,29 @@ position: relative;
     }
 }
 @media (max-width: 450px) {
+
+textarea#comment_content{
+    z-index: 1085;
+position: relative;
+width: 260px;
+left: -10px
+}
+
+    #comment_avatar>img {
+        height: 80px;
+width: 80px;
+left: -25px;
+position: relative;
+    }
+
+    #comment {
+        width: 300px;
+    }
+
+#pane3 {
+     visibility: visible;
+}
+
     #prep_heading {
     color: white;
     position: relative;
@@ -894,10 +917,6 @@ background-position: 50% 50%;
      width: 305px;
      display: block;
  }
-
- #pane3 {
-    display:block;
-}
 
 
  #star_mobile {

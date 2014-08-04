@@ -19,6 +19,8 @@ nav a:hover {
     color: #b32b2a;
     text-decoration: none; }
 
+
+
 .navbar-nav>li>a {
   color: white;
   top: 0px;
@@ -133,7 +135,6 @@ color: inherit;
  }
  
 
-
 .nav-tabs>li.active>a {color: #333;
 background-color: tomato;
 border: 1px solid #ddd;
@@ -160,10 +161,58 @@ color: tomato;
   top:100px;
 }
 
+.tab-content {
+  position: relative;
+  top:-40px;
+}
+
+.nav {
+  top:-40px;
+}
+
+.navbar-collapse{
+  background-color: #333;
+}
+
+ .navbar{
+      height: auto;
+      z-index: 1090;
+    }
+
+    .navbar-header{
+      position: relative;
+      top:-15px;
+    }
+
+    .navbar-toggle {
+      position: relative;
+float: right;
+margin-right: 15px;
+/* padding: 9px 10px; */
+/* margin-top: 8px; */
+/* margin-bottom: 8px; */
+/* background-color: tomato; */
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+height: 25px;
+top: 3px;
+    }
 
 .nav-tabs>li {
   background-color: white;
 }
+
+ .nav-tabs>li>a {
+ margin-right: 2px;
+ line-height: 1.428571429;
+ border: 1px solid transparent;
+ border-radius: 4px 4px 0 0;
+ color: tomato;
+ height: 6px;
+font-size:14px;
+padding-bottom: 20px;
+ }
 
 body {
   background-color: #333;
@@ -211,10 +260,6 @@ nav li {
   margin-right: 10px;
   padding: 2px 6px 2px 6px;
   border-right: none;
-background-image: url("/assets/chalkborder.png");
-background-size: 15%;
-background-repeat: no-repeat;
-background-position: 10px 20px;
 height: 35px;
     }
 
@@ -229,6 +274,7 @@ height: 35px;
   text-align: center;
   width: 100%;
   position: relative;
+  top: 15px;
 }
 
 .col-lg-3 {

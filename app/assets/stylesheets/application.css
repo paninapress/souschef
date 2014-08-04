@@ -446,6 +446,7 @@ h1 {
     position: absolute;
     color: white;
     font-family: 'octin_vintage_b_rg-webfont';
+    width: 550px;
 }
 #star {
     top: 190px;
@@ -514,6 +515,7 @@ top: 360px;
      color: white;
      position: relative;
      top: 150px;
+     display: block;
  }
  #ingredients_list {
      color: white;
@@ -602,11 +604,7 @@ position: relative;
     position: relative;
     top: 70px;
 }
-#prep_heading {
-    color: white;
-    position: relative;
-    top: 150px;
-}
+
 #ingredients_list {
     color: white;
     font-size: 16px;
@@ -714,8 +712,8 @@ background-color: white;
 }
 
 #comment_avatar>img {
-  height: 100px;
-width: 100px;
+  height: 90px;
+width: 90px;
 left: -15px;
 position: relative;
 
@@ -769,6 +767,12 @@ position: relative;
     }
 }
 @media (max-width: 450px) {
+    #prep_heading {
+    color: white;
+    position: relative;
+    top: 150px;
+    display: none;
+}
 
 #myModal {
     display: block;
@@ -836,9 +840,9 @@ background-position: 50% 50%;
 
 
  #recipeclip {
-     top: 520px;
+     top: 335px;
      position: absolute;
-     left: 30px;
+     left: 10px;
  }
 
 #prep {
@@ -848,6 +852,7 @@ background-position: 50% 50%;
      top: 70px;
      left: 5px;
      width: 305px;
+     display: none;
  }
 
  #ingredients_list {
@@ -881,11 +886,12 @@ background-position: 50% 50%;
  }
 
 .recipe_title {
-    left: 40px;
+    left: 10px;
     font-size: 24px;
-    top: 420px;
+    top: 290px;
     position: absolute;
     color: white;
+    width: 300px;
     font-family: 'octin_vintage_b_rg-webfont';
 }
 

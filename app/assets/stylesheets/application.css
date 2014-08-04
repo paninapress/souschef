@@ -180,6 +180,19 @@ input[type="submit"] {
 #my_recipe_photo {
     margin-left: 125px;
 }
+
+#myModal {
+    display: none;
+}
+
+#myModal2 {
+    display: none;
+}
+
+#myModal3 {
+    display: none;
+}
+
 label {
     margin-top: 10px;
 }
@@ -516,6 +529,11 @@ display: none;
 
 }
 
+.mobile_modal{
+    z-index: 1060;
+position: relative;
+}
+
  #recipe_source {
      color: white;
      font-size: 14px;
@@ -696,10 +714,11 @@ background-color: white;
 }
 
 #comment_avatar>img {
-   height: 80px;
-width: 125px;
-left: -30px;
+  height: 100px;
+width: 100px;
+left: -15px;
 position: relative;
+
 }
 
 .comment {
@@ -750,6 +769,18 @@ position: relative;
     }
 }
 @media (max-width: 450px) {
+
+#myModal {
+    display: block;
+}
+
+#myModal2 {
+    display: block;
+}
+
+#myModal2 {
+    display: none;
+}
 
     .social-buttons {
     position: absolute;

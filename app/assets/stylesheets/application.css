@@ -453,7 +453,8 @@ h1 {
     position: absolute;
     left: 410px;
     color: white;
-    display: block;
+       display: inline;
+   
 }
 #star_title {
     top: 150px;
@@ -463,26 +464,27 @@ left: 415px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
-display: block;
+   display: inline;
+
 }
 #star>img {
     width: 30px;
     height: 30px;
-    display: block;
+       display: inline;
 }
 #user_star {
     top: 290px;
     position: absolute;
     left: 435px;
     color: white;
-    display: block;
+       display: inline;
 }
 #user_star>img {
     width: 30px;
     height: 30px;
     position: relative;
     left: -25px;
-    display: block;
+    display: inline;
 }
 #user_star_title {
     top: 250px;
@@ -491,7 +493,7 @@ left: 435px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';
-display: block;
+   display: inline;
 
 }
 #recipe_image>img {
@@ -850,10 +852,11 @@ background-position: 50% 50%;
      top: 290px;
      position: absolute;
      left: 10px;
+     z-index: 1085;
  }
 
  #masonry-container {
-    height: 300px;
+    height: 400px;
     position: relative;
     left: -15px;
  }
@@ -895,6 +898,7 @@ background-position: 50% 50%;
     position: absolute;
     left: 410px;
     color: white;
+  display: inline;
 }
 #star_title_mobile {
     top: 150px;
@@ -904,22 +908,27 @@ left: 415px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
+ display: inline;
 }
+
 #star_mobile>img {
     width: 30px;
     height: 30px;
+      display: inline;
 }
 #user_star_mobile {
     top: 290px;
     position: absolute;
     left: 435px;
     color: white;
+      display: inline;
 }
 #user_star_mobile>img {
     width: 30px;
     height: 30px;
     position: relative;
     left: -25px;
+      display: inline;
 }
 #user_star_title_mobile {
     top: 250px;
@@ -929,7 +938,7 @@ left: 435px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';
-
+  display: inline;
 }
 
 #star {
@@ -937,7 +946,8 @@ font-family: 'carnevalee_freakshow-webfont';
     position: absolute;
     left: 410px;
     color: white;
-    display: none;
+      display: none;
+   
 }
 #star_title {
     top: 150px;
@@ -947,26 +957,27 @@ left: 415px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
-display: none;
+    display: none;
+
 }
 #star>img {
     width: 30px;
     height: 30px;
-    display: none;
+        display: none;
 }
 #user_star {
     top: 290px;
     position: absolute;
     left: 435px;
     color: white;
-   display: none;
+         display: none;
 }
 #user_star>img {
     width: 30px;
     height: 30px;
     position: relative;
     left: -25px;
-   display: none;
+    display: none;
 }
 #user_star_title {
     top: 250px;
@@ -975,7 +986,7 @@ left: 435px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';
-display: none;
+  display: none;
 
 }
 

@@ -142,19 +142,22 @@
      <%= render "comments/comments" %>  
       </div>
 
-    </div>
 
-      </div>
-      <div class="tab-pane" id="pane3">
-        <p id="star_title_mobile">Averate rating</p>
+<div class="tab-pane" id="pane3">
+  <p id="star_title_mobile">Averate rating</p>
 <div id="star_mobile">
 </div>
 
 <p id="user_star_title_mobile">Your rating</p>
 <div id="user_star_mobile">
 </div>
-      </div>
 
+</div>
+
+    </div>
+
+      </div>
+      
       </section>
 
     </div>
@@ -266,12 +269,7 @@ $('#tab2 a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 });
-
-$('#tab3 a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
-        </script>
+</script>
         <script>
 $('#star').raty({
     readOnly: true,

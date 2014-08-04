@@ -52,24 +52,24 @@
         <p id="serving_content"><%=@serving%></p> 
         <p id="serving_title">Servings</p>
       </div>
-      <li class="nutrition_info nutrition_info_mobile" id="cal">calories  <%= @calories %> </li>                
-    <li class="nutrition_info  nutrition_info_mobile"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
+      <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                
+    <li class="nutrition_info"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
       <%= @protein %></li>
-                   <li class="nutrition_info  nutrition_info_mobile">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                   <li class="nutrition_info">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp &nbsp &nbsp &nbsp &nbsp <%=@fat %></li>
-                    <li class="nutrition_info  nutrition_info_mobile">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
+                    <li class="nutrition_info">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
       &nbsp<%=@saturated %></li>
-                  <li class="nutrition_info  nutrition_info_mobile">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
+                  <li class="nutrition_info">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
         <%= @poly %></li>
-                  <li class="nutrition_info  nutrition_info_mobile">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                  <li class="nutrition_info">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
       &nbsp  <%= @sodium%></li>
-                  <li class="nutrition_info  nutrition_info_mobile">Monounsaturated Fat &nbsp &nbsp
+                  <li class="nutrition_info">Monounsaturated Fat &nbsp &nbsp
        <%= @mono%></li>
-                   <li class="nutrition_info  nutrition_info_mobile">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                   <li class="nutrition_info">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
        <%= @fiber%></li>
-                     <li class="nutrition_info  nutrition_info_mobile">Carbohydrates  &nbsp &nbsp &nbsp
+                     <li class="nutrition_info">Carbohydrates  &nbsp &nbsp &nbsp
       &nbsp <%= @carb%></li>
-                  <li class="nutrition_info  nutrition_info_mobile">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
+                  <li class="nutrition_info">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
       &nbsp  <%= @cholesterol %>
                             </p>
      </div>
@@ -78,13 +78,13 @@
         
     
           <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
-             <ul  class="nav nav-tabs">
+            <ul  class="nav nav-tabs">
       <li class="active"><a href="#pane1" data-toggle="tab">Recipe</a></li>
-      <li><a href="#pane2" data-toggle="tab">Reviews</a></li>
+      <li><a href="#pane2" data-toggle="tab">Comments</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="pane1">
-         <p class="recipe_title">
+       <p class="recipe_title">
 
                             <%= @recipes.title %>
                               
@@ -100,7 +100,7 @@
 <div id="user_star">
 </div>
 <div class="social-buttons"></div>
-                            <p id="recipe_image">
+<p id="recipe_image">
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
                              <div id="ingredients_list" class="ingredients_list_mobile">
@@ -109,23 +109,23 @@
                            <br>
                               <%= simple_format(@ingredients) %>
                            </div>
-                         
+                            
                          <h4 id="prep_heading">Preparation:</h4>
                            <div id="prep" class="prep_mobile" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
                                 </div>
 
-                                  <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->
+                                  <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3  bucket.-->
 
-                        
       </div>
+
       <div class="tab-pane" id="pane2">
-      <div class="accordion-heading">
+        <div class="accordion-heading">
     <a class="accordion-toggle"
        data-toggle="collapse"
        data-parent="#accordion2"
        href="#collapseOne">Add Comment</a>
 </div>
-<div id="collapseOne" class="accordion-body collapse">
+        <div id="collapseOne" class="accordion-body collapse">
         <div class="well well-small">
             <div class="accordion-toggle">
                      
@@ -134,13 +134,12 @@
 </div>
             </div>
         </div>
-    </div>
+    
    
      <%= render "comments/comments" %>  
-                   
-</div>
-</div>
+      </div>
 
+    </div>
       </div>
       </section>
     </div>

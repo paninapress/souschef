@@ -735,12 +735,19 @@ height: 150px;
 }
 @media (max-width: 450px) {
 
+    .social-buttons {
+    position: absolute;
+left: 393px;
+top: 360px;
+display: none;
+}
+
 .prep_mobile {
     display: none;
 }
 
 .prep{
-    display: block;
+    display: none;
 }
 
 .nutrition_info {
@@ -821,7 +828,7 @@ background-position: 50% 50%;
  #recipe_source {
      color: white;
      font-size: 14px;
-     top: 480px;
+     top: 455px;
      position: absolute;
      left: 40px;
  }
@@ -829,7 +836,7 @@ background-position: 50% 50%;
 .recipe_title {
     left: 40px;
     font-size: 24px;
-    top: 400px;
+    top: 420px;
     position: absolute;
     color: white;
     font-family: 'octin_vintage_b_rg-webfont';

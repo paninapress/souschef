@@ -696,12 +696,21 @@ background-color: white;
 }
 
 #comment_avatar>img {
-    width: 72px;
-    height: 72px;
+   height: 80px;
+width: 125px;
+left: -30px;
+position: relative;
 }
 
 .comment {
     height: 150px;
+    border-style: solid;
+border-color: #333;
+border-width: medium;
+left: 15px;
+border-top: none;
+padding-top: 15px;
+border-right: none;
 }
 
 
@@ -720,6 +729,13 @@ background-color: white;
 font-family: 'engeholzschrift-webfont';
 font-size: 36px;
 height: 150px;
+}
+
+#comments {
+    background-color: tan;
+    width: 598px;
+left: 15px;
+position: relative;
 }
 
 @media (max-width: 950px) {

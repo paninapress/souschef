@@ -10,7 +10,7 @@
     	<% if  comment.content.length > 100 %>
     	<div class="truncated"><%=truncate(comment.content, length: 250)%></div>
       <div class="more">view more...</div>
-      <div class="complete"><%= word_wrap(comment.content, line_width: 20) %></div>
+      <div class="complete"><%= word_wrap(comment.content, line_width: 5) %></div>
       	<% else %>
 
       	<div><%= simple_format comment.content %></div>

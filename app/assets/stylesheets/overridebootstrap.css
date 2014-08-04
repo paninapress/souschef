@@ -152,7 +152,9 @@ color: tomato;
 
 @media (max-width: 450px) {
 
-
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0;
+}
 
 .alert {
   top:100px;

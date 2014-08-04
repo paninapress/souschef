@@ -759,12 +759,6 @@ font-size: 36px;
 height: 150px;
 }
 
-#comments {
-    background-color: tan;
-left: 15px;
-position: relative;
-height: 300px;
-}
 
 @media (max-width: 950px) {
     #speaker {
@@ -778,6 +772,17 @@ height: 300px;
     }
 }
 @media (max-width: 450px) {
+.comment{
+    height: 120px;
+}
+
+
+    #comments {
+    background-color: tan;
+left: 15px;
+position: relative;
+height: 300px;
+}
 
     #rating_tab{
     visibility: visible;
@@ -940,7 +945,7 @@ font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
  display: inline;
- width: 100px;
+ width: 200px;
 }
 
 #star_mobile>img {

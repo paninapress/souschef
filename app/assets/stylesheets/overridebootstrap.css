@@ -179,7 +179,7 @@ color: tomato;
 
  .navbar{
       height: auto;
-      z-index: 1090;
+      z-index: 1099;
     }
 
     .navbar-header{
@@ -311,7 +311,7 @@ div.accordion-heading{
 }
 
 a.accordion-toggle{
- z-index: 1099;
+ z-index: 1098;
 position: relative;
 }
 

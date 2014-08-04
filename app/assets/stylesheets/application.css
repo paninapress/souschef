@@ -774,6 +774,7 @@ height: 150px;
 @media (max-width: 450px) {
 .comment{
     height: 120px;
+    width: 200px;
 }
 
 
@@ -782,6 +783,7 @@ height: 150px;
 left: 15px;
 position: relative;
 height: 300px;
+width: 315px;
 }
 
     #rating_tab{

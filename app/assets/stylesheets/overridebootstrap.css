@@ -165,8 +165,8 @@ color: tomato;
 }
 
 .tab-content {
-  position: relative;
-  top:-100px;
+  position: absolute;
+  top:-45px;
 }
 
 .nav {
@@ -268,8 +268,8 @@ height: 35px;
     }
 
     ul.nav.nav-tabs{
-  top:-100px;
-position:relative;
+  top:-45px;
+position:absolute;
 z-index: 1085;
 width: 310px;
 }

@@ -81,6 +81,7 @@
             <ul  class="nav nav-tabs">
       <li class="active"><a href="#pane1" data-toggle="tab">Recipe</a></li>
       <li><a href="#pane2" data-toggle="tab">Comments</a></li>
+      <li><a href="#pane3" data-toggle="tab">Ratings</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="pane1">
@@ -146,6 +147,15 @@
       </div>
 
       </section>
+      <div class="tab-pane" id="pane3">
+        <p id="star_title">Averate rating</p>
+<div id="star">
+</div>
+
+<p id="user_star_title">Your rating</p>
+<div id="user_star">
+</div>
+      </div>
 
     </div>
                                       <!-- Button trigger modal -->
@@ -307,7 +317,7 @@ $(".prep_modal").click(function (e) {
   $("#myModal").hide();
   $("#myModal3").hide();
   $("#myModal2").show();
-  
+
 
 });
 

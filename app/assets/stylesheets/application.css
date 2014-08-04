@@ -538,9 +538,6 @@ display: none;
 
 }
 
-#pane3 {
-    display:block;
-}
 
 .mobile_modal{
     z-index: 1060;
@@ -697,6 +694,7 @@ position: relative;
     width: 598px;
 
 }
+
 
 #pane3 {
     display:none;
@@ -893,18 +891,22 @@ background-position: 50% 50%;
      display: block;
  }
 
+ #pane3 {
+    display:block;
+}
+
+
  #star_mobile {
-    top: 190px;
+    top: 10px;
     position: absolute;
-    left: 410px;
+    left: 10px;
     color: white;
   display: inline;
 }
 #star_title_mobile {
-    top: 150px;
-
+    top: 20px;
 position: absolute;
-left: 415px;
+left: 15px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
@@ -917,9 +919,9 @@ font-family: 'carnevalee_freakshow-webfont';
       display: inline;
 }
 #user_star_mobile {
-    top: 290px;
+    top: 20px;
     position: absolute;
-    left: 435px;
+    left: 35px;
     color: white;
       display: inline;
 }
@@ -927,14 +929,13 @@ font-family: 'carnevalee_freakshow-webfont';
     width: 30px;
     height: 30px;
     position: relative;
-    left: -25px;
+    left: 15px;
       display: inline;
 }
 #user_star_title_mobile {
-    top: 250px;
-
+    top: 50px;
 position: absolute;
-left: 435px;
+left: 45px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';

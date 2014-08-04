@@ -6,6 +6,7 @@
     	<%= simple_format comment.username %>
     </div>
     <div class="comment col-lg-10 col-xs-9">
+      <div class="container">
     	<% if  comment.content.length > 100 %>
     	<div class="truncated"><%=truncate(comment.content, length: 250)%></div>
       <div class="more">view more...</div>
@@ -14,7 +15,7 @@
 
       	<div><%= simple_format comment.content %></div>
       	<% end %>
-
+      </div>
     </div>
 
 

@@ -149,7 +149,7 @@
 
     </div>
                                       <!-- Button trigger modal -->
-<button class="btn btn-primary btn-info mobile_modal" data-toggle="modal" data-target="#myModal">
+<button class="btn btn-primary btn-info mobile_modal ingredient" data-toggle="modal" data-target="#myModal">
   Ingredients
 </button>
 
@@ -162,7 +162,7 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        ...
+        Food
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -172,7 +172,7 @@
   </div>
 </div>
 
-<button class="btn btn-primary btn-info mobile_modal" data-toggle="modal" data-target="#myModal2">
+<button class="btn btn-primary btn-info mobile_modal prep_modal" data-toggle="modal" data-target="#myModal2">
   Preparation
 </button>
 
@@ -185,7 +185,7 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        ...
+        Instructions
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -195,7 +195,7 @@
   </div>
 </div>
 
-<button class="btn btn-primary btn-info mobile_modal" data-toggle="modal" data-target="#myModal3">
+<button class="btn btn-primary btn-info mobile_modal nutrition_modal" data-toggle="modal" data-target="#myModal3">
   Nutrition
 </button>
 
@@ -208,7 +208,7 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        ...
+        Nutrition Value
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -293,7 +293,29 @@ $(".more").toggle(function(){
 });
 </script>
 <script type="text/javascript">
-$('#myModal').modal({
-  keyboard: false
+$('.ingredient').click(function (e) {
+  e.preventDefault()
+  $("#myModal2").hide();
+  $("#myModal3").hide();
+  $("#myModal").show();
+});
+
+</script>
+<script type="text/javascript">
+$(".prep_modal").click(function (e) {
+ e.preventDefault()
+  $("#myModal").hide();
+  $("#myModal3").hide();
+  $("#myModal2").show();
+});
+
+</script>
+
+<script type="text/javascript">
+$(".nutrition_modal").click(function (e) {
+ e.preventDefault()
+  $("#myModal2").hide();
+  $("#myModal").hide();
+   $("#myModal3").show();
 });
 </script>

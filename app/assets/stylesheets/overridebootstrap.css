@@ -295,7 +295,15 @@ width: 310px;
 }
 
 .btn-info {
-  display:inline-block;
+  display:inline;
+top:-80px;
+position: relative;
+width: 100px;
+left:20px;
+border-radius: 0px;
+color: #333;
+background-color: tomato;
+border-color: tomato;
 }
 
   }

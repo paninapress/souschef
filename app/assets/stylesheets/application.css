@@ -759,6 +759,13 @@ font-size: 36px;
 height: 150px;
 }
 
+    #comments {
+    background-color: tan;
+left: 15px;
+position: relative;
+width: 598px;
+}
+
 
 @media (max-width: 950px) {
     #speaker {

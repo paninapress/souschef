@@ -40,7 +40,7 @@
   <% end %>
     </div>
   <div class="row">
-    <div class="col-lg-2 nutrition_column_mobile" id="nutrition_column_desktop">
+    <div class="col-lg-2 nutrition_column_mobile" id="nutrition_column">
       <div class="col-xs-4" id="calories_column">
         <p id="calorie_content"><%=@calories %></p>
         <p id="caloire_title"> Calories</p></div>
@@ -103,7 +103,7 @@
                             <p id="recipe_image">
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
-                             <div id="ingredients_list">
+                             <div id="ingredients_list" class="ingredients_list_mobile">
 
                            <h4>Ingredients:</h4>
                            <br>
@@ -111,7 +111,7 @@
                            </div>
                          
                          <h4 id="prep_heading">Preparation:</h4>
-                           <div id="prep" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
+                           <div id="prep" class="prep_mobile" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
                                 </div>
 
                                   <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3 bucket.-->

@@ -490,7 +490,13 @@ top: 360px;
      font-size: 16px;
      position: relative;
      top: 70px;
+     display: block;
  }
+
+.prep_mobile {
+    display: none;
+}
+
  #prep_heading {
      color: white;
      position: relative;
@@ -502,7 +508,14 @@ top: 360px;
      top: 150px;
      position: relative;
      margin-bottom: 55px;
+     display: block;
  }
+
+.ingredients_list_mobile { 
+display: none;
+
+}
+
  #recipe_source {
      color: white;
      font-size: 14px;
@@ -518,14 +531,11 @@ top: 360px;
  
  
  
- #nutrition_column_desktop {
+ #nutrition_column {
      background-color: tan;
  left: 8px;
  margin-top: 135px;
- }
-
- #nutrition_column_mobile {
-    display: none;
+ display: block;
  }
  
  #cal {
@@ -612,11 +622,6 @@ font-size: 14px;
 padding-bottom: 40px;
 }
 
-#nutrition_column_desktop {
-    background-color: tomato;
-left: 8px;
-margin-top: 135px;
-}
 
 .nutrition_column_mobile {
     display: none;
@@ -729,6 +734,22 @@ height: 150px;
 }
 @media (max-width: 450px) {
 
+.prep_mobile {
+    display: none;
+}
+
+.prep{
+    display: block;
+}
+
+
+
+ #nutrition_column {
+     background-color: tan;
+ left: 8px;
+ margin-top: 135px;
+ display: none;
+ }
 
 .form_shell {
     width: 335px;
@@ -746,10 +767,6 @@ background-position: 50% 50%;
 #comment_content {
     width: 280px;
 }
-
-#nutrition_column_desktop {
-     display: none;
- }
 
  .nutrition_column_mobile {
     display: block;
@@ -779,6 +796,18 @@ background-position: 50% 50%;
      margin-bottom: 55px;
      left: 5px;
      width: 305px;
+     display: none;
+ }
+
+  .ingredients_list_mobile {
+     color: white;
+     font-size: 16px;
+     top: 150px;
+     position: relative;
+     margin-bottom: 55px;
+     left: 5px;
+     width: 305px;
+     display: block;
  }
 
  #recipe_source {

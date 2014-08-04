@@ -145,17 +145,17 @@
     </div>
 
       </div>
-
-      </section>
       <div class="tab-pane" id="pane3">
-        <p id="star_title">Averate rating</p>
-<div id="star">
+        <p id="star_title_mobile">Averate rating</p>
+<div id="star_mobile">
 </div>
 
-<p id="user_star_title">Your rating</p>
-<div id="user_star">
+<p id="user_star_title_mobile">Your rating</p>
+<div id="user_star_mobile">
 </div>
       </div>
+
+      </section>
 
     </div>
                                       <!-- Button trigger modal -->
@@ -272,6 +272,27 @@ $('#star').raty({
   });
 
   $('#user_star').raty({
+    score: <%= @rating.score %>,
+    half: true,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>
+<script>
+$('#star_mobile').raty({
+    readOnly: true,
+    score: <%= @recipes.average_rating %>,
+    half: true,
+    path: '/assets'
+  });
+
+  $('#user_star_mobile').raty({
     score: <%= @rating.score %>,
     half: true,
     path: '/assets',

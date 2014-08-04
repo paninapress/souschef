@@ -1,3 +1,7 @@
+.btn-info {
+  display:none;
+}
+
 nav ul {
   display: flex; }
 nav li {
@@ -18,12 +22,6 @@ nav a {
 nav a:hover {
     color: #b32b2a;
     text-decoration: none; }
-
-ul.nav.nav-tabs{
-  top:-45px;
-position:relative;
-z-index: 1085;
-}
 
 
 .navbar-nav>li>a {
@@ -206,6 +204,7 @@ top: 10px;
 
 .nav-tabs>li {
   background-color: white;
+  height: 40px;
 }
 
  .nav-tabs>li>a {
@@ -214,7 +213,7 @@ top: 10px;
  border: 1px solid transparent;
  border-radius: 4px 4px 0 0;
  color: tomato;
- height: 6px;
+ height: 40px;
 font-size:14px;
 padding-bottom: 20px;
  }
@@ -268,6 +267,14 @@ nav li {
 height: 35px;
     }
 
+    ul.nav.nav-tabs{
+  top:-45px;
+position:relative;
+z-index: 1085;
+width: 310px;
+}
+
+
 .nav>li>a {
   width: 100%;
   text-align: center;
@@ -285,6 +292,10 @@ height: 35px;
 .col-lg-3 {
   width: 30.6%;
   left: 15px;
+}
+
+.btn-info {
+  display:block;
 }
 
   }

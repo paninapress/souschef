@@ -453,6 +453,7 @@ h1 {
     position: absolute;
     left: 410px;
     color: white;
+    display: block;
 }
 #star_title {
     top: 150px;
@@ -462,31 +463,35 @@ left: 415px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
+display: block;
 }
 #star>img {
     width: 30px;
     height: 30px;
+    display: block;
 }
 #user_star {
     top: 290px;
     position: absolute;
     left: 435px;
     color: white;
+    display: block;
 }
 #user_star>img {
     width: 30px;
     height: 30px;
     position: relative;
     left: -25px;
+    display: block;
 }
 #user_star_title {
     top: 250px;
-
 position: absolute;
 left: 435px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';
+display: block;
 
 }
 #recipe_image>img {
@@ -882,6 +887,95 @@ background-position: 50% 50%;
      width: 305px;
      display: block;
  }
+
+ #star_mobile {
+    top: 190px;
+    position: absolute;
+    left: 410px;
+    color: white;
+}
+#star_title_mobile {
+    top: 150px;
+
+position: absolute;
+left: 415px;
+font-size: 28px;
+color: white;
+font-family: 'carnevalee_freakshow-webfont';
+}
+#star_mobile>img {
+    width: 30px;
+    height: 30px;
+}
+#user_star_mobile {
+    top: 290px;
+    position: absolute;
+    left: 435px;
+    color: white;
+}
+#user_star_mobile>img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -25px;
+}
+#user_star_title_mobile {
+    top: 250px;
+
+position: absolute;
+left: 435px;
+color: white;
+font-size: 28px;
+font-family: 'carnevalee_freakshow-webfont';
+
+}
+
+#star {
+    top: 190px;
+    position: absolute;
+    left: 410px;
+    color: white;
+    display: none;
+}
+#star_title {
+    top: 150px;
+
+position: absolute;
+left: 415px;
+font-size: 28px;
+color: white;
+font-family: 'carnevalee_freakshow-webfont';
+display: none;
+}
+#star>img {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#user_star {
+    top: 290px;
+    position: absolute;
+    left: 435px;
+    color: white;
+   display: none;
+}
+#user_star>img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -25px;
+   display: none;
+}
+#user_star_title {
+    top: 250px;
+position: absolute;
+left: 435px;
+color: white;
+font-size: 28px;
+font-family: 'carnevalee_freakshow-webfont';
+display: none;
+
+}
 
   #recipe_source {
      color: white;

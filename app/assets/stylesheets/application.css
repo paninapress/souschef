@@ -506,6 +506,10 @@ left: 393px;
 top: 360px;
 }
 
+#rating_tab{
+    visibility: hidden;
+}
+
 #prep {
       color: white;
      font-size: 16px;
@@ -697,7 +701,7 @@ position: relative;
 
 
 #pane3 {
-    display:none;
+     visibility: visible;
 }
 
 .complete{

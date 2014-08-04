@@ -81,11 +81,12 @@
             <ul  class="nav nav-tabs">
       <li class="active"><a href="#pane1" data-toggle="tab">Recipe</a></li>
       <li><a href="#pane2" data-toggle="tab">Comments</a></li>
-      <li><a href="#pane3" data-toggle="tab">Ratings</a></li>
+      <li><a href="#pane3" id="rating_tab" data-toggle="tab">Ratings</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="pane1">
-       <p class="recipe_title">
+      
+<p class="recipe_title">
 
                             <%= @recipes.title %>
                               
@@ -117,11 +118,8 @@
 
                                   <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3  bucket.-->
 
-
-
       </div>
-
-      <div class="tab-pane" id="pane2">
+<div class="tab-pane" id="pane2">
         <div class="accordion-heading">
     <a class="accordion-toggle"
        data-toggle="collapse"
@@ -140,19 +138,9 @@
     
    
      <%= render "comments/comments" %>  
+
       </div>
-
-
-<div class="tab-pane" id="pane3">
-  <p id="star_title_mobile">Averate rating</p>
-<div id="star_mobile">
-</div>
-
-<p id="user_star_title_mobile">Your rating</p>
-<div id="user_star_mobile">
-</div>
-
-</div>
+<div class="tab-pane" id="pane3"><h1>HIHIHIHII</h1></div>
 
     </div>
 
@@ -260,12 +248,16 @@
         <script src="/assets/jquery.raty.js"></script>
         <script src="/assets/jquery.sharer.js"></script>
         <script type="text/javascript">
-$('#tab1 a').click(function (e) {
+$('#pane1 a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 });
 
-$('#tab2 a').click(function (e) {
+$('#pane2 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+$('#pane3 a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 });

@@ -847,13 +847,15 @@ background-position: 50% 50%;
 
 
  #recipeclip {
-     top: 310px;
+     top: 290px;
      position: absolute;
      left: 10px;
  }
 
  #masonry-container {
     height: 300px;
+    position: relative;
+    left: -10px;
  }
 
 #prep {
@@ -980,7 +982,7 @@ display: none;
   #recipe_source {
      color: white;
      font-size: 12px;
-     top: 250px;
+     top: 240px;
      position: absolute;
      left: 10px;
      width: 300px;
@@ -989,7 +991,7 @@ display: none;
 .recipe_title {
     left: 10px;
     font-size: 24px;
-    top: 210px;
+    top: 205px;
     position: absolute;
     color: white;
     width: 300px;

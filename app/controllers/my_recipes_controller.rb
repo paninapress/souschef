@@ -14,6 +14,7 @@ class MyRecipesController < ApplicationController
   # GET /my_recipes
   def index
     @myrecipes = current_user.my_recipes.order('created_at desc').page(params[:page])
+    @username = current_user.username
   end
 
   # GET /my_recipes/1

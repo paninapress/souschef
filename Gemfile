@@ -81,7 +81,6 @@ gem 'devise', '~> 3.0.0.rc'
 
 gem 'kaminari'
 
-
 gem 'rails_12factor'
 
 

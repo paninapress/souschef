@@ -152,6 +152,20 @@ color: tomato;
 
 @media (max-width: 450px) {
 
+.alert {
+  top:100px;
+}
+
+
+.nav-tabs>li {
+  background-color: white;
+}
+
+body {
+  background-color: #333;
+}
+
+
 audio {
   height: 30px;
   vertical-align: middle;
@@ -161,9 +175,11 @@ audio {
 position: relative;
 left: 65px;
 }
+
 audio::-webkit-media-controls-enclosure {
   height: 15px;
 }
+
 audio::-webkit-media-controls-panel {
   height: 15px;
   box-shadow: 1px 3px 5px #333;

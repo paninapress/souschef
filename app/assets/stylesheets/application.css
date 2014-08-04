@@ -518,10 +518,14 @@ top: 360px;
  
  
  
- #nutrition_column {
+ #nutrition_column_desktop {
      background-color: tan;
  left: 8px;
  margin-top: 135px;
+ }
+
+ #nutrition_column_mobile {
+    display: none;
  }
  
  #cal {
@@ -608,10 +612,14 @@ font-size: 14px;
 padding-bottom: 40px;
 }
 
-#nutrition_column {
+#nutrition_column_desktop {
     background-color: tomato;
 left: 8px;
 margin-top: 135px;
+}
+
+#nutrition_column_mobile {
+    display: none;
 }
 
 #cal {
@@ -720,6 +728,33 @@ height: 150px;
     }
 }
 @media (max-width: 450px) {
+
+
+.form_shell {
+    width: 335px;
+min-height: 555px;
+margin: 10px auto 10px;
+padding: 20px 15px 15px;
+background-color: transparent;
+color: white;
+background-image: url("/assets/formframe.png");
+background-size: 90%;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}    
+
+#comment_content {
+    width: 280px;
+}
+
+ #nutrition_column_desktop {
+     display: none;
+ }
+
+ #nutrition_column_mobile {
+    display: block;
+ }
+
 
  #recipeclip {
      top: 520px;

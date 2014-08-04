@@ -761,9 +761,9 @@ height: 150px;
 
 #comments {
     background-color: tan;
-    width: 598px;
 left: 15px;
 position: relative;
+height: 300px;
 }
 
 @media (max-width: 950px) {
@@ -924,49 +924,55 @@ background-position: 50% 50%;
 
 
  #star_mobile {
-    top: 10px;
+    top: 70px;
     position: absolute;
-    left: 10px;
+    left: 30px;
     color: white;
   display: inline;
+  width: 300px;
+
 }
 #star_title_mobile {
     top: 20px;
 position: absolute;
-left: 15px;
+left: 80px;
 font-size: 28px;
 color: white;
 font-family: 'carnevalee_freakshow-webfont';
  display: inline;
+ width: 100px;
 }
 
 #star_mobile>img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
       display: inline;
 }
 #user_star_mobile {
-    top: 20px;
+    top: 230px;
     position: absolute;
-    left: 35px;
+    left: 15px;
     color: white;
       display: inline;
+      width: 300px;
+      z-index: 1095;
 }
 #user_star_mobile>img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     position: relative;
     left: 15px;
       display: inline;
 }
 #user_star_title_mobile {
-    top: 50px;
+    top: 170px;
 position: absolute;
-left: 45px;
+left: 95px;
 color: white;
 font-size: 28px;
 font-family: 'carnevalee_freakshow-webfont';
   display: inline;
+  width: 200px;
 }
 
 #star {

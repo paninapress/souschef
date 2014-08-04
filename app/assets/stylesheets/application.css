@@ -618,7 +618,7 @@ left: 8px;
 margin-top: 135px;
 }
 
-#nutrition_column_mobile {
+.nutrition_column_mobile {
     display: none;
 }
 
@@ -747,11 +747,11 @@ background-position: 50% 50%;
     width: 280px;
 }
 
- #nutrition_column_desktop {
+#nutrition_column_desktop {
      display: none;
  }
 
- #nutrition_column_mobile {
+ .nutrition_column_mobile {
     display: block;
  }
 

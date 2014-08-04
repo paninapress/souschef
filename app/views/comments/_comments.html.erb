@@ -3,7 +3,7 @@
   <% @comments.each do |comment| %>
   <div class="username col-lg-2">
     <p id="comment_avatar"><%= image_tag(comment.profile) if comment.profile? %></p>
-    	<%= simple_format(comment.username) %>
+    	<%= simple_format comment.username %>
     </div>
     <div class="comment col-lg-10">
     	<% if  comment.content.length > 250 %>

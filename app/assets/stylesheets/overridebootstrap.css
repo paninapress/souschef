@@ -152,6 +152,8 @@ color: tomato;
 
 @media (max-width: 450px) {
 
+
+
 .alert {
   top:100px;
 }

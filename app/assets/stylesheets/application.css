@@ -620,6 +620,7 @@ border-width: thin;
 padding-top: 15px;
 font-size: 14px;
 padding-bottom: 40px;
+display: block;
 }
 
 
@@ -742,6 +743,13 @@ height: 150px;
     display: block;
 }
 
+.nutrition_info {
+    display: none;
+}
+
+ .nutrition_info_mobile{
+    display: block;
+ }
 
 
  #nutrition_column {

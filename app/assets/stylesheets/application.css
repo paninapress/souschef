@@ -779,6 +779,10 @@ position: relative;
 }
 @media (max-width: 450px) {
 
+    #rating_tab{
+    visibility: visible;
+}
+
 textarea#comment_content{
     z-index: 1085;
 position: relative;

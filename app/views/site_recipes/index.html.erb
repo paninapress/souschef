@@ -70,16 +70,16 @@
 </div>
 <div class="panel3 center" data-stellar-background-ratio="0.4">
   <% @siterecipes.each do |recipe| %>
-    <div id="masonry-container">
+    <div id="masonry-container_index">
       <a href="<%= site_recipe_path(recipe)%>">
         <div class="box col4">
           <img src="http://www.epicurious.com<%= recipe.image %>">
           <div class="row">
             <div class="col-xs-12"><%= recipe.title %></div>
           <div class="col-xs-12" id="index_source"><%= recipe.source %></div>
-          <div class="col-xs-4 col-lg-3 index_info"><h1 class="info_value">254</h1><h2 class="info_title">Calories</h2></div>
+          <div class="col-xs-4 col-lg-3 index_info"><h1 class="info_value"><%= recipe.calories %></h1><h2 class="info_title">Calories</h2></div>
            <div class="col-xs-4  col-lg-3 index_info" style="background-color:coral;"><h1 class="info_value">N/A</h1><h2 class="info_title">Time</h2></div>
-            <div class="col-xs-4 col-lg-3 index_info" ><h1 class="info_value">8</h1><h2 class="info_title">Serving</h2></div>
+            <div class="col-xs-4 col-lg-3 index_info" ><h1 class="info_value"><%= recipe.servings%></h1><h2 class="info_title">Serving</h2></div>
         </div>
         </div>
       </a>

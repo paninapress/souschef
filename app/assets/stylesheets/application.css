@@ -696,6 +696,34 @@ position: relative;
     width: 60px;
 }
 
+#calorie_content_mobile{
+visibility: hidden;
+}
+#caloire_title_mobile {
+visibility: hidden;
+}
+
+#time_column_mobile {
+visibility: hidden;
+}
+
+#time_content_mobile {
+visibility: hidden;
+}
+
+#time_title_mobile{
+    visibility: hidden;
+}
+    #serving_column_mobile {
+visibility: hidden;
+    }
+       #serving_content_mobile{
+visibility: hidden;
+       }
+      #serving_title_mobile{
+visibility: hidden;
+      }
+
 #pane2 {
     width: 598px;
 
@@ -900,7 +928,7 @@ display: none;
 }
 
  .nutrition_info_mobile{
-    display: block;
+   
  }
 
 
@@ -908,7 +936,7 @@ display: none;
      background-color: tan;
  left: 8px;
  margin-top: 135px;
- display: none;
+ display: block;
  }
 
 .form_shell {
@@ -932,6 +960,34 @@ background-position: 50% 50%;
     display: block;
  }
 
+
+#calorie_content_mobile{
+visibility: visible;
+}
+#caloire_title_mobile {
+visibility: visible;
+}
+
+#time_column_mobile {
+visibility: visible;
+}
+
+#time_content_mobile {
+visibility: visible;
+}
+
+#time_title_mobile{
+ visibility: visible;
+}
+    #serving_column_mobile {
+visibility: visible;
+    }
+       #serving_content_mobile{
+visibility: visible;
+       }
+      #serving_title_mobile{
+visibility: visible;
+      }
 
  #recipeclip {
      top: 290px;
@@ -1083,7 +1139,7 @@ font-family: 'carnevalee_freakshow-webfont';
   #recipe_source {
      color: white;
      font-size: 12px;
-     top: 240px;
+     top: 265px;
      position: absolute;
      left: 10px;
      width: 300px;
@@ -1091,7 +1147,7 @@ font-family: 'carnevalee_freakshow-webfont';
 
 .recipe_title {
     left: 10px;
-    font-size: 24px;
+    font-size: 22px;
     top: 205px;
     position: absolute;
     color: white;

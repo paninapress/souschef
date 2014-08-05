@@ -155,6 +155,17 @@ color: tomato;
 }
 
 @media (max-width: 450px) {
+.modal{
+  z-index: 1090;
+}
+
+.modal-content {
+  width: 330px;
+left:-15px;
+top:75px;
+height: 340px;
+overflow: auto;
+}
 
 .modal-backdrop, .modal-backdrop.fade.in {
     opacity: 0;

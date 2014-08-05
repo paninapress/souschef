@@ -94,7 +94,7 @@
 
                             <div id="recipe_source"> <%= @recipes.source %></div>
 
-                            <p id="star_title">Averate rating</p>
+                            <p id="star_title">Average rating</p>
 <div id="star">
 </div>
 
@@ -105,7 +105,7 @@
 <p id="recipe_image">
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
-                             <div id="ingredients_list" class="ingredients_list_mobile">
+                             <div id="ingredients_list">
 
                            <h4>Ingredients:</h4>
                            <br>
@@ -141,7 +141,7 @@
 
       </div>
 <div class="tab-pane" id="pane3">                           
-  <p id="star_title_mobile">Averate rating</p>
+  <p id="star_title_mobile">Average rating</p>
 <div id="star_mobile">
 </div>
 
@@ -169,14 +169,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Ingredients</h4>
       </div>
       <div class="modal-body">
-        Food
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="ingredients_list_mobile">
+           <%= simple_format(@ingredients) %>
+        </div>
       </div>
     </div>
   </div>
@@ -192,14 +190,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Instructions</h4>
       </div>
-      <div class="modal-body">
-        Instructions
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body prep_mobile">
+        <%= simple_format(@preparation) %>
       </div>
     </div>
   </div>
@@ -215,20 +209,30 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Nutrition Information</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body nutrition_info_mobile">
         Nutrition Value
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
 
 </div>
+
+<div class="info_mobile">
+<p id="calorie_content_mobile"><%=@calories %></p>
+        <p id="caloire_title_mobile"> Calories</p></div>
+       <div id="time_column_mobile">
+        <p id="time_content_mobile">N/A</p> 
+        <p id="time_title_mobile">Time</p>
+      </div>
+        <div id="serving_column_mobile">
+        <p id="serving_content_mobile"><%=@serving%></p> 
+        <p id="serving_title_mobile">Servings</p>
+      </div>
+</div>
+
       <div class="col-lg-4">
         <div id="video-instruction"><h1>whowh w whowh wo hwohwo  whowh owho</h1></div>
         <div id="content" style="left:572px; width:450px; height:250px;">

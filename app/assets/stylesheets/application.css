@@ -779,6 +779,12 @@ width: 598px;
     }
 }
 @media (max-width: 450px) {
+
+.username {
+    height: auto;
+    font-size: 24px;
+}
+
 .comment{
     height: 120px;
     width: 200px;
@@ -790,7 +796,7 @@ input[type="submit"] {
 }
 
 .more {
-    z-index: 1099;
+    z-index: 1097;
     position: relative;
 }
 
@@ -815,8 +821,8 @@ left: -10px
 
     #comment_avatar>img {
         height: 80px;
-width: 80px;
-left: -25px;
+width: 100px;
+left: -45px;
 position: relative;
     }
 

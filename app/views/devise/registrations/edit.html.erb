@@ -34,7 +34,7 @@
         </div>
       </nav>
 <div class="container-fluid form-bg">
-  <div class= "form_shell">
+  <div class= "form_shell_edit">
     <div class="row">
       <div class="span12 center">
         <h2>Edit
@@ -53,16 +53,16 @@
             <i>(leave blank if you don't want to change it)</i><br />
             <%= f.password_field :password, :autocomplete => "off", :autofocus => true, placeholder: 'Password' %></div>
           <div><%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, :autofocus => true, placeholder: 'Password Confirmation' %></div>
+            <%= f.password_field :password_confirmation, :autofocus => true, placeholder: 'Password Confirmation', style: "background-color:tomato;" %></div>
           <div><%= f.label :current_password %>
             <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password,  :autofocus => true, placeholder: 'Current Password' %></div>
+            <%= f.password_field :current_password,  :autofocus => true, placeholder: 'Current Password', style: "background-color:tomato;" %></div>
             <p>
     <label>Change Avatar</label>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, id: "edit_avatar" %>
     <%= f.hidden_field :avatar_cache %>
   </p>
-          <div><%= f.submit "Update",class: "form_button" %></div>
+          <div><%= f.submit "Update",class: "form_button", id: "edit_account_button" %></div>
         <% end %>
         <h3>Cancel my account</h3>
         <p>Unhappy?

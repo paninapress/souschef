@@ -189,7 +189,7 @@ input[type="submit"] {
     width: 350px;
 }
 #my_recipe_photo {
-    margin-left: 125px;
+    margin-left: 525px;
 }
 
 #myModal {
@@ -222,10 +222,14 @@ label {
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-.form-title {} #new_recipe_form {
+.form-title {} 
+
+#new_recipe_form {
     color: black;
     background-image: none;
+    margin-top: 100px;
 }
+
 .bgSizeCover {
     height: 650px;
     background-image: url("/assets/landing.jpg");
@@ -859,6 +863,36 @@ width: 550px;
 }
 
 
+.form_shell_edit{
+    width: 650px;
+height: 900px;
+margin: 100px auto 10px;
+padding: 40px 15px 15px;
+background-color: transparent;
+color: white;
+background-image: url("/assets/formframe.png");
+background-size: 95%;
+background-repeat: no-repeat;
+}    
+
+form#edit_user.edit_user{
+
+}
+
+
+#edit_account_button {
+    margin-bottom:25px;
+    margin-top: 25px;
+}
+
+#edit_avatar {
+    margin-left:35%;
+}
+
+#new_recipe {
+    background-color: tan;
+    height: 800px;
+}
 
 @media (max-width: 950px) {
     #speaker {
@@ -872,6 +906,19 @@ width: 550px;
     }
 }
 @media (max-width: 450px) {
+
+.form_shell {
+    width: 335px;
+min-height: 555px;
+margin: 10px auto 10px;
+padding: 20px 15px 15px;
+background-color: transparent;
+color: white;
+background-image: url("/assets/formframe.png");
+background-size: 90%;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}  
 
 .username {
     height: auto;
@@ -887,7 +934,6 @@ input[type="submit"] {
     position: relative;
     z-index: 1099;
 }
-
 
 
 .more {
@@ -990,18 +1036,6 @@ display: none;
  display: none;
  }
 
-.form_shell {
-    width: 335px;
-min-height: 555px;
-margin: 10px auto 10px;
-padding: 20px 15px 15px;
-background-color: transparent;
-color: white;
-background-image: url("/assets/formframe.png");
-background-size: 90%;
-background-repeat: no-repeat;
-background-position: 50% 50%;
-}    
 
 #comment_content {
     width: 280px;
@@ -1271,6 +1305,8 @@ font-family: 'carnevalee_freakshow-webfont';
         border-radius: 4px;
         margin-right: 100px;
     }
+
+
     .search_button {
         margin-right: 20%;
     }

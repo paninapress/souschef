@@ -170,6 +170,8 @@ input[type="submit"] {
     -o-transition: background-color 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out;
 }
+
+
 #my_recipe_description {
     width: 350px;
     height: 200px;
@@ -706,20 +708,32 @@ position: relative;
 
 .complete{
     display:none;
-    margin-bottom: 50px;
+   margin-bottom: 50px;
 position: relative;
-padding-bottom: 500px;
-/* height: 500px; */
 z-index: 10;
 background-color: white;
+height: 110px;
+overflow: scroll;
+width: 460px;
+left: -10px;
+background-color: tan;
+top: -15px;
+}
+
+.truncated {
+padding-bottom: 15px;
 }
 
 .more{
     background:lightblue;
     color:navy;
-    font-size:13px;
+    font-size:16px;
     padding:0px;
     cursor:pointer;
+    background: tan;
+color: white;
+top: -15px;
+position: relative;
 }
 
 #comment_avatar>img {
@@ -766,6 +780,9 @@ position: relative;
 width: 598px;
 }
 
+textarea#comment_content{
+width: 550px;
+}
 
 @media (max-width: 950px) {
     #speaker {

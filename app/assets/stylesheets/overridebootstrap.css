@@ -156,7 +156,7 @@ color: tomato;
 
 @media (max-width: 450px) {
 .modal{
-  z-index: 1090;
+  z-index: 1020;
 }
 
 .modal-content {

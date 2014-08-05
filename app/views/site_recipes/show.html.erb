@@ -118,6 +118,19 @@
 
                                   <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3  bucket.-->
 
+<div class="info_mobile">
+<p id="calorie_content_mobile"><%=@calories %></p>
+        <p id="caloire_title_mobile"> Calories:</p></div>
+       <div id="time_column_mobile">
+        <p id="time_content_mobile">N/A</p> 
+        <p id="time_title_mobile">Time:</p>
+      </div>
+        <div id="serving_column_mobile">
+        <p id="serving_content_mobile"><%=@serving%></p> 
+        <p id="serving_title_mobile">Servings:</p>
+      </div>
+</div>
+
       </div>
 <div class="tab-pane" id="pane2">
         <div class="accordion-heading">
@@ -217,18 +230,7 @@
 
 </div>
 
-<div class="info_mobile">
-<p id="calorie_content_mobile"><%=@calories %></p>
-        <p id="caloire_title_mobile"> Calories:</p></div>
-       <div id="time_column_mobile">
-        <p id="time_content_mobile">N/A</p> 
-        <p id="time_title_mobile">Time:</p>
-      </div>
-        <div id="serving_column_mobile">
-        <p id="serving_content_mobile"><%=@serving%></p> 
-        <p id="serving_title_mobile">Servings:</p>
-      </div>
-</div>
+
 
       <div class="col-lg-4">
         <div id="video-instruction"><h1>whowh w whowh wo hwohwo  whowh owho</h1></div>

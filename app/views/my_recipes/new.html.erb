@@ -52,39 +52,45 @@
               <% end %>
             </ul>
           <% end %>
-          <div><%= f.label :title, class: "center" %><br>
-            <%= f.text_field :title, class: "center" %></div>
-          <div><%= f.label :ingredients, "Ingredients", class: "center"%><br>
-            <%= f.text_area :ingredients, class: "center"%></div>
-            <div><%= f.label :preparation, "Instructions",class: "center"%><br>
-            <%= f.text_area :preparation, class: "center"%></div>
-             <div><%= f.label :photo,class: "center"%><br>
-            <%= f.file_field :photo %></div><br>
-            <div><%= f.label :time,"Time",class: "center"%><br>
-            <%= f.text_field :time, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :servings,"Servings",class: "center"%><br>
-            <%= f.text_field :servings, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :calories,"Calories",class: "center"%><br>
-            <%= f.text_field :calories, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :fat,"Fat",class: "center"%><br>
-            <%= f.text_field :fat, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :protein,"Protein",class: "center"%><br>
-            <%= f.text_field :protein, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :saturated,"Saturated Fat",class: "center"%><br>
-            <%= f.text_field :saturated, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :poly,"Polyunsaturated Fat",class: "center"%><br>
-            <%= f.text_field :poly, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :mono,"Monounsaturated Fat",class: "center"%><br>
-            <%= f.text_field :mono, class: "center", placeholder: "Not Available"%></div>
-             <div><%= f.label :carb,"Carbohydrates",class: "center"%><br>
-            <%= f.text_field :carb, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :fiber,"Fiber",class: "center"%><br>
-            <%= f.text_field :fiber, class: "center", placeholder: "Not Available"%></div>
-            <div><%= f.label :sodium,"Sodium",class: "center"%><br>
-            <%= f.text_field :sodium, class: "center", placeholder: "Not Available"%></div>
-             <div><%= f.label :cholesterol,"Cholesterol",class: "center"%><br>
-            <%= f.text_field :cholesterol, class: "center", placeholder: "Not Available"%></div>
-          <div><%= f.submit "Create my recipe", class: "form_button" %></div>
+          <div class="col-lg-4">
+          <div><%= f.label :title, class: "center", style: "color:#333" %><br>
+            <%= f.text_field :title, class: "center", style: "color: tomato; background-color:#333; border:none; width:80%;" %></div>
+          <div><%= f.label :ingredients, "Ingredients", class: "center", style: "color:#333"%><br>
+            <%= f.text_area :ingredients, class: "center", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :preparation, "Instructions",class: "center", style: "color:#333"%><br>
+            <%= f.text_area :preparation, class: "center", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+             <div><%= f.label :photo,class: "center", style: "color:#333"%><br>
+            <%= f.file_field :photo, style: "color: tomato;" %></div><br>
+            </div>
+             <div class="col-lg-4">
+            <div><%= f.label :time,"Time",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :time, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :servings,"Servings",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :servings, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :calories,"Calories",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :calories, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :fat,"Fat",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :fat, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :protein,"Protein",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :protein, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :saturated,"Saturated Fat",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :saturated, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            </div>
+             <div class="col-lg-4">
+            <div><%= f.label :poly,"Polyunsaturated Fat",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :poly, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :mono,"Monounsaturated Fat",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :mono, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+             <div><%= f.label :carb,"Carbohydrates",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :carb, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :fiber,"Fiber",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :fiber, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            <div><%= f.label :sodium,"Sodium",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :sodium, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+             <div><%= f.label :cholesterol,"Cholesterol",class: "center", style: "color: #333;"%><br>
+            <%= f.text_field :cholesterol, class: "center", placeholder: "Not Available", style: "color: tomato; background-color:#333; border:none; width:80%;"%></div>
+            </div>
+          <div><%= f.submit "Create my recipe", class: "form_button", style: "margin-top:35px; margin-bottom:15px;" %></div>
         <% end %>
       </div>
     </div>

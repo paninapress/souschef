@@ -20,7 +20,22 @@ class MyRecipesController < ApplicationController
   # GET /my_recipes/1
   def show
     @username = current_user.username
-    @myrecipes = MyRecipe.find(params[:id])
+    @recipes = MyRecipe.find(params[:id])
+    @image = @recipes.photo
+    @ingredients = @recipes.ingredients
+    @preparation = @recipes.preparation
+    @description =@ingredients + @preparation
+    @calories = @recipes.calories
+    @protein = @recipes.protein
+    @fat = @recipes.fat
+    @saturated = @recipes.saturated
+    @poly = @recipes.poly
+    @sodium = @recipes.sodium
+    @mono= @recipes.mono
+    @cholesterol = @recipes.cholesterol
+    @carb = @recipes.carb
+    @fiber = @recipes.fiber
+    @serving = @recipes.servings
     #@ingredients = @myrecipes.ingredients
     #@preparation = @myrecipes.preparation
     #@description =@ingredients + @preparation
@@ -38,6 +53,17 @@ class MyRecipesController < ApplicationController
     AWS::S3::S3Object.store(@myrecipes.speechlink, open(@myrecipes.speechlink), 'tennis-testing')
     #Upload the recipe audio file to S3.
     File.delete("#{Rails.root}/app/assets/audios/#{@myrecipes.title+@username}.mp3")
+    @commentable = @recipes
+  @comments = @commentable.comments
+  @comment = Comment.new
+  if current_user == nil
+   @current_user = User.first
+  else
+    @current_user = current_user.id   
+  end
+
+@rating = Rating.where(site_recipe_id: @recipes.id, user_id: @current_user).first unless @rating 
+@rating = Rating.create(site_recipe_id: @recipes.id, user_id: @current_user, score: 0)
   end
 
   # GET /my_recipes/new

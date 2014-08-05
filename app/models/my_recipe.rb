@@ -8,6 +8,13 @@ class MyRecipe < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
 
+ def average_rating
+  if ratings.size == 0
+    ratings.sum(:score)
+  else
+  ratings.sum(:score) / ratings.size
+end
+end
 
 
 def set_recipe

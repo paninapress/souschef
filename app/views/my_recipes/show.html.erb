@@ -33,32 +33,226 @@
           </div>
         </div>
       </nav>
-<div class="container-fluid" style="margin-top:50px;">
+<div class="container-fluid">
+  <div id="notice">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+    </div>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-2 nutrition_column_mobile" id="nutrition_column">
+      <div class="col-xs-4" id="calories_column">
+        <p id="calorie_content"><%=@calories %></p>
+        <p id="caloire_title"> Calories</p></div>
+       <div class="col-xs-4" id="time_column">
+        <p id="time_content">N/A</p> 
+        <p id="time_title">Time</p>
+      </div>
+        <div class="col-xs-4" id="serving_column">
+        <p id="serving_content"><%=@serving%></p> 
+        <p id="serving_title">Servings</p>
+      </div>
+      <li class="nutrition_info" id="cal">calories  <%= @calories %> </li>                
+    <li class="nutrition_info"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
+      <%= @protein %></li>
+                   <li class="nutrition_info">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp <%=@fat %></li>
+                    <li class="nutrition_info">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
+      &nbsp<%=@saturated %></li>
+                  <li class="nutrition_info">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
+        <%= @poly %></li>
+                  <li class="nutrition_info">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp  <%= @sodium%></li>
+                  <li class="nutrition_info">Monounsaturated Fat &nbsp &nbsp
+       <%= @mono%></li>
+                   <li class="nutrition_info">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+       <%= @fiber%></li>
+                     <li class="nutrition_info">Carbohydrates  &nbsp &nbsp &nbsp
+      &nbsp <%= @carb%></li>
+                  <li class="nutrition_info">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
+      &nbsp  <%= @cholesterol %>
+                            </p>
+     </div>
+    <div class="col-lg-6 col-md-6">
       <section>
-        <p id="notice"><%= notice %></p>
-        <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-          <div class="box col6">
-            <p>
-              <strong>Title:</strong>
-              <%= @myrecipes.title %>
-            </p>
-            <p>
-              <%= image_tag @myrecipes.photo_url %>
-            </p>
-            <p>
-              <strong>Description:</strong>
-              <%= @myrecipes.description %>
-            </p>
-            <%= link_to 'Edit', edit_my_recipe_path(@myrecipes) %>
-            <%= link_to 'Back', my_recipes_path %>
-            <audio id="recipeclip"src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls>"HTML5 Audio"</audio><!-- Audio clip from Amazon S3 bucket.-->
-          </section>
+        
+    
+          <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" style="margin-top: 85px;">
+            <ul  class="nav nav-tabs">
+      <li class="active"><a href="#pane1" data-toggle="tab">Recipe</a></li>
+      <li><a href="#pane2" data-toggle="tab">Comments</a></li>
+      <li><a href="#pane3" id="rating_tab" data-toggle="tab">Ratings</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="pane1">
+      
+<p class="recipe_title">
+
+                            <%= @recipes.title %>
+                              
+                            </p>
+
+                            <div id="recipe_source"> <%= User.find(@recipes.user_id).username %></div>
+
+                            <p id="star_title">Average rating</p>
+<div id="star">
+</div>
+
+<p id="user_star_title">Your rating</p>
+<div id="user_star">
+</div>
+<div class="social-buttons"></div>
+<p id="recipe_image">
+                              <img src="<%= @recipes.photo %>" style="position:relative;">
+                            </p>
+                             <div id="ingredients_list">
+
+                           <h4>Ingredients:</h4>
+                           <br>
+                              <%= simple_format(@ingredients) %>
+                           </div>
+                            
+                         <h4 id="prep_heading">Preparation:</h4>
+                           <div id="prep" class="prep_mobile" style="color:white;font-size;16px;"><%= simple_format(@preparation) %>
+                                </div>
+
+                                  <audio id="recipeclip" src='https://s3.amazonaws.com/tennis-testing/app/assets/audios/<%="#{@title}"%>.mp3' controls autoplay>"HTML5 Audio"</audio> <!-- Audio clip from Amazon S3  bucket.-->
+
+<div class="info_mobile">
+<p id="calorie_content_mobile"><%=@calories %></p>
+        <p id="caloire_title_mobile"> Calories:</p></div>
+       <div id="time_column_mobile">
+        <p id="time_content_mobile">N/A</p> 
+        <p id="time_title_mobile">Time:</p>
+      </div>
+        <div id="serving_column_mobile">
+        <p id="serving_content_mobile"><%=@serving%></p> 
+        <p id="serving_title_mobile">Servings:</p>
+      </div>
+
+      </div>
+<div class="tab-pane" id="pane2">
+        <div class="accordion-heading">
+    <a class="accordion-toggle"
+       data-toggle="collapse"
+       data-parent="#accordion2"
+       href="#collapseOne">Add Comment +</a>
+</div>
+        <div id="collapseOne" class="accordion-body collapse">
+        <div class="well well-small">
+            <div class="accordion-toggle">
+                     
+<%= render "comments/form" %>
+
+</div>
+            </div>
         </div>
-        <div class="col-lg-4">
-          <div id="content">
-            <video id="webcam" autoplay width="480" height="480"></video><!-- Where video will be displayed-->
+    
+   
+     <%= render "comments/comments" %>  
+
+      </div>
+<div class="tab-pane" id="pane3">                           
+  <p id="star_title_mobile">Average rating</p>
+<div id="star_mobile">
+</div>
+
+<p id="user_star_title_mobile">Your rating</p>
+<div id="user_star_mobile">
+</div></div>
+
+    </div>
+
+      </div>
+      
+      </section>
+
+    </div>
+
+    <div class="row">
+                                      <!-- Button trigger modal -->
+<button class="btn btn-primary btn-info mobile_modal ingredient col-sm-4" data-toggle="modal" data-target="#myModal">
+  Ingredients
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Ingredients</h4>
+      </div>
+      <div class="modal-body">
+        <div class="ingredients_list_mobile">
+           <%= simple_format(@ingredients) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary btn-info mobile_modal prep_modal col-sm-4" data-toggle="modal" data-target="#myModal2">
+  Preparation
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Instructions</h4>
+      </div>
+      <div class="modal-body prep_mobile">
+        <%= simple_format(@preparation) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-primary btn-info mobile_modal nutrition_modal col-sm-4" data-toggle="modal" data-target="#myModal3">
+  Nutrition
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Nutrition Information</h4>
+      </div>
+      <div class="modal-body nutrition_info_mobile">
+          <li class="nutrition_info_modal"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
+      <%= @protein %></li>
+                   <li class="nutrition_info_modal">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp <%=@fat %></li>
+                    <li class="nutrition_info_modal">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
+      &nbsp<%=@saturated %></li>
+                  <li class="nutrition_info_modal">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
+        <%= @poly %></li>
+                  <li class="nutrition_info_modal">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp  <%= @sodium%></li>
+                  <li class="nutrition_info_modal">Monounsaturated Fat &nbsp &nbsp
+       <%= @mono%></li>
+                   <li class="nutrition_info_modal">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+       <%= @fiber%></li>
+                     <li class="nutrition_info_modal">Carbohydrates  &nbsp &nbsp &nbsp
+      &nbsp <%= @carb%></li>
+                  <li class="nutrition_info_modal">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
+      &nbsp  <%= @cholesterol %>
+                            </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+      <div class="col-lg-4">
+        <div id="video-instruction"><h1>whowh w whowh wo hwohwo  whowh owho</h1></div>
+        <div id="content" style="left:572px; width:450px; height:250px;">
+          <video id="webcam" autoplay width="480" height="480"><!-- Where video will be displayed-->
           </video>
           <canvas id="canvas-source" width="480" height="480"></canvas>
           <canvas id="canvas-highlights" width="480" height="480"></canvas>
@@ -73,10 +267,114 @@
           </div>
         </div>
         <div class="loading">Loading assets...</div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="https://s3.amazonaws.com/tennis-testing/app.js"></script>
         <script src="/assets/sample.js"></script>
+        <script src="/assets/jquery.raty.js"></script>
+        <script src="/assets/jquery.sharer.js"></script>
+        <script type="text/javascript">
+$('#pane1 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+
+$('#pane2 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+$('#pane3 a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+</script>
+        <script>
+$('#star').raty({
+    readOnly: true,
+    score: <%= @recipes.average_rating %>,
+    half: true,
+    path: '/assets'
+  });
+
+  $('#user_star').raty({
+    score: <%= @rating.score %>,
+    half: true,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>
+<script>
+$('#star_mobile').raty({
+    readOnly: true,
+    score: <%= @recipes.average_rating %>,
+    half: true,
+    path: '/assets'
+  });
+
+  $('#user_star_mobile').raty({
+    score: <%= @rating.score %>,
+    half: true,
+    path: '/assets',
+    click: function(score, evt) {
+      $.ajax({
+        url: '/ratings/' + <%= @rating.id %>,
+        type: 'PATCH',
+        data: { score: score }
+      });
+    }
+  });
+</script>
       </div>
     </div>
   </div>
 </div>
+<script>
+$(".social-buttons").sharer()
+</script>
+
+<script type="text/javascript">
+$(".more").toggle(function(){
+    $(this).text("less..").siblings(".complete").show();
+      $(".truncated").hide();    
+}, function(){
+    $(this).text("view more..").siblings(".complete").hide();
+      $(".truncated").show();  
+
+});
+</script>
+<script type="text/javascript">
+$('.ingredient').click(function (e) {
+  e.preventDefault()
+  $("#myModal2").hide();
+  $("#myModal3").hide();
+  $("#myModal").show();
+});
+
+</script>
+<script type="text/javascript">
+$(".prep_modal").click(function (e) {
+ e.preventDefault()
+  $("#myModal").hide();
+  $("#myModal3").hide();
+  $("#myModal2").show();
+
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(".nutrition_modal").click(function (e) {
+ e.preventDefault()
+  $("#myModal2").hide();
+  $("#myModal").hide();
+   $("#myModal3").show();
+});
+</script>

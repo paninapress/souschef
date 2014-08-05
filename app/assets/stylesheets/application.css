@@ -189,7 +189,7 @@ input[type="submit"] {
     width: 40%;
 }
 #my_recipe_photo {
-    margin-left: 45%;
+    margin-left: 25%;
 }
 
 #myModal {
@@ -228,13 +228,8 @@ label {
     color: black;
     background-image: none;
     margin-top: 100px;
-    background-image: url("/assets/recipe_frame.png");
 margin-top: 100px;
-background-size: 95%;
-background-position-x: 50%;
-background-position-y: 65%;
-background-repeat: no-repeat;
-height: 700px;
+height: auto;
 }
 
 #edit_recipe_form {
@@ -251,7 +246,7 @@ height: 700px;
 }
 
 #new_recipe_title {
-    margin-top: 65px;
+    margin-top: 25px;
 }
 
 .bgSizeCover {
@@ -787,6 +782,11 @@ visibility: hidden;
 visibility: hidden;
       }
 
+
+#pane1 {
+    width: 598px;
+}
+
 #pane2 {
     width: 598px;
 
@@ -856,7 +856,7 @@ border-right: none;
 }
 
 #profile_pic>img{
-    width: 425px;
+    width: 426px;
     height: 425px;
     position: relative;
     left: -15px;
@@ -915,7 +915,7 @@ form#edit_user.edit_user{
 
 #new_recipe {
     background-color: tan;
-    height: 800px;
+    height: auto;
 }
 
 @media (max-width: 950px) {
@@ -1004,6 +1004,9 @@ position: relative;
         width: 340px;
         height: 340px;
     }
+
+
+
 
 #pane3 {
      visibility: visible;

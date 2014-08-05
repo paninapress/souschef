@@ -221,7 +221,25 @@
         <h4 class="modal-title" id="myModalLabel">Nutrition Information</h4>
       </div>
       <div class="modal-body nutrition_info_mobile">
-        Nutrition Value
+          <li class="nutrition_info_modal"> Protein   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp
+      <%= @protein %></li>
+                   <li class="nutrition_info_modal">Fat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp &nbsp &nbsp &nbsp &nbsp <%=@fat %></li>
+                    <li class="nutrition_info_modal">Saturated Fat&nbsp &nbsp  &nbsp &nbsp
+      &nbsp<%=@saturated %></li>
+                  <li class="nutrition_info_modal">Polyunsaturated Fat &nbsp &nbsp &nbsp &nbsp 
+        <%= @poly %></li>
+                  <li class="nutrition_info_modal">Sodium &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      &nbsp  <%= @sodium%></li>
+                  <li class="nutrition_info_modal">Monounsaturated Fat &nbsp &nbsp
+       <%= @mono%></li>
+                   <li class="nutrition_info_modal">Fiber &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+       <%= @fiber%></li>
+                     <li class="nutrition_info_modal">Carbohydrates  &nbsp &nbsp &nbsp
+      &nbsp <%= @carb%></li>
+                  <li class="nutrition_info_modal">Cholesterol &nbsp &nbsp &nbsp &nbsp  &nbsp
+      &nbsp  <%= @cholesterol %>
+                            </p>
       </div>
     </div>
   </div>

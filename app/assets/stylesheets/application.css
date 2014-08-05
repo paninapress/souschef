@@ -145,6 +145,15 @@ input[id="foodnav"] {
     top: -45px;
     left: 135px;
 }
+
+input[id="user_username"] {
+    background-color: tomato;
+}
+
+input[id="password_confirmation"] {
+    background-color: tomato;
+}
+
 input[type="submit"] {
     border: 0;
     width: 150px;
@@ -450,6 +459,32 @@ h1 {
     font-family: 'octin_vintage_b_rg-webfont';
     width: 550px;
 }
+
+
+.profile_container {
+position: absolute;
+top: 100px;
+height: 550px;
+background-color: tomato;
+}
+
+.profile_recipe {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.profile_recipe>#masonry-container.col3>img {
+    position: relative;
+    top: -92px;
+}
+
+#profile_recipe_header {
+position: relative;
+top: 90px;
+text-align: center;
+}
+
 #star {
     top: 190px;
     position: absolute;
@@ -729,6 +764,11 @@ visibility: hidden;
 
 }
 
+#nutrition_info_modal {
+    visibility: hidden;
+}
+
+
 
 #pane3 {
      visibility: hidden;
@@ -783,15 +823,21 @@ padding-top: 15px;
 border-right: none;
 }
 
+#profile_background {
+
+}
 
 #profile_pic>img{
-    width: 150px;
-    height: 150px;
+    width: 425px;
+    height: 425px;
+    position: relative;
+    left: -15px;
 }
 
 #username {
     font-family: 'headlinerno.45_demo-webfont';
     font-size: 64px;
+    text-align: center;
 }
 
 .username {
@@ -811,6 +857,8 @@ width: 598px;
 textarea#comment_content{
 width: 550px;
 }
+
+
 
 @media (max-width: 950px) {
     #speaker {
@@ -839,6 +887,8 @@ input[type="submit"] {
     position: relative;
     z-index: 1099;
 }
+
+
 
 .more {
     z-index: 1097;
@@ -1031,6 +1081,11 @@ top:-297px;
      left: 10px;
      z-index: 1085;
  }
+
+ #nutrition_info_modal {
+    visibility: visible;
+}
+
 
  #masonry-container {
     height: 400px;

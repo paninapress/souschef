@@ -59,7 +59,6 @@
             <%= f.password_field :current_password,  :autofocus => true, placeholder: 'Current Password' %></div>
             <p>
     <label>Change Avatar</label>
-     <%= image_tag(@user.avatar_url) if @user.avatar? %>
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %>
   </p>

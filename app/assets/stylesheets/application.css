@@ -830,6 +830,16 @@ position: relative;
         width: 300px;
     }
 
+    .col4{
+        width: 340px;
+        height: 450px;
+    }
+
+    .col4>img{
+        width: 340px;
+        height: 340px;
+    }
+
 #pane3 {
      visibility: visible;
 }

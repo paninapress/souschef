@@ -52,7 +52,8 @@ class MyRecipesController < ApplicationController
   # POST /my_recipes
   def create
     @myrecipes = current_user.my_recipes.new(my_recipes_params)
-
+    @myrecipes.description = @myrecipes.ingredients+@myrecipes.preparation
+    binding.pry
     if @myrecipes.save
       redirect_to @myrecipes, notice: 'Recipe was successfully created.'
     else
@@ -104,6 +105,6 @@ class MyRecipesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def my_recipes_params
-    params.require(:my_recipe).permit(:title, :description, :user_id, :photo, :search)
+    params.require(:my_recipe).permit(:title, :description, :user_id, :photo, :search, :ingredients, :preparation, :servings, :time, :calories, :fat, :saturated, :poly, :mono, :carb, :protein, :sodium, :fiber, :cholesterol)
   end
 end

@@ -916,7 +916,8 @@ display: none;
 }
 
 .prep_mobile {
-    display: none;
+    display: block;
+    top: -85px;
 }
 
 .prep{
@@ -963,30 +964,65 @@ background-position: 50% 50%;
 
 #calorie_content_mobile{
 visibility: visible;
+top:-440px;
+position: relative;
+color: white;
+left:280px;
+font-size: 16px;
+
 }
 #caloire_title_mobile {
 visibility: visible;
+top:-472px;
+position: relative;
+color: white;
+left:205px;
+font-size: 16px;
+
 }
 
 #time_column_mobile {
 visibility: visible;
+
 }
 
 #time_content_mobile {
 visibility: visible;
+top: -462px;
+position: relative;
+color: white;
+left: 280px;
+font-size: 16px;
 }
 
 #time_title_mobile{
  visibility: visible;
+ top: -495px;
+position: relative;
+color: white;
+left: 210px;
+font-size: 16px
 }
+
     #serving_column_mobile {
 visibility: visible;
     }
        #serving_content_mobile{
 visibility: visible;
+top:-488px;
+position: relative;
+color: white;
+left: 290px;
+font-size: 16px
        }
+
       #serving_title_mobile{
 visibility: visible;
+position: relative;
+color: white;
+left: 205px;
+font-size: 16px;
+top:-520px;
       }
 
  #recipeclip {
@@ -1024,9 +1060,9 @@ visibility: visible;
  }
 
   .ingredients_list_mobile {
-     color: white;
+     color: #333;
      font-size: 16px;
-     top: 150px;
+     top: 0px;
      position: relative;
      margin-bottom: 55px;
      left: 5px;
@@ -1139,7 +1175,7 @@ font-family: 'carnevalee_freakshow-webfont';
   #recipe_source {
      color: white;
      font-size: 12px;
-     top: 265px;
+     top: 260px;
      position: absolute;
      left: 10px;
      width: 300px;
@@ -1148,7 +1184,7 @@ font-family: 'carnevalee_freakshow-webfont';
 .recipe_title {
     left: 10px;
     font-size: 22px;
-    top: 205px;
+    top: 200px;
     position: absolute;
     color: white;
     width: 300px;

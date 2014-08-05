@@ -33,31 +33,35 @@
           </div>
         </div>
       </nav>
-<h1>Edit my recipe.</h1>
-<div class= "form_shell">
-  <div class="row">
-    <div class="span6 offset3 center">
-      <%= form_for(@myrecipes) do |f| %>
-        <% unless @myrecipes.errors.count == 0   %>
-          <div class="alert alert-error">
-            The form contains
-            <%= pluralize(@user.errors.count, "error") %>.
-          </div>
-          <ul>
-            <% @myrecipes.errors.full_messages.each do |msg| %>
-              <li>*
-                <%= msg %></li>
-            <% end %>
-          </ul>
+            <div id="new_recipe">
+<div class="container-fluid">
+  <div id="new_recipe_form">
+    <div class="row">
+      <div class="span12 center">
+        <h1 id="new_recipe_title">Edit Recipe</h1>
+        <%= form_for(@myrecipes) do |f|  %>
+          <% unless @myrecipes.errors.count == 0   %>
+            <div class="alert alert-error">
+              The form contains
+              <%= pluralize(@user.errors.count, "error") %>.
+            </div>
+            <ul>
+              <% @myrecipes.errors.full_messages.each do |msg| %>
+                <li>*
+                  <%= msg %></li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div><%= f.label :title, class: "center" %><br>
+            <%= f.text_field :title, class: "center" %></div>
+          <div><%= f.label :description,class: "center"%><br>
+            <%= f.text_area :description, class: "center"%></div>
+          <div><%= f.label :photo,class: "center"%><br>
+            <%= f.file_field :photo %></div><br>
+          <div><%= f.submit "Edit Recipe", class: "form_button" %></div>
         <% end %>
-        <%= f.label :title %><br />
-        <%= f.text_field :title %><br />
-        <%= f.label :description %><br />
-        <%= f.text_area :description %><br />
-        <%= f.label :photo %>
-        <%= f.file_field :photo %>
-        <%= f.submit "Edit my recipe", class: "form_button" %>
-      <% end %>
+      </div>
     </div>
   </div>
+</div>
 </div>

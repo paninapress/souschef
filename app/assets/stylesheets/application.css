@@ -182,14 +182,14 @@ input[type="submit"] {
 
 
 #my_recipe_description {
-    width: 350px;
+    width: 60%;
     height: 200px;
 }
 #my_recipe_title {
-    width: 350px;
+    width: 40%;
 }
 #my_recipe_photo {
-    margin-left: 525px;
+    margin-left: 45%;
 }
 
 #myModal {
@@ -228,6 +228,30 @@ label {
     color: black;
     background-image: none;
     margin-top: 100px;
+    background-image: url("/assets/recipe_frame.png");
+margin-top: 100px;
+background-size: 95%;
+background-position-x: 50%;
+background-position-y: 65%;
+background-repeat: no-repeat;
+height: 700px;
+}
+
+#edit_recipe_form {
+    color: black;
+    background-image: none;
+    margin-top: 100px;
+    background-image: url("/assets/recipe_frame.png");
+margin-top: 100px;
+background-size: 95%;
+background-position-x: 50%;
+background-position-y: 65%;
+background-repeat: no-repeat;
+height: 700px;
+}
+
+#new_recipe_title {
+    margin-top: 65px;
 }
 
 .bgSizeCover {

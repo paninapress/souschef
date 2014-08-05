@@ -38,7 +38,7 @@
   <div id="new_recipe_form">
     <div class="row">
       <div class="span12 center">
-        <h1>New Recipe</h1>
+        <h1 id="new_recipe_title">New Recipe</h1>
         <%= form_for(@myrecipes) do |f|  %>
           <% unless @myrecipes.errors.count == 0   %>
             <div class="alert alert-error">

@@ -71,7 +71,7 @@
 <div class="panel3 center" data-stellar-background-ratio="0.4">
   <% @siterecipes.each do |recipe| %>
     <div id="masonry-container">
-      <a href="<%= site_path(recipe)%>">
+      <a href="<%= site_recipe_path(recipe)%>">
         <div class="box col3">
           <img src="http://www.epicurious.com<%= recipe.image %>">
           <div class="row">

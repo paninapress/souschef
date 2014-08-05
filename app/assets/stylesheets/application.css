@@ -784,12 +784,21 @@ width: 598px;
     width: 200px;
 }
 
+input[type="submit"] {
+    position: relative;
+    z-index: 1099;
+}
+
+.more {
+    z-index: 1099;
+    position: relative;
+}
 
     #comments {
     background-color: tan;
 left: 15px;
 position: relative;
-height: 300px;
+height: auto;
 width: 315px;
 }
 

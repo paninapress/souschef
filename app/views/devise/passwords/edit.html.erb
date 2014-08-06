@@ -1,3 +1,38 @@
+<nav class="navbar navbar-fixed-top stitched" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">SousChef</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav pull-right">
+          <% if signed_in? %>
+            <li><%= link_to "My profile", my_recipes_path %></li>
+            <li><%= link_to 'New Recipe', new_my_recipe_path%></li>
+                <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                <li>
+                  <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+                </li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Sign in",  new_user_session_path %></li>
+              <% end %>
+              <%= form_tag search_path, :class => "center" do %>
+                    <%= label_tag() %>
+                    <%= text_field_tag(:foodnav, "Search recipes...") %><br>
+                    <%= submit_tag "", :id=> "navsearch"%>
+                  <% end %>
+            </ul>
+          </div>
+        </div>
+      </nav>
 <div class= "form_shell">
   <h2>Change your password</h2>
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>

@@ -42,8 +42,11 @@ video {
 
 #video-instruction {
 	position: fixed;
-	top:80px;
+	top:90px;
 	left: 65%;
+	height: 260px;
+	width: 445px;
+	background-image: url("/assets/instructions.png");
 }
 
 .loading {

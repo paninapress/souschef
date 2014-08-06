@@ -6,7 +6,8 @@ class MyRecipe < ActiveRecord::Base
   has_many :ratings
   paginates_per 25
   validates :title, presence: true
-  validates :description, presence: true
+  validates :ingredients, presence: true
+  validates :preparation, presence: true
 
  def average_rating
   if ratings.size == 0

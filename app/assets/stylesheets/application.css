@@ -943,8 +943,16 @@ form#edit_user.edit_user{
 }
 @media (max-width: 450px) {
 
+#profile_pic>img{
+    width: 426px;
+    height: 425px;
+    position: relative;
+    left: -15px;
+}
+
+
     .form_title {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
 #form_shell_signup {
@@ -953,8 +961,9 @@ form#edit_user.edit_user{
 
 .form_shell_edit{
 height: 900px;
-padding: 40px 15px 15px;
+margin: 60px auto 10px;
 background-color: transparent;
+background-size: 290px 900px;
 color: white;
 }
 
@@ -1067,8 +1076,14 @@ display: none;
 }
 
 .prep_mobile {
-    display: block;
-    top: -85px;
+    color: #333;
+font-size: 16px;
+top: 0px;
+position: relative;
+margin-bottom: 55px;
+left: 5px;
+width: 305px;
+display: block;
 }
 
 .prep{

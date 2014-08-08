@@ -25,4 +25,5 @@
 //= require main
 //= require jquery.raty
 //= require jquery.sharer
+//= require share.min
 //= require_tree .

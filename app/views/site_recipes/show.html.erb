@@ -102,6 +102,7 @@
 <div id="user_star">
 </div>
 <div class="social-buttons"></div>
+<div class="share-button"></div>
 <p id="recipe_image">
                               <img src="http://www.epicurious.com<%= @recipes.image %>" style="position:relative;">
                             </p>
@@ -338,6 +339,9 @@ $('#star_mobile').raty({
 </div>
 <script>
 $(".social-buttons").sharer()
+</script>
+<script type="text/javascript">
+new Share(".share-button");
 </script>
 
 <script type="text/javascript">

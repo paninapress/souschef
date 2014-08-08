@@ -915,6 +915,10 @@ form#edit_user.edit_user{
 
 }
 
+.share_button {
+    visibility: hidden;
+}
+
 
 #edit_account_button {
     margin-bottom:25px;
@@ -1084,6 +1088,10 @@ margin-bottom: 55px;
 left: 5px;
 width: 305px;
 display: block;
+}
+
+.share_button {
+    visibility: visible;
 }
 
 .prep{

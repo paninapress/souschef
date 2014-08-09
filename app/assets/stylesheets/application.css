@@ -1007,6 +1007,10 @@ position: relative;
 left:130px;
 }
 
+div.col-xs-4.col-lg-3.index_info{
+    display: none;
+}
+
 #search_recipe_title{
     color: #333;
 top:-135px;
@@ -1044,7 +1048,7 @@ left:80px;
 color: tomato;
 }
 
-#search_recipe_time_value{
+#search_recipe_time_title{
     top:-90px;
 position: relative;
 width: 60px;
@@ -1058,6 +1062,14 @@ color: tomato;
 position: relative;
 width: 60px;
 left:50px;
+color: tomato;
+}
+
+#search_recipe_serving_title{
+    top:-90px;
+position: relative;
+width: 60px;
+left:40px;
 color: tomato;
 }
 

@@ -40,6 +40,8 @@
       <a href="<%= site_recipe_path(recipe)%>">
       <div class="box col4">
           <img src="http://www.epicurious.com<%= recipe.image %>">
+          <p id="star_title_search">Average rating</p>
+<div id="star_search">
           <div class="row">
             <div class="col-xs-12"><h2 id="search_recipe_title"><%= recipe.title %></h2></div>
           <div class="col-xs-12" id="index_source" style="color:white;"><%= recipe.source %></div>
@@ -51,3 +53,12 @@
       </a>
     </div>
   <% end %>
+
+   <script>
+$('#star').raty({
+    readOnly: true,
+    score: <%= @recipes.average_rating %>,
+    half: true,
+    path: '/assets'
+  });
+</script>

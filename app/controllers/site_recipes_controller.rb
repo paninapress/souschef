@@ -1,6 +1,6 @@
 class SiteRecipesController < ApplicationController
-	include ActionView::Helpers::TextHelper
-	before_action :authenticate_user!, except: [:index,:show,:search]
+  include ActionView::Helpers::TextHelper
+  before_action :authenticate_user!, except: [:index,:show,:search]
   def index
     @siterecipes = SiteRecipe.order('created_at desc').page(params[:page])
     #display some recipes that were created by former search results.
@@ -207,13 +207,6 @@ if box_nutrition[6].nil?
     end
 
     @recipes = SiteRecipe.last(12)
-    if current_user == nil
-   @current_user = User.first
-  else
-    @current_user = current_user.id   
-  end
-    @rating = Rating.where(site_recipe_id: @recipes.id, user_id: @current_user).first unless @rating 
-@rating = Rating.create(site_recipe_id: @recipes.id, user_id: @current_user, score: 0)
   end
 
 

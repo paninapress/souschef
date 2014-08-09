@@ -940,6 +940,9 @@ form#edit_user.edit_user{
 .share_button {
     visibility: hidden;
 }
+.share-button.sharer-0{
+    height: 0px !important;
+}
 
 
 #edit_account_button {
@@ -972,6 +975,46 @@ form#edit_user.edit_user{
     }
 }
 @media (max-width: 450px) {
+#star_search_mobile{
+    top: 45px;
+position: absolute;
+left: 150px;
+color: white;
+display: block;
+width:190px;
+height: 20px;
+}
+
+#star_search_mobile>img{
+width: 25px;
+height: 25px;
+min-height: 5px;
+top:10px;
+display: inline-block;
+}
+
+.share-button.sharer-0 label{
+    font-size: 16px;
+cursor: pointer;
+margin: 0;
+padding: 5px 10px;
+/* border-radius: 5px; */
+background: tomato;
+color: #white;
+-webkit-transition: all .3s ease;
+transition: all .3s ease;
+}
+
+.share-button.sharer-0{
+    height: 20px !important;
+    display: block;
+top: 50px;
+position: absolute;
+left:210px;
+z-index: 1200;
+top:140px;
+}
+
 
     #masonry-container-search>a>.col4{
         width: 320px;
@@ -1008,7 +1051,7 @@ left:130px;
 }
 
 div.col-xs-4.col-lg-3.index_info{
-    
+
 }
 
 #search_recipe_title{
@@ -1209,15 +1252,17 @@ position: relative;
 
 #myModal {
     display: block;
-    z-index: 2000;
+    z-index: 1900;
 }
 
 #myModal2 {
     display: block;
+     z-index: 1900;
 }
 
 #myModal2 {
     display: none;
+    z-index: 1900;
 }
 
     .social-buttons {

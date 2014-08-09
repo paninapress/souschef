@@ -963,6 +963,16 @@ form#edit_user.edit_user{
     color: white;
 }
 
+#star_search_mobile{
+    top: 45px;
+position: absolute;
+left: 150px;
+color: white;
+display: none;
+width:190px;
+height: 20px;
+}
+
 @media (max-width: 950px) {
     #speaker {
         top: 10px;
@@ -975,6 +985,11 @@ form#edit_user.edit_user{
     }
 }
 @media (max-width: 450px) {
+
+div.col-xs-4.col-lg-3.index_info {
+background-color: transparent !important;
+}
+
 #star_search_mobile{
     top: 45px;
 position: absolute;
@@ -1019,7 +1034,7 @@ top:140px;
     #masonry-container-search>a>.col4{
         width: 320px;
         height: 120px;
-        background-color: tan;
+        background-color: moccasin;
     }
 
     #masonry-container-search{
@@ -1080,7 +1095,7 @@ color: tomato;
 position: relative;
 width: 60px;
 left:110px;
-color: tomato;
+color: #333;
 }
 
 #search_recipe_time_value{
@@ -1096,7 +1111,7 @@ color: tomato;
 position: relative;
 width: 60px;
 left:80px;
-color: tomato;
+color: #333;
 }
 
 
@@ -1113,11 +1128,15 @@ color: tomato;
 position: relative;
 width: 60px;
 left:40px;
-color: tomato;
+color: #333;
 }
 
 #index_source{
-    visibility: hidden;
+    visibility:visible;
+height: 35px;
+background-color:coral;
+top: -2px;
+width: 335px;
 }
 
 #search_recipe_title_value{

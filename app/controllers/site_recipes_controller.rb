@@ -207,6 +207,21 @@ if box_nutrition[6].nil?
     end
 
     @recipes = SiteRecipe.last(12)
+    @image = @recipes.image
+    @ingredients = @recipes.ingredients
+    @preparation = @recipes.preparation
+    @description =@ingredients + @preparation
+    @calories = @recipes.calories
+    @protein = @recipes.protein
+    @fat = @recipes.fat
+    @saturated = @recipes.saturated
+    @poly = @recipes.poly
+    @sodium = @recipes.sodium
+    @mono= @recipes.mono
+    @cholesterol = @recipes.cholesterol
+    @carb = @recipes.carb
+    @fiber = @recipes.fiber
+    @serving = @recipes.servings
   end
 
 

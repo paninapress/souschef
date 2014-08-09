@@ -325,6 +325,9 @@ h1 {
     text-shadow: #000 0 0 7px, rgba(0, 0, 0, 1) 0 0 20px;
     text-align: none;
 }
+
+#search_result
+
 #speaker {
     position: absolute;
     top: 80px;
@@ -1400,6 +1403,8 @@ font-family: 'carnevalee_freakshow-webfont';
         font-size: 36px;
         width: 310px;
     }
+
+
     input[id="food"] {
         height: 50px;
         width: 300px;

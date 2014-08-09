@@ -33,7 +33,7 @@
   <p class="center" id="search_bar">Let SousChef read the recipe while you cook.</p>
   <%= form_tag search_path, :class => "center" do %>
     <%= label_tag() %>
-    <%= text_field_tag(:food, "Search recipes...") %><br>
+    <%= text_field_tag(:food) %><br>
     <%= submit_tag "Search", class: 'search_button'%>
   <% end %>
 </div>

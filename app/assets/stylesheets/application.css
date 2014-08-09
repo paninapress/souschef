@@ -973,7 +973,7 @@ form#edit_user.edit_user{
 }
 @media (max-width: 450px) {
 
-#masonry-container-search>img{
+#masonry-container-search>a>.box>img{
     width: 120px;
     height: 120px;
     min-height: 0;

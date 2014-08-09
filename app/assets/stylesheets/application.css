@@ -973,6 +973,20 @@ form#edit_user.edit_user{
 }
 @media (max-width: 450px) {
 
+    #masonry-container-search>a>.col4{
+        width: 320px;
+        height: 120px;
+        background-color: tan;
+    }
+
+    #masonry-container-search{
+        left: -15px;
+position: relative;
+margin-left: 0px;
+margin-right: 0px;
+
+    }
+
 #masonry-container-search>a>.box>img{
     width: 120px;
     height: 120px;
@@ -995,11 +1009,70 @@ left:130px;
 
 #search_recipe_title{
     color: #333;
+top:-135px;
+position: absolute;
+left:140px;
+width: 190px;
+font-size: 16px;
 }
 
 #index_info{
     background-color: none;
 }
+
+#search_recipe_calories_value{
+    top:-80px;
+position: relative;
+width: 60px;
+left:110px;
+color: tomato;
+}
+
+#search_recipe_calories_title{
+    top:-90px;
+position: relative;
+width: 60px;
+left:110px;
+color: tomato;
+}
+
+#search_recipe_time_value{
+    top:-80px;
+position: relative;
+width: 60px;
+left:80px;
+color: tomato;
+}
+
+#search_recipe_time_value{
+    top:-90px;
+position: relative;
+width: 60px;
+left:80px;
+color: tomato;
+}
+
+
+#search_recipe_serving_value{
+    top:-80px;
+position: relative;
+width: 60px;
+left:50px;
+color: tomato;
+}
+
+#index_source{
+    visibility: hidden;
+}
+
+#search_recipe_title_value{
+    top:-90px;
+position: relative;
+width: 60px;
+left:40px;
+color: tomato;
+}
+
 
 #result_title {
     color:white;

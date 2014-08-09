@@ -33,16 +33,15 @@
           </div>
         </div>
       </nav>
-<h2>Your Results</h2>
+<h2 id="result_title">Your Results:</h2>
 <div class="container-fluid">
-  <p id="search_result">Your Results.</p>
   <% @recipes.each do |recipe| %>
-    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+    <div id="masonry-container-search" class="transitions-enabled infinite-scroll clearfix">
       <a href="<%= site_recipe_path(recipe)%>">
       <div class="box col4">
           <img src="http://www.epicurious.com<%= recipe.image %>">
           <div class="row">
-            <div class="col-xs-12"><h2 style="color:white;"><%= recipe.title %></h2></div>
+            <div class="col-xs-12"><h2 id="search_recipe_title"><%= recipe.title %></h2></div>
           <div class="col-xs-12" id="index_source" style="color:white;"><%= recipe.source %></div>
           <div class="col-xs-4 col-lg-3 index_info"><h1 class="info_value"><%=recipe.calories%></h1><h2 class="info_title">Calories</h2></div>
            <div class="col-xs-4  col-lg-3 index_info" style="background-color:coral;"><h1 class="info_value">N/A</h1><h2 class="info_title">Time</h2></div>

@@ -30,6 +30,20 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+#masonry-container-search {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-right: 2%;
+    border-radius: 5px;
+    display: inline-block;
+    clear: both;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
  #masonry-container_index
   { margin-bottom: 70px;
     margin-top: 60px;
@@ -326,7 +340,9 @@ h1 {
     text-align: none;
 }
 
-#search_result
+#search_result{
+    margin-top: 35px;
+}
 
 #speaker {
     position: absolute;
@@ -521,6 +537,7 @@ background-color: tomato;
 position: relative;
 top: 90px;
 text-align: center;
+width: 300px;
 }
 
 #star {
@@ -871,16 +888,18 @@ border-right: none;
 }
 
 #profile_pic>img{
-    width: 426px;
-    height: 425px;
+    width: 326px;
+    height: 325px;
     position: relative;
     left: -15px;
 }
 
 #username {
     font-family: 'headlinerno.45_demo-webfont';
-    font-size: 64px;
+    font-size: 48px;
     text-align: center;
+    padding-top: 15px;
+width: 305px;
 }
 
 .username {
@@ -937,6 +956,10 @@ form#edit_user.edit_user{
     height: auto;
 }
 
+#search_recipe_title {
+    color: white;
+}
+
 @media (max-width: 950px) {
     #speaker {
         top: 10px;
@@ -950,9 +973,44 @@ form#edit_user.edit_user{
 }
 @media (max-width: 450px) {
 
+#masonry-container-search>img{
+    width: 120px;
+    height: 120px;
+    min-height: 0;
+}
+
+#masonry-container-search>.col3{
+    width: 320px;
+    height: 120px;
+    min-height: 0;
+    background-color: white;
+}
+
+#masonry-container-search>.col-xs-8>h2{
+color:white;
+top: -135px;
+position: relative;
+left:130px;
+}
+
+#search_recipe_title{
+    color: #333;
+}
+
+#index_info{
+    background-color: none;
+}
+
+#result_title {
+    color:white;
+    top: 50px;
+    position: relative;
+}
+
+
 #profile_pic>img{
-    width: 426px;
-    height: 425px;
+width: 320px;
+height: 300px;
     position: relative;
     left: -15px;
 }
@@ -967,6 +1025,7 @@ form#edit_user.edit_user{
 }
 
 .form_shell_edit{
+    width: 300px;
 height: 900px;
 margin: 60px auto 10px;
 background-color: transparent;

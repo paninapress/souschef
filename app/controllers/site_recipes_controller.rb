@@ -207,6 +207,8 @@ if box_nutrition[6].nil?
     end
 
     @recipes = SiteRecipe.last(12)
+    @rating = Rating.where(site_recipe_id: @recipes.id, user_id: @current_user).first unless @rating 
+@rating = Rating.create(site_recipe_id: @recipes.id, user_id: @current_user, score: 0)
   end
 
 

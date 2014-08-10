@@ -1013,9 +1013,9 @@ display: inline-block;
 cursor: pointer;
 margin: 0;
 padding: 5px 10px;
-/* border-radius: 5px; */
-background: tomato;
-color: white;
+border-radius: 0px !important;
+background: tomato !important;
+color: white !important;
 -webkit-transition: all .3s ease;
 transition: all .3s ease;
 }
@@ -1270,16 +1270,16 @@ position: relative;
 }
 
 #myModal {
-    display: block;
+    display: none;
     z-index: 1900;
 }
 
 #myModal2 {
-    display: block;
+    display: none;
      z-index: 1900;
 }
 
-#myModal2 {
+#myModal3 {
     display: none;
     z-index: 1900;
 }

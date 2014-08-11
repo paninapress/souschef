@@ -155,6 +155,10 @@ color: tomato;
 }
 
 @media (max-width: 450px) {
+.tab-content {
+  width: 330px;
+}
+
 .modal{
   z-index: 1020;
 }

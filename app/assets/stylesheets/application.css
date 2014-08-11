@@ -1026,7 +1026,7 @@ transition: all .3s ease;
 top: 50px;
 position: absolute;
 left:210px;
-z-index: 1200;
+z-index: 200;
 top:140px;
 }
 
@@ -1356,7 +1356,7 @@ position: absolute;
 
 #calorie_content_mobile{
 visibility: visible;
-top:-210px;
+top:-205px;
 position: relative;
 color: white;
 left:280px;
@@ -1365,7 +1365,7 @@ font-size: 16px;
 }
 #caloire_title_mobile {
 visibility: visible;
-top:-242px;
+top:-212px;
 position: relative;
 color: white;
 left:205px;
@@ -1380,7 +1380,7 @@ visibility: visible;
 
 #time_content_mobile {
 visibility: visible;
-top: -170px;
+top: -150px;
 position: relative;
 color: white;
 left: 280px;
@@ -1389,7 +1389,7 @@ font-size: 16px;
 
 #time_title_mobile{
  visibility: visible;
- top: -202px;
+ top: -182px;
 position: relative;
 color: white;
 left: 210px;
@@ -1401,7 +1401,7 @@ visibility: visible;
     }
        #serving_content_mobile{
 visibility: visible;
-top:-285px;
+top:-260px;
 position: relative;
 color: white;
 left: 290px;
@@ -1414,7 +1414,7 @@ position: relative;
 color: white;
 left: 205px;
 font-size: 16px;
-top:-317px;
+top:-267px;
       }
 
  #recipeclip {

@@ -976,6 +976,11 @@ width:190px;
 height: 20px;
 }
 
+.index_info_search{
+background-color: tomato;
+
+}
+
 @media (max-width: 950px) {
     #speaker {
         top: 10px;
@@ -1073,7 +1078,7 @@ background-color: tomato !important;
 }
 
 div.col-xs-4.col-lg-3.index_info_search{
-background-color: none !important;
+background-color: transparent; !important;
 }
 
 #search_recipe_title{
@@ -1090,7 +1095,7 @@ font-size: 16px;
 }
 
 #recipe_info_bg{
-    background-color: none;
+    background-color: transparent;
 }
 
 #search_recipe_calories_value{

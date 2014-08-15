@@ -322,8 +322,7 @@ h1 {
     padding-right: 15px;
     padding-top: 35px;
     padding-bottom: 50px;
-    background-image: url("/assets/papertexture.jpg");
-    background-size: cover;
+    background-color: tomato;
 }
 .circle {
     width: 200px;
@@ -888,8 +887,8 @@ border-right: none;
 }
 
 #profile_pic>img{
-    width: 326px;
-    height: 325px;
+    width: 425px;
+    height: 425px;
     position: relative;
     left: -15px;
 }
@@ -897,8 +896,8 @@ border-right: none;
 #username {
     font-family: 'headlinerno.45_demo-webfont';
     font-size: 48px;
-    text-align: center;
-    padding-top: 15px;
+    text-align: right;
+    padding-top: 35px;
 width: 305px;
 }
 
@@ -1150,8 +1149,7 @@ color: tomato;
 
 #result_title {
     color:white;
-    top: 50px;
-    position: relative;
+    margin-top: 100px;
 }
 
 

@@ -79,7 +79,6 @@ class MyRecipesController < ApplicationController
   def create
     @myrecipes = current_user.my_recipes.new(my_recipes_params)
     @myrecipes.description = @myrecipes.ingredients+@myrecipes.preparation
-    binding.pry
     if @myrecipes.save
       redirect_to @myrecipes, notice: 'Recipe was successfully created.'
     else

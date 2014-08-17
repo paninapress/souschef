@@ -186,7 +186,7 @@ if box_nutrition[6].nil?
 
     i = 0
     while i < temp.size
-      SiteRecipe.find_or_create_by(title: "#{box_title[i]}", 
+      SiteRecipe.create(title: "#{box_title[i]}", 
         ingredients: "#{box_ingredient[i]}", 
         preparation: "#{box_preparation[i]}", 
         image: "#{box_image[i]}", 

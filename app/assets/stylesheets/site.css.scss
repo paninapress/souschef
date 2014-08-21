@@ -279,6 +279,11 @@ video {
 
 @media (max-width: 450px) {
 
+.navbar-brand{
+	top: 10px;
+position: relative;
+}
+
 #video-instruction {
 	display: none;
 }

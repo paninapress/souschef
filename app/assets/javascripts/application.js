@@ -26,4 +26,5 @@
 //= require jquery.raty
 //= require jquery.sharer
 //= require share.min
+//= require Wix
 //= require_tree .
